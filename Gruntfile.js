@@ -57,7 +57,8 @@ module.exports = function (grunt) {
     processhtml: {
       dist:{
         options: {
-          process: true
+          process: true,
+          recursive: true
         },
         files: [{
           expand: true,
