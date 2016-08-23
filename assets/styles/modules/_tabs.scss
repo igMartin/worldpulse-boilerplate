@@ -1,0 +1,61 @@
+////
+/// Tabs
+/// @group Component - Tabs
+/// @author MS
+////
+
+
+@mixin tabs($color, $background-color) {
+  display: inline-block;
+  padding: torem(10px);
+  margin-left: torem(-4px);
+  border-right: torem(2px) solid $color;
+  border-top: torem(2px) solid $color;
+  border-bottom: torem(2px) solid $color;
+  color: $color;
+  background-color: $background-color;
+  font-weight: $msuif-font-weight-bold;
+}
+
+.wrapper-tab{
+  width: 50%;
+}
+
+.tabs {
+
+  &__tab {
+    @include tabs($color-red, $color-white);
+    width: 25.1%;
+
+    &:first-child &:not(.tabs__tab--is-active){
+      border-left: torem(2px) solid $color-red;
+    }
+
+    &:hover:not(.tabs__tab--is-active) {
+      background-color: $color-pink;
+    }
+
+    &--is-active {
+      color: $color-blue;
+      background-color: $color-lightblue;
+      border-color: $color-blue;
+      border-left: torem(2px) solid $color-blue;
+    }
+
+    &--not-active {
+      opacity: 0.2;
+    }
+  }
+
+  &__content {
+    @include tabs($color-red, $color-white);
+    border-left: torem(2px) solid $color-red;
+    border-top: none;
+    display: none;
+    border-radius: 0 0 10px 10px;
+
+    &:target {
+      display: block;
+    }
+  }
+}

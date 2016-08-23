@@ -1,0 +1,92 @@
+////
+/// Forms
+/// -> Radio and checkboxes
+/// @group Forms
+////
+
+@import "forms/radio-checkbox";
+
+
+/// Inputs
+
+@mixin input($color, $border-width) {
+  border: torem($border-width) solid $color;
+  font-weight: $msuif-font-weight-bold;
+  padding: torem(10px);
+  outline: none;
+}
+
+.input{
+
+  &__classic {
+    @include input($color-gray, 1px);
+    font-style: italic;
+    font-weight: $msuif-font-weight;
+  }
+
+  &__roundside-primary {
+    @include input($color-blue, 2px);
+    border-radius: 0 50px 50px 0;
+  }
+
+  &__roundside-secondary {
+    @include input($color-green, 2px);
+    border-radius: 0 50px 50px 0;
+  }
+
+  &__square {
+    @include input($color-gray, 1px);
+      color: $color-gray;
+
+    &--error {
+      @include input($color-red, 1px);
+      color: $color-red;
+    }
+  }
+}
+
+
+///Dropdowns
+
+@mixin dropdown($border-color, $border-radius) {
+  border: torem(2px) solid $border-color;
+  border-radius: torem($border-radius);
+  font-weight: $msuif-font-weight-bold;
+  color: $color-gray;
+  padding: torem(8px);
+  outline: none;
+  background-color: $color-white;
+
+  &:hover {
+    background-color: $border-color;
+    color: $color-white;
+  }
+}
+
+.dropdown {
+
+  &__pill {
+
+    &--red {
+      @include dropdown($color-red, 50px);
+    }
+
+    &--blue {
+      @include dropdown($color-blue, 50px);
+    }
+
+    &--green {
+      @include dropdown($color-green, 50px);
+    }
+  }
+
+  &__square {
+      @include dropdown($color-gray, 0px);
+      text-transform: uppercase;
+
+    &:hover {
+      background-color: $color-green;
+      border-color: $color-green;
+    }
+  }
+}

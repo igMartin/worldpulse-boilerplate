@@ -1,0 +1,92 @@
+////
+/// Modal Dialogs
+/// @group Component - Modal Dialogs
+/// @author MS
+////
+
+///
+$modal-backdrop-background:    rgba(#000, 0.5) !default;
+///
+$modal-transition-delay:       $msuif-transition-duration !default;
+
+
+/// Component Dialog -
+/// This is a CSS-only modal that takes
+/// advantage of :target event to show
+/// a modal-like component using HTML anchors.
+/// @example
+///   <a href="#modal">Show modal dialog</a>
+///   <div class="c-modal" id="modal">
+///     <a href="#!" class="c-modal__close">Close</a>
+///     <div class="c-modal__content">Modal dialog content goes here.</div>
+///   </div>
+
+
+
+.c-modal {
+  // @include edit();
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: $modal-backdrop-background;
+  transition: visibility $msuif-transition-duration 0s, opacity $msuif-transition-duration $msuif-transition-timing;
+
+    @at-root {
+      &__content {
+        @include align(both);
+        max-width: torem(800px);
+        padding: torem(50px);
+        opacity: 0;
+        background-color: $color-white;
+        transition: opacity $msuif-transition-duration $msuif-transition-timing $modal-transition-delay, margin $msuif-transition-duration $msuif-transition-timing $modal-transition-delay;
+
+        &--center {
+          text-align: center;
+
+          input {
+            @include stack();
+            margin-bottom: torem(10px);
+          }
+        }
+
+      }
+
+      &__close {
+        position: absolute;
+        top: torem(10px);
+        right: torem(10px);
+      }
+
+      &__social {
+        @include center();
+        width: 50%;
+        border: 1px solid #000;
+
+        span {
+          position: absolute;
+          margin-top: -3%;
+          margin-left: 13%;
+          padding: torem(15px);
+          background: $color-white;
+        }
+      }
+    }
+
+    // Show modal dialog and it's content
+    &:target,
+    &--is-visible {
+      visibility: visible;
+      opacity: 1;
+
+      // Would be great to use '&' for consistency, but for some reason, it compiles to .modal:target__content
+      .c-modal__content {
+          margin-top: 0;
+          opacity: 1;
+      }
+    }
+  }
