@@ -1,0 +1,40 @@
+//  nav
+
+.nav {
+  display: flex;
+  align-items: center;
+  border: torem(1px) solid $color-black;
+  background-color: $color-white;
+  font-weight: bold;
+
+  &__logo {
+    flex: 1;
+
+    img {
+      justify-content: flex-start;
+    }
+  }
+
+  &__links {
+    flex: 3;
+    text-align: center;
+    overflow: hidden;
+
+    ul {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    ul>li {
+      position: relative;
+      display: list-item;
+      padding: 0 40px 0 40px;
+
+      &:last-child {
+        padding-right: 60px;
+      }
+    }
+  }
+}

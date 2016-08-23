@@ -18,5 +18,9 @@
     position: absolute;
     top: torem(10px);
     right: torem(15px);
+
+    @media (min-width: 1200px) {
+      right: torem(95px);
+    }
   }
 }
