@@ -12,27 +12,41 @@
 @mixin input($color, $border-width) {
   border: torem($border-width) solid $color;
   font-weight: $msuif-font-weight-bold;
-  padding: torem(10px);
+  height: torem(38px);
   outline: none;
+  padding-left: torem(8px);
 }
 
 .input{
 
   &__classic {
-    @include input($color-gray, 1px);
-    font-style: italic;
-    font-weight: $msuif-font-weight;
+
+    &--primary {
+      @include input($color-gray, 1px);
+      font-style: italic;
+      font-weight: $msuif-font-weight;
+    }
+
+    &--secondary {
+      @include input($color-white, 1px);
+      font-style: italic;
+      font-weight: $msuif-font-weight;
+    }
   }
 
-  &__roundside-primary {
-    @include input($color-blue, 2px);
-    border-radius: 0 50px 50px 0;
+  &__roundside {
+
+    &--primary {
+      @include input($color-blue, 2px);
+      border-radius: 0 50px 50px 0;
+    }
+
+    &--secondary {
+      @include input($color-green, 2px);
+      border-radius: 0 50px 50px 0;
+    }
   }
 
-  &__roundside-secondary {
-    @include input($color-green, 2px);
-    border-radius: 0 50px 50px 0;
-  }
 
   &__square {
     @include input($color-gray, 1px);

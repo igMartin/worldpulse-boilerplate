@@ -3,11 +3,12 @@
 /// @group Component - Buttons
 ////
 @mixin button($color, $background-color, $border-color, $border-width){
-  padding: 15px 20px 15px 20px;
+  padding: 8px 20px 8px 15px;
   color: $color;
   background-color: $background-color;
   border: torem($border-width) solid $border-color;
   font-weight: $msuif-font-weight-bold;
+  min-width: torem(108px);
 }
 
 .button {
@@ -39,6 +40,11 @@
 
     &--secondary {
       @include button($color-orange, $color-white, $color-white, 2px);
+      border-radius: 0 50px 50px 0;
+    }
+
+    &--tertiary {
+      @include button($color-white, $color-red, $color-white, 2px);
       border-radius: 0 50px 50px 0;
     }
   }

@@ -3,3 +3,59 @@
 /// @group Footer
 /// @author MS
 ////
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: $color-red;
+  color: $color-white;
+  font-weight: bold;
+  padding: 0 20px 0 40px;
+  margin-top: torem(20px);
+
+  &__links {
+    @include span(6/12);
+
+    ul>li {
+      @include col(1/4);
+
+      &:first-child {
+        @include col(1/6);
+      }
+
+      &:last-child {
+        @include col(1/6);
+      }
+    }
+  }
+
+  &__email {
+    @include span(4/12);
+
+    &--wrapper {
+      display: flex;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  &__social {
+    @include span(2/12);
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: torem(15px);
+      padding-left: torem(35px);
+
+      li {
+        margin-bottom: torem(20px);
+        margin-right: torem(30px);
+        font-size: torem(25px);
+      }
+    }
+  }
+}
