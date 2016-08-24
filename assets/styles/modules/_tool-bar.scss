@@ -6,6 +6,7 @@
   &__wrapper {
     display: flex;
     justify-content: flex-end;
+    height: torem(45px);
   }
 
   &__links {
@@ -21,9 +22,33 @@
         justify-content: center;
         align-items: center;
 
-        >li:not(:last-child) {
-          margin-right: 20px;
+        li>a>p {
+          margin-top: 0;
+          margin-bottom: 0;
         }
+
+        >li:not(:last-child) {
+          margin-right: torem(8px);
+        }
+      }
+    }
+
+    &--otherlang {
+      display: flex;
+      align-items: center;
+
+      i {
+        margin-left: torem(8px);
+        font-size: torem(25px);
+      }
+    }
+
+    &--search {
+      display: flex;
+      align-items: center;
+      i {
+        margin-right: torem(8px);
+        font-size: torem(20px);
       }
     }
   }
