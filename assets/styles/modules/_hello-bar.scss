@@ -1,0 +1,28 @@
+// hello bar
+
+
+.hello-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  background-color: $color-green;
+
+  &__text {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    color: $color-white;
+
+    button {
+      margin: 8px 0 8px 20px;
+      padding: 0 15px 0 15px;
+    }
+  }
+
+  &__close {
+    flex: 0;
+    margin-right: torem(20px);
+    color: $color-white;
+  }
+}

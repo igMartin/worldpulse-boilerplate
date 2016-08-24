@@ -39,18 +39,28 @@ $modal-transition-delay:       $msuif-transition-duration !default;
     @at-root {
       &__content {
         @include align(both);
-        max-width: torem(800px);
-        padding: torem(50px);
+        padding: 40px 60px 40px 60px;
         opacity: 0;
         background-color: $color-white;
         transition: opacity $msuif-transition-duration $msuif-transition-timing $modal-transition-delay, margin $msuif-transition-duration $msuif-transition-timing $modal-transition-delay;
 
+        &--header {
+          text-align: center;
+        }
+
         &--center {
           text-align: center;
+          padding: 20px 40px 30px 40px;
 
           input {
             @include stack();
+            max-width: 400px;
             margin-bottom: torem(10px);
+
+            &:focus {
+              border-color: $color-green;
+              border-width: torem(1.5px);
+            }
           }
         }
 
@@ -58,8 +68,9 @@ $modal-transition-delay:       $msuif-transition-duration !default;
 
       &__close {
         position: absolute;
-        top: torem(10px);
-        right: torem(10px);
+        top: torem(12px);
+        right: torem(15px);
+        color: $color-black;
       }
 
       &__social {
@@ -67,11 +78,20 @@ $modal-transition-delay:       $msuif-transition-duration !default;
         width: 50%;
         border: 1px solid #000;
 
+        ul {
+          display: flex;
+          justify-content: space-around;
+
+          li>i {
+            font-size: torem(20px);
+          }
+        }
+
         span {
           position: absolute;
           margin-top: -3%;
-          margin-left: 13%;
-          padding: torem(15px);
+          margin-left: 11%;
+          padding: 10px 10px 5px 10px;
           background: $color-white;
         }
       }

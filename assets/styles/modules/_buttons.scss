@@ -3,7 +3,6 @@
 /// @group Component - Buttons
 ////
 @mixin button($color, $background-color, $border-color, $border-width){
-  display: inline-block;
   padding: 15px 20px 15px 20px;
   color: $color;
   background-color: $background-color;

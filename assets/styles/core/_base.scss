@@ -69,6 +69,7 @@ button {
 }
 
 a {
+  color: inherit;
 	text-decoration: none;
   transition: all $msuif-transition-duration $msuif-transition-timing;
 }
