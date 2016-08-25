@@ -3,10 +3,10 @@
 .nav {
   display: flex;
   align-items: center;
-  max-height: torem(60px);
-  border: torem(1px) solid $color-black;
-  background-color: $color-white;
-  color: $color-black;
+  background-color: $color-sand;
+  color: $color-red;
+  padding: 10px 0 10px 0;
+  font-weight: $msuif-font-weight-semibold;
 
   &__logo {
     flex: 1;
@@ -19,13 +19,14 @@
 
     i {
       justify-content: flex-start;
-      font-size: torem(40px);
+      font-size: torem(60px);
       color: $color-black;
     }
 
     p {
       justify-content: flex-start;
-      font-size: torem(14px)
+      font-size: $msuif-font-size-jumbo;
+      font-weight: $msuif-font-weight-bold;
     }
   }
 

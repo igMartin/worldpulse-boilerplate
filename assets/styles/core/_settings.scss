@@ -7,11 +7,21 @@
 
 /// Fonts ///
 ///
-$msuif-font-size: 16px;
-///
 $msuif-font-size-small: 14px;
 ///
-$msuif-font-weight: 400;
+$msuif-font-size: 16px;
+///
+$msuif-font-size-big: 20px;
+///
+$msuif-font-size-jumbo: 26px;
+///
+$msuif-font-weight-light: 300;
+///
+$msuif-font-weight-regular: 400;
+///
+$msuif-font-weight-semibold: 600;
+///
+$msuif-font-weight-bold: 700;
 ///
 $msuif-font-family-primary: Campton, "Helvetica Neue", Helvetica, sans-serif;
 ///
@@ -19,54 +29,38 @@ $msuif-font-family-secondary: Open Sans, "Helvetica Neue", Helvetica, sans-serif
 ///
 $msuif-font-family-tertiary: Noto Serif, "Helvetica Neue", Helvetica, sans-serif;
 ///
-$msuif-font: $msuif-font-weight toem($msuif-font-size) $msuif-font-family-primary;
+$msuif-font: $msuif-font-weight-regular toem($msuif-font-size) $msuif-font-family-primary;
 ///
-$msuif-font-weight-light: 300;
-///
-$msuif-font-weight-regular: $msuif-font-weight;
-///
-$msuif-font-weight-semibold: 600;
-///
-$msuif-font-weight-bold: 700;
-///
-$msuif-font-color: #101010;
-///
-$msuif-font-color-bright: #edede6;
-///
-$msuif-font-color-dark: $msuif-font-color;
-///
-$msuif-font-color-white: #fff;
-
-
-
-/// Background ///
-///
-$msuif-background: $msuif-font-color-bright;
-///
-$msuif-background-bright: $msuif-background;
 
 
 /// Colors ///
 ///
 $color-red: #961E23;
-$color-blue: #4AA8B7;
-$color-orange: #F58255;
-$color-yellow: #E6C81E;
-$color-green: #69BEA5;
-$color-gray: #AAAFA1;
-$color-pink: #F4E8E8;
-$color-lightblue: #D8FAFB;
-$color-black: #000000;
-$color-white: #FFFFFF;
-
-
-/// Wrapper ///
 ///
-$msuif-wrapper-min-width: torem(1200px);
+$color-blue: #4AA8B7;
+///
+$color-orange: #F58255;
+///
+$color-yellow: #E6C81E;
+///
+$color-green: #69BEA5;
+///
+$color-gray: #AAAFA1;
+///
+$color-pink: #F4E8E8;
+///
+$color-lightblue: #D8FAFB;
+///
+$color-sand: #FCF9E8;
+///
+$color-black: #000000;
+///
+$color-white: #FFFFFF;
+///
+$msuif-font-color: $color-black;
+///
+$msuif-background: #EDEDE6;
 
-.wrapper {
-  padding: 0 40px 0 40px;
-}
 
 /// Breakpoints ///
 ///

@@ -24,13 +24,13 @@
     &--primary {
       @include input($color-gray, 1px);
       font-style: italic;
-      font-weight: $msuif-font-weight;
+      font-weight: $msuif-font-weight-regular;
     }
 
     &--secondary {
       @include input($color-white, 1px);
       font-style: italic;
-      font-weight: $msuif-font-weight;
+      font-weight: $msuif-font-weight-regular;
     }
   }
 
