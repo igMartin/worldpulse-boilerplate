@@ -1,0 +1,42 @@
+// Block Quote
+
+.blockquote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-lightblue;
+  text-align: center;
+
+  &__wrapper {
+    flex: 6;
+    color: $color-blue;
+    padding: 5% 0 5% 0;
+
+    img {
+      border-radius: 50%;
+      border: torem(6px) solid $color-white;
+    }
+  }
+
+  &__arrow {
+    flex: 1;
+    color: $color-white;
+    font-size: $msuif-font-size-super;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -0.5em;
+    bottom: -2em;
+    left: 50%;
+
+    border: 1em solid black;
+    border-color: transparent transparent $color-lightblue $color-lightblue;
+
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+  }
+}

@@ -37,7 +37,6 @@ h5,
 h6 {
   font: $msuif-font;
   font-weight: 400;
-  color: $msuif-font-color;
 }
 
 h1 {
@@ -45,6 +44,7 @@ h1 {
   font-size: $msuif-headers-h1-font-size;
   font-weight: $msuif-font-weight-bold;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 
 h2 {
