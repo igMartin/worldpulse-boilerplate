@@ -6,55 +6,54 @@
 
 .footer {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   background-color: $color-red;
   color: $color-white;
   font-weight: bold;
-  padding: 0 20px 0 40px;
-  margin-top: torem(20px);
+  padding: 0 0 0 2%;
 
   &__links {
-    @include span(6/12);
+    flex: 5;
+    padding-right: 2%;
 
-    ul>li {
-      @include col(1/4);
+    ul {
+      display: flex;
+      justify-content: space-around;
 
-      &:first-child {
-        @include col(1/6);
-      }
-
-      &:last-child {
-        @include col(1/6);
+      li>a:first-child>p {
+        margin-bottom: torem(30px);
       }
     }
   }
 
   &__email {
-    @include span(4/12);
+    flex: 3;
 
     &--wrapper {
       display: flex;
 
       input {
-        width: 80%;
+        flex-grow: 2;
       }
     }
   }
 
   &__social {
-    @include span(2/12);
+    flex: 1;
+    padding: 0 0 0 5%;
+    align-content: space-around;
 
     ul {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding-top: torem(15px);
-      padding-left: torem(100px);
+      flex-flow: row wrap;
+      font-size: torem(25px);
 
       li {
-        margin-bottom: torem(20px);
-        margin-right: torem(30px);
-        font-size: torem(25px);
+        flex-basis: 30%;
+
+        &:nth-child(-n+3){
+          margin-bottom: torem(20px);
+        }
       }
     }
   }

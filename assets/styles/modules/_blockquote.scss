@@ -16,20 +16,6 @@
       border-radius: 50%;
       border: torem(6px) solid $color-white;
     }
-
-    &::after {
-      content: "";
-      position: absolute;
-      margin-left: -0.5em;
-      bottom: -107em;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border: 2em solid $color-lightblue;
-      border-color: transparent transparent $color-lightblue $color-lightblue;
-      transform-origin: 0 0;
-      transform: rotate(-45deg);
-    }
   }
 
   &__arrow {
@@ -37,5 +23,22 @@
     color: $color-white;
     font-size: $msuif-font-size-super;
   }
+}
 
+.companies {
+  height: torem(180px);
+  width: 100%;
+  background-color: $color-sand;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 48%;
+    width: 0;
+    height: 0;
+    border: 2em solid $color-lightblue;
+    border-color: transparent transparent $color-lightblue $color-lightblue;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+  }
 }

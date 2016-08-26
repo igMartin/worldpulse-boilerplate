@@ -4,7 +4,7 @@
 ////
 @mixin button($color, $background-color, $border-color, $border-width){
   padding: 8px 20px 8px 15px;
-  min-width: torem(108px);
+  min-width: 108px;
   border: torem($border-width) solid $border-color;
   color: $color;
   background-color: $background-color;
