@@ -1,0 +1,55 @@
+// Progress indicator
+@mixin progress-indicator($color){
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  //Lines
+  &:after {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    left: 54%;
+    height: 1px;
+    width: 100%;
+    content: "";
+    background-color: $color-gray;
+  }
+  // Bullets/Balls
+  &:before {
+    position: absolute;
+    z-index: 2;
+    top: -11px;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 1.2em;
+    border: none;
+    line-height: 1.2em;
+    content: " ";
+    background-color: $color;
+  }
+  &:last-child{
+    &:after{
+      display:none;
+    }
+  }
+}
+.progress-indicator-container {
+  width: 100%;
+  padding: 5em;
+  ul{
+    text-align: center;
+  }
+}
+
+.progress-indicator-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.progress-indicator-item {
+  @include progress-indicator($color-gray);
+  &--selected{
+    @include progress-indicator($color-black);
+  }
+}
