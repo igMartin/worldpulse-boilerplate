@@ -5,13 +5,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   height: torem(45px);
   top: 0;
   background-color: $color-green;
 
   &__text {
     display: flex;
-    flex: 1;
+    flex: 30;
     justify-content: center;
     color: $color-white;
 
@@ -26,8 +27,9 @@
   }
 
   &__close {
-    flex: 0;
-    margin-right: torem(20px);
+    display: flex;
+    justify-content: center;
+    flex: 1;
     color: $color-white;
   }
 }
