@@ -16,6 +16,20 @@
       border-radius: 50%;
       border: torem(6px) solid $color-white;
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      margin-left: -0.5em;
+      bottom: -107em;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border: 2em solid $color-lightblue;
+      border-color: transparent transparent $color-lightblue $color-lightblue;
+      transform-origin: 0 0;
+      transform: rotate(-45deg);
+    }
   }
 
   &__arrow {
@@ -24,19 +38,4 @@
     font-size: $msuif-font-size-super;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    margin-left: -0.5em;
-    bottom: -2em;
-    left: 50%;
-
-    border: 1em solid black;
-    border-color: transparent transparent $color-lightblue $color-lightblue;
-
-    transform-origin: 0 0;
-    transform: rotate(-45deg);
-  }
 }
