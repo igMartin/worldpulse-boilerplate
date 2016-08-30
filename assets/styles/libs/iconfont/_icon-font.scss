@@ -86,7 +86,27 @@
 }
 
 
-.icon-world:before {
+.icon-star-full:before {
   content:"\f10d";
+}
+
+
+.icon-star-half:before {
+  content:"\f10e";
+}
+
+
+.icon-star-quarter:before {
+  content:"\f10f";
+}
+
+
+.icon-star-three-quarters:before {
+  content:"\f110";
+}
+
+
+.icon-world:before {
+  content:"\f111";
 }
 
