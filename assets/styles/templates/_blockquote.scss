@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $color-lightblue;
+  background-color: $color-lighterblue;
   text-align: center;
 
   &__wrapper {
@@ -36,8 +36,8 @@
     left: 48%;
     width: 0;
     height: 0;
-    border: 2em solid $color-lightblue;
-    border-color: transparent transparent $color-lightblue $color-lightblue;
+    border: 2em solid $color-lighterblue;
+    border-color: transparent transparent $color-lighterblue $color-lighterblue;
     transform-origin: 0 0;
     transform: rotate(-45deg);
   }

@@ -1,0 +1,46 @@
+// PARTNERS
+
+.partners {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 5% 8%;
+  background-color: $color-lightblue;
+
+  h2 {
+    padding-bottom: torem(40px);
+    color: $color-white;
+  }
+
+  &__profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: torem(30px);
+
+    &--individual {
+      width: 30%;
+      padding: 20px 15px;
+      background-color: $color-white;
+      border: torem(3px) solid $color-blue;
+      border-radius: torem(15px);
+
+      @include respond-to('ismobile'){
+        width: 100%;
+        margin-bottom: torem(20px);
+      }
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    @include respond-to('ismobile') {
+       display: block;
+     }
+  }
+
+  button {
+    font-size: $msuif-font-size-jumbo;
+  }
+}

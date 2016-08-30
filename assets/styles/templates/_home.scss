@@ -5,7 +5,7 @@
 ////
 
 .home {
-  
+
   &__jumbotron {
     background-image: url(http://lorempixel.com/1800/1200/people/4);
     background-repeat: no-repeat;
@@ -29,8 +29,6 @@
 
       button {
         margin-bottom: torem(50px);
-        height: torem(70px);
-        width: torem(180px);
         font-size: $msuif-font-size-jumbo;
       }
     }

@@ -3,7 +3,7 @@
 /// @group Component - Buttons
 ////
 @mixin button($color, $background-color, $border-color, $border-width){
-  padding: 8px 20px 8px 15px;
+  padding: 20px 70px;
   min-width: 108px;
   border: torem($border-width) solid $border-color;
   color: $color;
@@ -37,28 +37,31 @@
     &--primary {
       @include button($color-white, $color-blue, $color-blue, 2px);
       border-radius: 0 50px 50px 0;
+      padding: 8px 40px;
     }
 
     &--secondary {
       @include button($color-orange, $color-white, $color-white, 2px);
       border-radius: 0 50px 50px 0;
+      padding: 8px 40px;
     }
 
     &--tertiary {
       @include button($color-white, $color-red, $color-white, 2px);
       border-radius: 0 50px 50px 0;
+      padding: 8px 40px;
     }
   }
 
   &__pill {
 
     &--primary {
-      @include button($color-white, transparent, $color-white, 2px);
+      @include button($color-white, transparent, $color-white, 3px);
       border-radius: torem(50px);
     }
 
     &--secondary {
-      @include button($color-white, $color-red, $color-white, 2px);
+      @include button($color-white, $color-red, $color-white, 3px);
       border-radius: torem(50px);
     }
   }
