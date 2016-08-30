@@ -1,0 +1,35 @@
+// hear-her-story section
+
+.hear-her-story {
+  background-color: $color-ivory;
+  text-align: center;
+  padding: 2% 15%;
+
+  h2 {
+    color: $color-orange;
+    margin-bottom: torem(20px);
+  }
+
+  &__nav ul{
+    display: flex;
+    justify-content: space-around;
+    color: $color-gray;
+    font-size: $msuif-font-size-big;
+  }
+
+  &__articles {
+    padding: 2% 8%;
+    text-align: left;
+
+    &--header {
+
+      &__profile {
+
+        img {
+
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
