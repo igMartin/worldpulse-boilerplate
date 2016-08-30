@@ -5,7 +5,7 @@
 ////
 
 .home {
-  
+
   &__jumbotron {
     background-image: url(http://lorempixel.com/1800/1200/people/4);
     background-repeat: no-repeat;
@@ -13,10 +13,9 @@
 
     &--wrapper {
       padding: 10% 0 3% 0;
-      width: 50%;
+      width: 60%;
       margin: auto;
       text-align: center;
-
       h1 {
         padding-top: torem(120px);
       }
@@ -26,13 +25,18 @@
         color: $color-white;
         font-weight: $msuif-font-weight-bold;
       }
-
-      button {
-        margin-bottom: torem(50px);
-        height: torem(70px);
-        width: torem(180px);
-        font-size: $msuif-font-size-jumbo;
+      .home__button--wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: torem(540px);
+        button {
+          margin-bottom: torem(50px);
+          height: torem(70px);
+          font-size: $msuif-font-size-jumbo;
+        }
       }
+
     }
   }
 }

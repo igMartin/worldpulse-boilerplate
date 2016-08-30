@@ -3,8 +3,8 @@
 /// @group Component - Buttons
 ////
 @mixin button($color, $background-color, $border-color, $border-width){
-  padding: 8px 20px 8px 15px;
-  min-width: 108px;
+  padding: 0 1em;
+  min-width: torem(198px);
   border: torem($border-width) solid $border-color;
   color: $color;
   background-color: $background-color;
