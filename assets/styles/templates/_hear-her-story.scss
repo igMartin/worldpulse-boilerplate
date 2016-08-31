@@ -1,6 +1,7 @@
 // hear-her-story section
 
 .hear-her-story {
+  position: relative;
   background-color: $color-ivory;
   text-align: center;
   padding: 2% 15%;
@@ -10,16 +11,56 @@
     margin-bottom: torem(20px);
   }
 
-  &__nav ul{
-    display: flex;
-    justify-content: space-around;
+  &__nav {
     color: $color-gray;
     font-size: $msuif-font-size-big;
+    margin-bottom: torem(20px);
+
+    ul{
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &--dropdown {
+      visibility: hidden;
+      position: absolute;
+      z-index: 1;
+      top: 14%;
+      right: 8%;
+      text-align: left;
+      padding: 1.5%;
+      box-shadow: 0 3px 15px 5px #ccc;
+      background-color: inherit;
+      color: $color-gray;
+      font-size: $msuif-font-size-big;
+
+      &:target {
+        visibility: visible;
+      }
+
+      ul {
+        margin: 0;
+
+        li {
+          margin-bottom: torem(5px);
+        }
+      }
+    }
+
+    &--more {
+
+    }
+
   }
+
 
   &__articles {
     padding: 2% 8%;
     text-align: left;
+
+    article {
+      margin-bottom: torem(60px);
+    }
 
     &--header {
 
@@ -27,7 +68,7 @@
 
         img {
           height: torem(65px);
-          width: torem(65px); 
+          width: torem(65px);
           border-radius: 50%;
         }
       }
