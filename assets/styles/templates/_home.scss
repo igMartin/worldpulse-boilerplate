@@ -13,17 +13,24 @@
 
     &--wrapper {
       padding: 10% 0 3% 0;
-      width: 60%;
+      width: 65%;
       margin: auto;
       text-align: center;
-      h2 {
-        padding-top: torem(120px);
+      color: $color-white;
+
+      h4 {
+        margin-bottom: torem(20px);
       }
 
-      h2, h4 {
-        padding-bottom: torem(20px);
-        color: $color-white;
+      &__inner {
+        width: 92%;
+
+        h2 {
+          margin-top: torem(120px);
+          margin-bottom: torem(20px);
+        }
       }
+
       &--button__container {
         display: flex;
         justify-content: space-between;

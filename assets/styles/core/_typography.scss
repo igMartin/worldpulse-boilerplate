@@ -13,7 +13,7 @@
 ///
 $msuif-headers-h1-font-size: 				toem(56px);
 ///
-$msuif-headers-h2-font-size: 				toem(53px);
+$msuif-headers-h2-font-size: 				toem(60px);
 ///
 $msuif-headers-h3-font-size: 				toem(50px);
 ///
@@ -21,10 +21,11 @@ $msuif-headers-h4-font-size: 				toem(28px);
 ///
 $msuif-headers-h5-font-size: 				toem(24px);
 ///
-$msuif-headers-h6-font-size: 				toem(18px);
+$msuif-headers-h6-font-size: 				toem(20px);
 ///
-$msuif-headers-p-font-size:         toem(14px);
+$msuif-headers-p-font-size:         toem(16px);
 ///
+$msuif-headers-small-p-font-size:   toem(14px);
 
 
 h1 {
@@ -32,7 +33,7 @@ h1 {
   font-weight: $msuif-font-weight-bold;
   font-family: $msuif-font-family-primary;
   text-transform: capitalize;
-  // line-height: 1.2;
+  line-height: 1.2;
 }
 
 h2 {
@@ -40,7 +41,7 @@ h2 {
   font-weight: $msuif-font-weight-semibold;
   font-family: $msuif-font-family-primary;
   text-transform: uppercase;
-  // line-height: 1.4;
+  line-height: 1.4;
 }
 
 h3 {
@@ -68,8 +69,13 @@ h6 {
 }
 
 p {
-  font-family: $msuif-headers-p-font-size;
+  font-size: $msuif-headers-p-font-size;
   font-weight: $msuif-font-weight-semibold;
+  font-family: $msuif-font-family-secondary;
+}
+
+.small-p {
+  font-size: $msuif-headers-small-p-font-size;
   font-family: $msuif-font-family-secondary;
 }
 
