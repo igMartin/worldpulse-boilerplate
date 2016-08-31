@@ -6,7 +6,7 @@
   text-align: center;
   padding: 2% 15%;
 
-  h2 {
+  h1 {
     color: $color-orange;
     margin-bottom: torem(20px);
   }
@@ -71,6 +71,14 @@
           width: torem(65px);
           border-radius: 50%;
         }
+      }
+    }
+
+    &--actions {
+
+      span {
+        background: none;
+        border: 1px red solid;
       }
     }
   }

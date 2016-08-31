@@ -16,14 +16,13 @@
       width: 60%;
       margin: auto;
       text-align: center;
-      h1 {
+      h2 {
         padding-top: torem(120px);
       }
 
-      h1, h4 {
+      h2, h4 {
         padding-bottom: torem(20px);
         color: $color-white;
-        font-weight: $msuif-font-weight-bold;
       }
       &--button__container {
         display: flex;
