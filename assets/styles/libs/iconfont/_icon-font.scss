@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Noto+Serif';
+
 @font-face {
   font-family: "icon-font";
   src: url('../fonts/icon-font.eot');
@@ -7,6 +9,19 @@
     url('../fonts/icon-font.ttf') format('truetype'),
     url('../fonts/icon-font.svg#icon-font') format('svg');
 }
+
+@font-face {
+  font-family: 'Campton-Book';
+  src: url('../fonts/Campton-Book.eot');
+  src: url('../fonts/Campton-Book.woff2') format('woff2'),
+       url('../fonts/Campton-Book.woff') format('woff'),
+       url('../fonts/Campton-Book.ttf') format('truetype'),
+       url('../fonts/Campton-Book.svg#Campton-Book') format('svg'),
+       url('../fonts/Campton-Book.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 .ms-icon {
   font-family:"icon-font";
@@ -91,27 +106,6 @@
 }
 
 
-.icon-star-full:before {
+.icon-world:before {
   content:"\f10e";
 }
-
-
-.icon-star-half:before {
-  content:"\f10f";
-}
-
-
-.icon-star-quarter:before {
-  content:"\f110";
-}
-
-
-.icon-star-three-quarters:before {
-  content:"\f111";
-}
-
-
-.icon-world:before {
-  content:"\f112";
-}
-
