@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Noto+Serif';
+
 @font-face {
   font-family: "icon-font";
   src: url('../fonts/icon-font.eot');
@@ -7,6 +9,19 @@
     url('../fonts/icon-font.ttf') format('truetype'),
     url('../fonts/icon-font.svg#icon-font') format('svg');
 }
+
+@font-face {
+  font-family: 'Campton-Book';
+  src: url('../fonts/Campton-Book.eot');
+  src: url('../fonts/Campton-Book.woff2') format('woff2'),
+       url('../fonts/Campton-Book.woff') format('woff'),
+       url('../fonts/Campton-Book.ttf') format('truetype'),
+       url('../fonts/Campton-Book.svg#Campton-Book') format('svg'),
+       url('../fonts/Campton-Book.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 .ms-icon {
   font-family:"icon-font";
@@ -26,122 +41,71 @@
 // Icons
 
 
-.icon-Icon_over_black_Beacon_22x30:before {
+.icon-Logo_horizontal:before {
   content:"\f101";
 }
 
 
-.icon-Icon_over_black_Bookmark_16x26:before {
+.icon-beacon:before {
   content:"\f102";
 }
 
 
-.icon-Icon_over_black_Heart_25x23:before {
+.icon-bookmark:before {
   content:"\f103";
 }
 
 
-.icon-Icon_over_black_Pencil_23x23:before {
+.icon-envelope:before {
   content:"\f104";
 }
 
 
-.icon-Icon_over_black_Person+_30x26:before {
+.icon-hand:before {
   content:"\f105";
 }
 
 
-.icon-Icon_over_black_Speach_26x22:before {
+.icon-heart:before {
   content:"\f106";
 }
 
 
-.icon-Logo_horizontal:before {
+.icon-medal:before {
   content:"\f107";
 }
 
 
-.icon-beacon:before {
+.icon-pencil:before {
   content:"\f108";
 }
 
 
-.icon-bookmark:before {
+.icon-person:before {
   content:"\f109";
 }
 
 
-.icon-envelope:before {
+.icon-phone:before {
   content:"\f10a";
 }
 
 
-.icon-hand:before {
+.icon-plus:before {
   content:"\f10b";
 }
 
 
-.icon-heart:before {
+.icon-search:before {
   content:"\f10c";
 }
 
 
-.icon-medal:before {
+.icon-speach:before {
   content:"\f10d";
 }
 
 
-.icon-pencil:before {
+.icon-world:before {
   content:"\f10e";
 }
-
-
-.icon-person:before {
-  content:"\f10f";
-}
-
-
-.icon-phone:before {
-  content:"\f110";
-}
-
-
-.icon-plus:before {
-  content:"\f111";
-}
-
-
-.icon-search:before {
-  content:"\f112";
-}
-
-
-.icon-speach:before {
-  content:"\f113";
-}
-
-
-.icon-star-full:before {
-  content:"\f114";
-}
-
-
-.icon-star-half:before {
-  content:"\f115";
-}
-
-
-.icon-star-quarter:before {
-  content:"\f116";
-}
-
-
-.icon-star-three-quarters:before {
-  content:"\f117";
-}
-
-
-.icon-world:before {
-  content:"\f118";
-}
-
