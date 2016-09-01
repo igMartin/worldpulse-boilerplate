@@ -4,17 +4,17 @@
   position: relative;
   background-color: $color-ivory;
   text-align: center;
-  padding: 2% 15%;
+  padding: 4% 15%;
 
   h1 {
     color: $color-orange;
-    margin-bottom: torem(20px);
+    margin-bottom: torem(30px);
   }
 
   &__nav {
     color: $color-gray;
     font-size: $msuif-font-size-big;
-    margin-bottom: torem(20px);
+    margin-bottom: torem(60px);
 
     ul{
       display: flex;
@@ -37,7 +37,7 @@
       display: none;
       position: absolute;
       z-index: 1;
-      top: 14%;
+      top: 17.9%;
       right: 8%;
       text-align: left;
       padding: 1.5%;
@@ -45,10 +45,6 @@
       background-color: inherit;
       color: $color-gray;
       font-size: $msuif-font-size-big;
-
-      &:target {
-        visibility: visible;
-      }
 
       ul {
         margin: 0;
@@ -77,11 +73,28 @@
     &--header {
 
       &__profile {
+        display: flex;
 
-        img {
-          height: torem(65px);
-          width: torem(65px);
+        &--photo {
+          height: torem(85px);
+          width: torem(85px);
           border-radius: 50%;
+          margin-right: toem(20px);
+        }
+
+        &__wrapper {
+
+          h5 {
+            margin: 3% 0 0 0;
+            padding-top: toem(3px);
+            font-style: italic;
+          }
+
+          &--flag {
+            border-radius: 0px;
+            height: toem(60px);
+            width: toem(48px);
+          }
         }
       }
     }
