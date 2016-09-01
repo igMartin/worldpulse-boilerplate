@@ -5,6 +5,9 @@
   height: auto;
   text-align: center;
   padding: 5% 8%;
+  @include respond-to('ismobile'){
+		padding: 5% 0;
+	};
   background-color: $color-white;;
 
   h1 {
@@ -62,9 +65,5 @@
        display: block;
        width: 90%;
      }
-  }
-
-  button {
-    font-size: $msuif-font-size-jumbo;
   }
 }

@@ -73,7 +73,7 @@ h3 {
 h4 {
   font-size: $msuif-headers-h4-font-size;
   font-weight: $msuif-font-weight-semibold;
-  font-family: $msuif-font-family-primary;
+  font-family: $msuif-font-family-secondary;
 
   @include respond-to('ismobile') {
     font-size: $msuif-headers-h4-font-size-mobile;
