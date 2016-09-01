@@ -5,8 +5,9 @@
 ////
 
 
-/// Fonts ///
+///Fonts///
 ///
+///Size
 $msuif-font-size-small: 14px;
 ///
 $msuif-font-size: 16px;
@@ -17,6 +18,7 @@ $msuif-font-size-jumbo: 26px;
 ///
 $msuif-font-size-super: 60px;
 ///
+///Weight
 $msuif-font-weight-light: 300;
 ///
 $msuif-font-weight-regular: 400;
@@ -25,13 +27,12 @@ $msuif-font-weight-semibold: 600;
 ///
 $msuif-font-weight-bold: 700;
 ///
-$msuif-font-family-primary: Campton, "Helvetica Neue", Helvetica, sans-serif;
+///Family
+$msuif-font-family-primary: "Campton-Book", "Helvetica Neue", Helvetica, sans-serif;
 ///
-$msuif-font-family-secondary: Open Sans, "Helvetica Neue", Helvetica, sans-serif;
+$msuif-font-family-secondary: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 ///
-$msuif-font-family-tertiary: Noto Serif, "Helvetica Neue", Helvetica, sans-serif;
-///
-$msuif-font: $msuif-font-weight-regular toem($msuif-font-size) $msuif-font-family-primary;
+$msuif-font-family-tertiary: "Noto Serif", "Helvetica Neue", Helvetica, sans-serif;
 ///
 
 
@@ -60,6 +61,8 @@ $color-sand: #FCF9E8;
 $color-black: #000000;
 ///
 $color-white: #FFFFFF;
+///
+$color-ivory: #FCFCFC;
 ///
 $msuif-font-color: $color-black;
 ///

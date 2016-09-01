@@ -1,0 +1,152 @@
+// hear-her-story section
+
+.hear-her-story {
+  position: relative;
+  background-color: $color-ivory;
+  text-align: center;
+  padding: 4% 15%;
+
+  h1 {
+    color: $color-orange;
+    margin-bottom: torem(30px);
+  }
+
+  &__nav {
+    color: $color-gray;
+    font-size: $msuif-font-size-big;
+    margin-bottom: torem(80px);
+
+    ul{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      li {
+        padding-bottom: toem(20px);
+        padding-left: toem(20px);
+      }
+    }
+
+    &--active {
+      padding: 0 5% 2% 5%;
+      color: $color-orange;
+      font-weight: $msuif-font-weight-bold;
+      border-bottom: toem(3px) solid $color-orange;
+
+      &--drop {
+        @extend .hear-her-story__nav--active;
+        padding: 0 2% 1% 0;
+      }
+    }
+
+    &--dropdown {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      top: 15%;
+      right: 8%;
+      text-align: left;
+      padding: 1.5%;
+      border: toem(2px) solid $color-orange;
+      background-color: inherit;
+      color: $color-gray;
+      font-size: $msuif-font-size-big;
+
+      ul {
+        margin: 0;
+
+        li {
+          margin-bottom: torem(5px);
+        }
+      }
+
+      @include respond-to('ismobile') {
+        top: 18.5%;
+      }
+    }
+  }
+
+
+  &__articles {
+    padding: 2% 8%;
+    text-align: left;
+
+    article {
+      margin-bottom: torem(80px);
+    }
+
+    &--header {
+
+      &__profile {
+        display: flex;
+        margin-bottom: toem(10px);
+
+        &__photo {
+          height: torem(85px);
+          width: torem(85px);
+          border-radius: 50%;
+          margin-right: toem(20px);
+        }
+
+        &__wrapper {
+          flex: 8;
+
+          h5 {
+            margin: 0;
+            padding-top: toem(3px);
+            font-style: italic;
+          }
+
+          &--flag {
+            border-radius: 0px;
+            height: toem(60px);
+            width: toem(48px);
+          }
+        }
+
+        &__category {
+          display: flex;
+          // width: 67%;
+          flex: 4;
+          justify-content: flex-end;
+
+          span {
+            height: toem(85px);
+            width: toem(85px);
+            border-radius: 50%;
+            background-color: $color-blue;
+            color: $color-white;
+            text-align: center;
+            line-height: toem(5px);
+
+            @include respond-to('ismobile') {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    &--text {
+
+      h4 {
+        margin: 0;
+      }
+    }
+
+    &--actions {
+      display: flex;
+
+      span {
+        color: $color-orange;
+        display: flex;
+
+        p {
+          margin: 0;
+          padding-right: toem(20px);
+          padding-left: toem(10px);
+        }
+      }
+    }
+  }
+}

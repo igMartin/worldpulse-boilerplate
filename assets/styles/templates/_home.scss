@@ -13,23 +13,34 @@
 
     &--wrapper {
       padding: 10% 0 3% 0;
-      width: 50%;
+      width: 65%;
       margin: auto;
       text-align: center;
+      color: $color-white;
 
-      h1 {
-        padding-top: torem(120px);
+      h4 {
+        margin-bottom: torem(20px);
       }
 
-      h1, h4 {
-        padding-bottom: torem(20px);
-        color: $color-white;
-        font-weight: $msuif-font-weight-bold;
+      &__inner {
+        width: 92%;
+
+        h2 {
+          margin-top: torem(120px);
+          margin-bottom: torem(20px);
+        }
       }
 
-      button {
-        margin-bottom: torem(50px);
-        font-size: $msuif-font-size-jumbo;
+      &--button__container {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: torem(520px);
+        button {
+          margin-bottom: torem(50px);
+          height: torem(70px);
+          font-size: $msuif-font-size-jumbo;
+        }
       }
     }
   }
