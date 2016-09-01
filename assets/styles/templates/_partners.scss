@@ -22,7 +22,7 @@
 
     &--individual {
       width: 30%;
-      padding: 20px 15px 0 15px;
+      padding: 20px 17px 0;
       background-color: $color-white;
       border: torem(3px) solid $color-gray;
       border-radius: torem(15px);
@@ -45,7 +45,7 @@
         }
 
         img {
-          height: toem(65px);
+          height: auto;
           width: toem(45px);
           border-radius: 0px;
         }
