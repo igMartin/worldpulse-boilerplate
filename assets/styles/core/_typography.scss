@@ -23,9 +23,9 @@ $msuif-headers-h5-font-size: 				toem(24px);
 ///
 $msuif-headers-h6-font-size: 				toem(20px);
 ///
-$msuif-headers-p-font-size:         toem(16px);
+$msuif-headers-p-font-size:         toem(18px);
 ///
-$msuif-headers-small-p-font-size:   toem(14px);
+$msuif-headers-small-p-font-size:   toem(16px);
 
 
 h1 {
@@ -70,13 +70,14 @@ h6 {
 
 p {
   font-size: $msuif-headers-p-font-size;
-  font-weight: $msuif-font-weight-semibold;
   font-family: $msuif-font-family-secondary;
+  text-align: left;
 }
 
 .small-p {
   font-size: $msuif-headers-small-p-font-size;
   font-family: $msuif-font-family-secondary;
+  text-align: left;
 }
 
 ///

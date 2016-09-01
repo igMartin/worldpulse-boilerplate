@@ -21,15 +21,27 @@
       justify-content: space-around;
     }
 
+    &--active {
+      padding: 0 5% 2% 5%;
+      color: $color-orange;
+      font-weight: $msuif-font-weight-bold;
+      border-bottom: toem(3px) solid $color-orange;
+
+      &--drop {
+        @extend .hear-her-story__nav--active;
+        padding: 0 2% 1% 0;
+      }
+    }
+
     &--dropdown {
-      visibility: hidden;
+      display: none;
       position: absolute;
       z-index: 1;
       top: 14%;
       right: 8%;
       text-align: left;
       padding: 1.5%;
-      box-shadow: 0 3px 15px 5px #ccc;
+      border: toem(2px) solid $color-orange;
       background-color: inherit;
       color: $color-gray;
       font-size: $msuif-font-size-big;
@@ -74,11 +86,25 @@
       }
     }
 
+    &--text {
+
+      h4 {
+        margin: 0;
+      }
+    }
+
     &--actions {
+      display: flex;
 
       span {
-        background: none;
-        border: 1px red solid;
+        color: $color-orange;
+        display: flex;
+
+        p {
+          margin: 0;
+          padding-right: toem(20px);
+          padding-left: toem(10px);
+        }
       }
     }
   }
