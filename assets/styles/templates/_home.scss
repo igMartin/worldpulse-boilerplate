@@ -35,7 +35,11 @@
         display: flex;
         justify-content: space-between;
         margin: auto;
-        width: torem(520px);
+        max-width: 700px;
+        @include respond-to('ismobile'){
+          width: auto;
+          flex-wrap: wrap;
+        }
         button {
           margin-bottom: torem(50px);
           height: torem(70px);

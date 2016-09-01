@@ -5,6 +5,20 @@
 ////
 
 
+@import 'https://fonts.googleapis.com/css?family=Noto+Serif';
+
+@font-face {
+   font-family: 'Campton-Book';
+   src: url('../fonts/Campton-Book.eot');
+   src: url('../fonts/Campton-Book.woff2') format('woff2'),
+        url('../fonts/Campton-Book.woff') format('woff'),
+        url('../fonts/Campton-Book.ttf') format('truetype'),
+        url('../fonts/Campton-Book.svg#Campton-Book') format('svg'),
+        url('../fonts/Campton-Book.eot?#iefix') format('embedded-opentype');
+   font-weight: normal;
+   font-style: normal;
+ }
+
 ///Fonts///
 ///
 ///Size
@@ -76,8 +90,8 @@ $msuif-breakpoints: (
   'desktop': (max-width: 1366px),
   'ipad': (min-width: 1023px, max-width: 1024px),
   'isdesktop': (min-width: 1024px),
-  'ismobile': (max-width: 1024px),
-  'iphone': (max-width: 980px)
+  'ismobile': (max-width: 500px),
+  'iphone': (max-width: 414px)
 );
 
 

@@ -3,20 +3,41 @@
 /// @group Component - Buttons
 ////
 @mixin button($color, $background-color, $border-color, $border-width){
-  padding: 15px 50px;
   border: torem($border-width) solid $border-color;
   color: $color;
   background-color: $background-color;
+  font-family: $msuif-font-family-primary;
   font-weight: $msuif-font-weight-bold;
   letter-spacing: torem(1px);
 }
 
+@mixin button_size {
+    &--medium {
+      padding: 15px 50px;
+      @include respond-to('ismobile') {
+        padding: 10px 35px;
+      }
+    }
+    &--small {
+      padding: 5px;
+      width: auto;
+    }
+    &--large {
+      padding:0;
+      width: torem(315px);
+      @include respond-to('ismobile') {
+          width: torem(280px);
+      };
+      text-align: center;
+    }
+}
 .button {
 
   &__square{
-
+    @include button_size;
     &--primary {
       @include button($color-white, $color-black, $color-black, 1px);
+
     }
 
     &--secondary {
@@ -32,7 +53,7 @@
   }
 
   &__roundside {
-
+    @include button_size;
     &--primary {
       @include button($color-white, $color-blue, $color-blue, 2px);
       border-radius: 0 50px 50px 0;
@@ -53,6 +74,7 @@
   }
 
   &__pill {
+    @include button_size;
 
     &--primary {
       @include button($color-white, transparent, $color-white, 3px);
@@ -67,10 +89,6 @@
     &--tertiary {
       @include button($color-orange, transparent, $color-orange, 3px);
       border-radius: torem(50px);
-
-      @include respond-to('ismobile') {
-        padding: 10px 35px;
-      }
     }
   }
 }
