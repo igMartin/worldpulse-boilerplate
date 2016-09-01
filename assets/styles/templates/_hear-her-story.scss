@@ -14,11 +14,17 @@
   &__nav {
     color: $color-gray;
     font-size: $msuif-font-size-big;
-    margin-bottom: torem(60px);
+    margin-bottom: torem(80px);
 
     ul{
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap;
+
+      li {
+        padding-bottom: toem(20px);
+        padding-left: toem(20px);
+      }
     }
 
     &--active {
@@ -37,7 +43,7 @@
       display: none;
       position: absolute;
       z-index: 1;
-      top: 17.9%;
+      top: 17.5%;
       right: 8%;
       text-align: left;
       padding: 1.5%;
@@ -53,12 +59,11 @@
           margin-bottom: torem(5px);
         }
       }
+
+      @include respond-to('ismobile') {
+
+      }
     }
-
-    &--more {
-
-    }
-
   }
 
 
@@ -74,8 +79,9 @@
 
       &__profile {
         display: flex;
+        margin-bottom: toem(10px);
 
-        &--photo {
+        &__photo {
           height: torem(85px);
           width: torem(85px);
           border-radius: 50%;
@@ -83,6 +89,7 @@
         }
 
         &__wrapper {
+          flex: 2;
 
           h5 {
             margin: 3% 0 0 0;
@@ -94,6 +101,23 @@
             border-radius: 0px;
             height: toem(60px);
             width: toem(48px);
+          }
+        }
+
+        &__category {
+          display: flex;
+          // width: 67%;
+          flex: 4;
+          justify-content: flex-end;
+
+          span {
+            height: toem(85px);
+            width: toem(85px);
+            border-radius: 50%;
+            background-color: $color-blue;
+            color: $color-white;
+            text-align: center;
+            line-height: toem(5px);
           }
         }
       }
