@@ -43,7 +43,7 @@
       display: none;
       position: absolute;
       z-index: 1;
-      top: 17.5%;
+      top: 15%;
       right: 8%;
       text-align: left;
       padding: 1.5%;
@@ -61,7 +61,7 @@
       }
 
       @include respond-to('ismobile') {
-
+        top: 18.5%;
       }
     }
   }
@@ -72,7 +72,7 @@
     text-align: left;
 
     article {
-      margin-bottom: torem(60px);
+      margin-bottom: torem(80px);
     }
 
     &--header {
@@ -89,10 +89,10 @@
         }
 
         &__wrapper {
-          flex: 2;
+          flex: 8;
 
           h5 {
-            margin: 3% 0 0 0;
+            margin: 0;
             padding-top: toem(3px);
             font-style: italic;
           }
@@ -118,6 +118,10 @@
             color: $color-white;
             text-align: center;
             line-height: toem(5px);
+
+            @include respond-to('ismobile') {
+              display: none;
+            }
           }
         }
       }
