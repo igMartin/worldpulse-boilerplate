@@ -3,8 +3,7 @@
 /// @group Component - Buttons
 ////
 @mixin button($color, $background-color, $border-color, $border-width){
-  padding: 20px 70px;
-  min-width: 108px;
+  padding: 15px 50px;
   border: torem($border-width) solid $border-color;
   color: $color;
   background-color: $background-color;
@@ -63,6 +62,15 @@
     &--secondary {
       @include button($color-white, $color-red, $color-white, 3px);
       border-radius: torem(50px);
+    }
+
+    &--tertiary {
+      @include button($color-orange, transparent, $color-orange, 3px);
+      border-radius: torem(50px);
+
+      @include respond-to('ismobile') {
+        padding: 10px 35px;
+      }
     }
   }
 }

@@ -5,33 +5,50 @@
   height: auto;
   text-align: center;
   padding: 5% 8%;
-  background-color: $color-lightblue;
+  background-color: $color-white;;
 
   h2 {
     padding-bottom: torem(40px);
-    color: $color-white;
+    color: $color-orange;
   }
 
   &__profile {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: torem(30px);
 
     &--individual {
       width: 30%;
-      padding: 20px 15px;
+      padding: 20px 15px 0 15px;
       background-color: $color-white;
-      border: torem(3px) solid $color-blue;
+      border: torem(3px) solid $color-gray;
       border-radius: torem(15px);
-
-      @include respond-to('ismobile'){
-        width: 100%;
-        margin-bottom: torem(20px);
-      }
+      min-height: toem(435px);
 
       img {
+        height: toem(150px);
+        width: toem(150px);
         border-radius: 50%;
+      }
+
+      &--naming {
+
+        h4, h5 {
+          margin: 0;
+        }
+
+        img {
+          height: toem(65px);
+          width: toem(45px);
+          border-radius: 0px;
+        }
+      }
+
+      @include respond-to('ismobile'){
+        margin: auto;
+        width: 80%;
+        margin-bottom: torem(20px);
       }
     }
 
