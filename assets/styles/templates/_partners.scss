@@ -7,16 +7,18 @@
   padding: 5% 8%;
   background-color: $color-white;;
 
-  h2 {
+  h1 {
     padding-bottom: torem(40px);
     color: $color-orange;
   }
 
   &__profile {
+    width: 85%;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: torem(30px);
+    margin: auto;
+    padding-bottom: toem(50px);
 
     &--individual {
       width: 30%;
@@ -24,7 +26,7 @@
       background-color: $color-white;
       border: torem(3px) solid $color-gray;
       border-radius: torem(15px);
-      min-height: toem(435px);
+      min-height: toem(460px);
 
       img {
         height: toem(150px);
@@ -38,6 +40,10 @@
           margin: 0;
         }
 
+        p {
+          text-align: center;
+        }
+
         img {
           height: toem(65px);
           width: toem(45px);
@@ -47,13 +53,14 @@
 
       @include respond-to('ismobile'){
         margin: auto;
-        width: 80%;
-        margin-bottom: torem(20px);
+        width: 90%;
+        margin-bottom: toem(20px);
       }
     }
 
     @include respond-to('ismobile') {
        display: block;
+       width: 90%;
      }
   }
 
