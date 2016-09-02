@@ -13,20 +13,20 @@
   }
 
   &__profile {
-    width: 85%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
+    // width: 95%;
     margin: auto;
     padding-bottom: toem(50px);
 
     &--individual {
-      width: 30%;
-      padding: 20px 15px 0 15px;
+      width: 31%;
+      padding: 20px 20px 0 20px;
       background-color: $color-white;
       border: torem(3px) solid $color-gray;
       border-radius: torem(15px);
-      min-height: toem(460px);
+      min-height: toem(420px);
 
       img {
         height: toem(150px);
