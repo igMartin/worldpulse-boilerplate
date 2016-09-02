@@ -43,7 +43,7 @@
       display: none;
       position: absolute;
       z-index: 1;
-      top: 15%;
+      top: 13%;
       right: 8%;
       text-align: left;
       padding: 1.5%;
@@ -68,11 +68,18 @@
 
 
   &__articles {
-    padding: 2% 8%;
+    padding: 0 8%;
     text-align: left;
+    margin-bottom: toem(80px);
 
     article {
-      margin-bottom: torem(80px);
+      padding: 2%;
+      margin-bottom: torem(40px);
+    }
+
+    &--selected {
+      border: toem(2px) solid $color-gray;
+      border-radius: toem(15px);
     }
 
     &--header {
@@ -98,8 +105,8 @@
 
           &--flag {
             border-radius: 0px;
-            height: toem(60px);
-            width: toem(48px);
+            height: auto;
+            width: toem(45px);
           }
         }
 
@@ -116,7 +123,7 @@
             background-color: $color-blue;
             color: $color-white;
             text-align: center;
-            line-height: toem(5px);
+            line-height: toem(80px);
 
             @include respond-to('ismobile') {
               display: none;
@@ -124,6 +131,10 @@
           }
         }
       }
+    }
+
+    &--text {
+      margin-bottom: toem(20px);
     }
 
     &--actions {
