@@ -4,9 +4,37 @@
 /// @group Settings
 ////
 
+@import 'https://fonts.googleapis.com/css?family=Noto+Serif';
 
-/// Fonts ///
+@font-face {
+  font-family: 'Campton-Bold';
+  src: url('../fonts/Campton-Bold.eot');
+  src: url('../fonts/Campton-Bold.woff2') format('woff2'),
+       url('../fonts/Campton-Bold.woff') format('woff'),
+       url('../fonts/Campton-Bold.ttf') format('truetype'),
+       url('../fonts/Campton-Bold.svg#Campton-Bold') format('svg'),
+       url('../fonts/Campton-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ @font-face {
+  font-family: 'Campton-SemiBold';
+  src: url('../fonts/Campton-SemiBold.eot');
+  src: url('../fonts/Campton-SemiBold.woff2') format('woff2'),
+       url('../fonts/Campton-SemiBold.woff') format('woff'),
+       url('../fonts/Campton-SemiBold.ttf') format('truetype'),
+       url('../fonts/Campton-SemiBold.svg#Campton-SemiBold') format('svg'),
+       url('../fonts/Campton-SemiBold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+///Fonts///
 ///
+///Size
 $msuif-font-size-small: 14px;
 ///
 $msuif-font-size: 16px;
@@ -17,6 +45,7 @@ $msuif-font-size-jumbo: 26px;
 ///
 $msuif-font-size-super: 60px;
 ///
+///Weight
 $msuif-font-weight-light: 300;
 ///
 $msuif-font-weight-regular: 400;
@@ -25,14 +54,14 @@ $msuif-font-weight-semibold: 600;
 ///
 $msuif-font-weight-bold: 700;
 ///
-$msuif-font-family-primary: "Campton-Book", "Helvetica Neue", Helvetica, sans-serif;
+///Family
+$msuif-font-family-primary: "Campton-SemiBold", "Campton-Bold", "Helvetica Neue", Helvetica, sans-serif;
 ///
-$msuif-font-family-secondary: Open Sans, "Helvetica Neue", Helvetica, sans-serif;
+$msuif-font-family-secondary: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 ///
-$msuif-font-family-tertiary: 'Noto Serif', "Helvetica Neue", Helvetica, sans-serif;
+$msuif-font-family-tertiary: "Noto Serif", "Helvetica Neue", Helvetica, sans-serif;
 ///
-$msuif-font: $msuif-font-weight-regular toem($msuif-font-size) $msuif-font-family-primary;
-///
+$msuif-font-family-quaternary: "Campton-Bold", "Campton-SemiBold",  "Helvetica Neue", "Noto Serif", Helvetica, sans-serif;
 
 
 /// Colors ///
@@ -51,13 +80,17 @@ $color-gray: #AAAFA1;
 ///
 $color-pink: #F4E8E8;
 ///
-$color-lightblue: #D8FAFB;
+$color-lightblue: #75B9C4;
+///
+$color-lighterblue: #D8FAFB;
 ///
 $color-sand: #FCF9E8;
 ///
 $color-black: #000000;
 ///
 $color-white: #FFFFFF;
+///
+$color-ivory: #FCFCFC;
 ///
 $msuif-font-color: $color-black;
 ///
@@ -71,8 +104,8 @@ $msuif-breakpoints: (
   'desktop': (max-width: 1366px),
   'ipad': (min-width: 1023px, max-width: 1024px),
   'isdesktop': (min-width: 1024px),
-  'ismobile': (max-width: 1024px),
-  'iphone': (max-width: 980px)
+  'ismobile': (max-width: 500px),
+  'iphone': (max-width: 414px)
 );
 
 

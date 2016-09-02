@@ -12,3 +12,16 @@ $('.c-tabs__tab').on('click',function(){
   .siblings('.c-tabs__tab')
   .removeClass('c-tabs__tab--is-active')
 });
+
+
+//dropdown
+
+$('.more-id').on("click",function(){
+  var more =  $(this).attr("id");
+  //post code
+})
+
+$('#more').on('click', function(){
+  $(this).toggleClass('hear-her-story__nav--active');
+  $('#more-drop').toggle();
+});

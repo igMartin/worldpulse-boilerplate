@@ -16,10 +16,10 @@
       align-items: center;
     }
 
-    i {
-      justify-content: flex-start;
+    span {
+      padding-right: torem(10px);
       font-size: torem(60px);
-      color: $color-black;
+      color: $color-red;
     }
 
     p {
