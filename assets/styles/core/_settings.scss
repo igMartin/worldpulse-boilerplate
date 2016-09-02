@@ -4,20 +4,19 @@
 /// @group Settings
 ////
 
-
 @import 'https://fonts.googleapis.com/css?family=Noto+Serif';
 
 @font-face {
-   font-family: 'Campton-Book';
-   src: url('../fonts/Campton-Book.eot');
-   src: url('../fonts/Campton-Book.woff2') format('woff2'),
-        url('../fonts/Campton-Book.woff') format('woff'),
-        url('../fonts/Campton-Book.ttf') format('truetype'),
-        url('../fonts/Campton-Book.svg#Campton-Book') format('svg'),
-        url('../fonts/Campton-Book.eot?#iefix') format('embedded-opentype');
-   font-weight: normal;
-   font-style: normal;
- }
+  font-family: 'Campton-Bold';
+  src: url('../fonts/Campton-Bold.eot');
+  src: url('../fonts/Campton-Bold.woff2') format('woff2'),
+       url('../fonts/Campton-Bold.woff') format('woff'),
+       url('../fonts/Campton-Bold.ttf') format('truetype'),
+       url('../fonts/Campton-Bold.svg#Campton-Bold') format('svg'),
+       url('../fonts/Campton-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
  @font-face {
   font-family: 'Campton-SemiBold';
@@ -56,12 +55,13 @@ $msuif-font-weight-semibold: 600;
 $msuif-font-weight-bold: 700;
 ///
 ///Family
-$msuif-font-family-primary: "Campton-SemiBold", "Campton-Book", "Helvetica Neue", Helvetica, sans-serif;
+$msuif-font-family-primary: "Campton-SemiBold", "Campton-Bold", "Helvetica Neue", Helvetica, sans-serif;
 ///
 $msuif-font-family-secondary: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 ///
 $msuif-font-family-tertiary: "Noto Serif", "Helvetica Neue", Helvetica, sans-serif;
 ///
+$msuif-font-family-quaternary: "Campton-Bold", "Campton-SemiBold",  "Helvetica Neue", "Noto Serif", Helvetica, sans-serif;
 
 
 /// Colors ///
