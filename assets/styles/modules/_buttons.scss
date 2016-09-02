@@ -17,6 +17,7 @@
       @include respond-to('ismobile') {
         padding: 10px 35px;
       }
+      font-size: $msuif-font-size-jumbo;
     }
     &--small {
       padding: 5px;

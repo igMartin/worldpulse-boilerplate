@@ -7,8 +7,9 @@
 .home {
 
   &__jumbotron {
-    background-image: url(http://lorempixel.com/1800/1200/people/4);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-color: $color-red; //fallback color
 
     &--wrapper {

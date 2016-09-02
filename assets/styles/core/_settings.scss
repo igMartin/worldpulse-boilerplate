@@ -19,6 +19,20 @@
    font-style: normal;
  }
 
+ @font-face {
+  font-family: 'Campton-SemiBold';
+  src: url('../fonts/Campton-SemiBold.eot');
+  src: url('../fonts/Campton-SemiBold.woff2') format('woff2'),
+       url('../fonts/Campton-SemiBold.woff') format('woff'),
+       url('../fonts/Campton-SemiBold.ttf') format('truetype'),
+       url('../fonts/Campton-SemiBold.svg#Campton-SemiBold') format('svg'),
+       url('../fonts/Campton-SemiBold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 ///Fonts///
 ///
 ///Size
@@ -42,7 +56,7 @@ $msuif-font-weight-semibold: 600;
 $msuif-font-weight-bold: 700;
 ///
 ///Family
-$msuif-font-family-primary: "Campton-Book", "Helvetica Neue", Helvetica, sans-serif;
+$msuif-font-family-primary: "Campton-SemiBold", "Campton-Book", "Helvetica Neue", Helvetica, sans-serif;
 ///
 $msuif-font-family-secondary: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 ///
