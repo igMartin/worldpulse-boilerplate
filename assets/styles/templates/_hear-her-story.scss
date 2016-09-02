@@ -136,16 +136,17 @@
 
     &--actions {
       display: flex;
+      align-items: center;
 
       span {
+        font-size: $msuif-font-size-jumbo;
         color: $color-orange;
-        display: flex;
+      }
 
-        p {
-          margin: 0;
-          padding-right: toem(20px);
-          padding-left: toem(10px);
-        }
+      p {
+        padding-right: toem(20px);
+        padding-left: toem(10px);
+        color: $color-orange;
       }
     }
   }
