@@ -5,9 +5,7 @@
   background-color: $color-ivory;
   text-align: center;
   padding: 4% 15%;
-  @include respond-to('ismobile'){
-		padding: 4% 0;
-	};
+
   h1 {
     color: $color-orange;
     margin-bottom: torem(30px);
@@ -101,6 +99,7 @@
 
           &--flag {
             border-radius: 0px;
+            height: toem(60px);
             width: toem(48px);
           }
         }

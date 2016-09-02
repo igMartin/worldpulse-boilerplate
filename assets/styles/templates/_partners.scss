@@ -19,12 +19,12 @@
     display: flex;
     justify-content: space-around;
     align-items: baseline;
-    // width: 95%;
+    width: 95%;
     margin: auto;
     padding-bottom: toem(50px);
 
     &--individual {
-      width: 31%;
+      width: 31.5%;
       padding: 20px 20px 0 20px;
       background-color: $color-white;
       border: torem(3px) solid $color-gray;
