@@ -27,6 +27,10 @@ body {
   }
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
 img {
   display: inline-block;
   height: auto;
@@ -55,9 +59,8 @@ nav {
 
 hr {
   width: 95%;
-  margin-top: toem(150px);
+  margin-top: toem(80px);
   height: toem(2px);
-  color: $color-gray;
   background-color: $color-gray;
 }
 

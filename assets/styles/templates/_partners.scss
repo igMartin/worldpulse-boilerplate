@@ -1,50 +1,67 @@
 // PARTNERS
 
+@mixin profile {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 95%;
+  margin: auto;
+  margin-bottom: toem(50px);
+}
+
+@mixin individual {
+  width: 31.5%;
+  padding: 20px 20px 0 20px;
+  background-color: $color-ivory;
+  border: torem(3px) solid $color-gray;
+  border-radius: torem(15px);
+  min-height: toem(420px);
+}
+
+@mixin photo{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 180px;
+  width: 180px;
+}
+
+
 .partners {
   width: 100%;
   height: auto;
   text-align: center;
-  padding: 5% 8%;
-  @include respond-to('ismobile'){
-		padding: 5% 0;
-	};
-  background-color: $color-white;;
+  padding: 5% 8% 1% 8%;
+  background-color: $color-ivory;
 
   h1 {
-    padding-bottom: torem(40px);
+    margin-bottom: torem(60px);
     color: $color-orange;
   }
 
+
   &__profile {
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    width: 95%;
-    margin: auto;
-    padding-bottom: toem(50px);
+    @include profile;
 
     &--individual {
-      width: 31.5%;
-      padding: 20px 20px 0 20px;
-      background-color: $color-white;
-      border: torem(3px) solid $color-gray;
-      border-radius: torem(15px);
-      min-height: toem(420px);
+      @include individual;
 
-      img {
-        height: toem(150px);
-        width: toem(150px);
-        border-radius: 50%;
+      &__photo {
+        display: flex;
+        justify-content: center;
+
+        &--unit {
+          @include photo;
+        }
       }
 
-      &--naming {
-
-        h4, h5 {
-          margin: 0;
-        }
+      &__naming {
 
         p {
           text-align: center;
+          margin-top: toem(10px);
         }
 
         img {
@@ -53,17 +70,59 @@
           border-radius: 0px;
         }
       }
-
-      @include respond-to('ismobile'){
-        margin: auto;
-        width: 90%;
-        margin-bottom: toem(20px);
-      }
     }
 
     @include respond-to('ismobile') {
-       display: block;
-       width: 90%;
+       display: none;
      }
+  }
+
+  &__mobile {
+    display: none;
+    font-size: $msuif-font-size-jumbo;
+    align-items: center;
+    margin-bottom: toem(20px);
+
+    &--arrow {
+      font-size: $msuif-font-size-jumbo;
+    }
+
+    &--profile {
+      @include profile;
+      margin-bottom: 0;
+
+      &__individual {
+        @include individual;
+        width: 90%;
+        min-height: toem(300px);
+
+        &__photo {
+          display: flex;
+          justify-content: center;
+
+          &--unit {
+            @include photo;
+          }
+        }
+
+        &__naming {
+
+          p {
+            margin-top: toem(10px);
+            text-align: center;
+          }
+
+          img {
+            height: auto;
+            width: toem(35px);
+            border-radius: 0px;
+          }
+        }
+      }
+    }
+
+    @include respond-to('ismobile'){
+      display: flex;
+    }
   }
 }
