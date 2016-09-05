@@ -15,13 +15,13 @@ $msuif-headers-h1-font-size: 				torem(48px);
 $msuif-headers-h1-font-size-mobile: 				torem(38px);
 ///
 $msuif-headers-h2-font-size: 				torem(56px);
-$msuif-headers-h2-font-size-mobile: 				torem(48px);
+$msuif-headers-h2-font-size-mobile: 				torem(44px);
 ///
 $msuif-headers-h3-font-size: 				torem(38px);
 $msuif-headers-h3-font-size-mobile: 				torem(34px);
 ///
 $msuif-headers-h4-font-size: 				torem(24px);
-$msuif-headers-h4-font-size-mobile: 				torem(24px);
+$msuif-headers-h4-font-size-mobile: 				torem(18px);
 ///
 $msuif-headers-h5-font-size: 				torem(24px);
 $msuif-headers-h5-font-size-mobile: 				torem(16px);
@@ -39,10 +39,10 @@ $msuif-headers-small-p-font-size-mobile:   torem(16px);
 h1 {
   font-size: $msuif-headers-h1-font-size;
   font-family: $msuif-font-family-quaternary;
-  line-height: 1.2;
 
   @include respond-to('ismobile') {
     font-size: $msuif-headers-h1-font-size-mobile;
+    line-height: 1;
   }
 }
 
@@ -51,10 +51,10 @@ h2 {
   font-weight: $msuif-font-weight-semibold;
   font-family: $msuif-font-family-primary;
   text-transform: uppercase;
-  line-height: 1.4;
 
   @include respond-to('ismobile') {
     font-size: $msuif-headers-h2-font-size-mobile;
+    line-height: 1;
   }
 }
 

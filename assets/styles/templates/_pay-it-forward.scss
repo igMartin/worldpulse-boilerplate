@@ -1,0 +1,40 @@
+////
+/// Home
+/// @group Home
+/// @author MS
+////
+
+.pay-it-forward {
+
+  &__jumbotron {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: $color-red; //fallback color
+    padding: 50px 0;
+
+    &--wrapper {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      color: $color-white;
+
+      h4 {
+        margin-bottom: toem(10px);
+      }
+
+      h2 {
+        margin-top: toem(60px);
+        margin-bottom: toem(5px);
+      }
+
+      button {
+        margin-top: toem(100px);
+
+        @include respond-to('ismobile') {
+          margin-top: toem(60px);
+        }
+      }
+    }
+  }
+}
