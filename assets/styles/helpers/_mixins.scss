@@ -81,3 +81,17 @@
     @content;
   }
 }
+
+// Main wrapper
+@mixin main_wrapper ($background-color:$color-white,$lateral-padding:8%) {
+	background-color: $background-color;
+  text-align: center;
+  padding: 5% $lateral-padding;
+	@include respond-to('ismobile'){
+		padding: 5% 0;
+	};
+	h1 {
+    color: $color-orange;
+    margin-bottom: torem(30px);
+  }
+}

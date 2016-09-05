@@ -2,14 +2,7 @@
 
 .hear-her-story {
   position: relative;
-  background-color: $color-ivory;
-  text-align: center;
-  padding: 4% 15%;
-
-  h1 {
-    color: $color-orange;
-    margin-bottom: torem(30px);
-  }
+  @include main_wrapper ($color-white,15%);
 
   &__nav {
     color: $color-gray;

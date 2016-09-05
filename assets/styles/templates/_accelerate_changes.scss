@@ -1,0 +1,36 @@
+.accelerate{
+  @include main_wrapper($color-ivory);
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    @include respond-to('ismobile'){
+      justify-content: center;
+    }
+    flex-flow: row wrap;
+    padding:5% 0;
+    margin: auto;
+    &__box{
+      max-width: torem(280px);
+      &--item {
+        @include respond-to('ismobile') {
+          display:flex;
+          flex-flow:row;
+        }
+      }
+      h6, h4{
+       text-align: left;
+       margin: 1% 0;
+      }
+      img{
+        margin-bottom: torem(15px);
+        width:auto;
+        height:torem(200px);
+        @include respond-to('ismobile') {
+          width:torem(80px);
+          height:auto;
+        }
+      }
+    }
+  }
+}
