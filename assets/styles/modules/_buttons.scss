@@ -26,6 +26,8 @@
     &--large {
       padding:0;
       width: torem(315px);
+      height: torem(70px);
+      font-size: $msuif-font-size-jumbo;
       @include respond-to('ismobile') {
           width: torem(280px);
       };

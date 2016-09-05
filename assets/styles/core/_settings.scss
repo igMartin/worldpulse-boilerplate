@@ -92,9 +92,11 @@ $color-white: #FFFFFF;
 ///
 $color-ivory: #FCFCFC;
 ///
-$msuif-font-color: $color-black;
+$msuif-font-color: tint($color-black,35%);
 ///
 $msuif-background: $color-red;
+///
+$msuif-font-color-secondary: tint($color-black,30%);
 
 
 /// Breakpoints ///
