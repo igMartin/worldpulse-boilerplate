@@ -1,50 +1,73 @@
 // PARTNERS
 
+@mixin profile {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 95%;
+  margin: auto;
+  // margin-bottom: toem(50px);
+}
+
+@mixin individual {
+  width: 31.5%;
+  padding: 20px 20px 0 20px;
+  background-color: $color-ivory;
+  border-radius: torem(15px);
+  min-height: toem(420px);
+}
+
+@mixin photo{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 180px;
+  width: 180px;
+}
+
+
 .partners {
   width: 100%;
   height: auto;
   text-align: center;
-  padding: 5% 8%;
-  @include respond-to('ismobile'){
-		padding: 5% 0;
-	};
-  background-color: $color-white;;
+  background-color: $color-lightgray;
 
   h1 {
-    padding-bottom: torem(40px);
+    padding: toem(20px);
     color: $color-orange;
   }
 
+  button {
+    margin-top: toem(20px);
+    margin-bottom: toem(40px);
+  }
+
   &__profile {
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    width: 95%;
-    margin: auto;
-    padding-bottom: toem(50px);
+    @include profile;
 
     &--individual {
-      width: 31.5%;
-      padding: 20px 20px 0 20px;
-      background-color: $color-white;
-      border: torem(3px) solid $color-gray;
-      border-radius: torem(15px);
-      min-height: toem(420px);
+      @include individual;
 
-      img {
-        height: toem(150px);
-        width: toem(150px);
-        border-radius: 50%;
+      &__photo {
+        display: flex;
+        justify-content: center;
+
+        &--unit {
+          @include photo;
+        }
       }
 
-      &--naming {
+      &__naming {
 
-        h4, h5 {
-          margin: 0;
+        h4:first-child {
+          margin-top: toem(10px);
         }
 
         p {
           text-align: center;
+          margin-top: toem(10px);
         }
 
         img {
@@ -53,17 +76,67 @@
           border-radius: 0px;
         }
       }
-
-      @include respond-to('ismobile'){
-        margin: auto;
-        width: 90%;
-        margin-bottom: toem(20px);
-      }
     }
 
     @include respond-to('ismobile') {
-       display: block;
-       width: 90%;
+       display: none;
      }
+  }
+
+  &__mobile {
+    display: none;
+    font-size: $msuif-font-size-jumbo;
+    align-items: center;
+    margin-bottom: toem(20px);
+
+    &--arrow {
+      font-size: $msuif-font-size-super;
+      color: $color-orange;
+      padding: 0 5px;
+    }
+
+    &--profile {
+      @include profile;
+      margin-bottom: 0;
+
+      &__individual {
+        @include individual;
+        width: 100%;
+        min-height: toem(260px);
+
+        &__photo {
+          display: flex;
+          justify-content: center;
+
+          &--unit {
+            @include photo;
+            height: 150px;
+            width: 150px;
+          }
+        }
+
+        &__naming {
+
+          h4:first-child {
+            margin-top: toem(10px);
+          }
+
+          p {
+            margin-top: toem(10px);
+            text-align: center;
+          }
+
+          img {
+            height: auto;
+            width: toem(25px);
+            border-radius: 0px;
+          }
+        }
+      }
+    }
+
+    @include respond-to('ismobile'){
+      display: flex;
+    }
   }
 }

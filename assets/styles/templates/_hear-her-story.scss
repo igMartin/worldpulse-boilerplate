@@ -4,11 +4,15 @@
   position: relative;
   background-color: $color-ivory;
   text-align: center;
-  padding: 4% 15%;
+  padding: 5% 15%;
 
   h1 {
     color: $color-orange;
     margin-bottom: torem(30px);
+
+    @include respond-to('ismobile') {
+      padding: 0 40px;
+    }
   }
 
   &__nav {
@@ -23,7 +27,11 @@
 
       li {
         padding-bottom: toem(20px);
-        padding-left: toem(20px);
+        padding-left: toem(5px);
+
+        &:last-child {
+          padding-right: toem(5px);
+        }
       }
     }
 
@@ -43,7 +51,7 @@
       display: none;
       position: absolute;
       z-index: 1;
-      top: 15%;
+      top: 14%;
       right: 8%;
       text-align: left;
       padding: 1.5%;
@@ -61,18 +69,35 @@
       }
 
       @include respond-to('ismobile') {
-        top: 18.5%;
+        top: 12%;
+        font-size: $msuif-font-size;
+      }
+    }
+
+    @include respond-to('ismobile') {
+      font-size: $msuif-font-size;
+      margin-bottom: toem(20px);
+
+      li:nth-child(n+4):not(:last-child){
+        display: none;
       }
     }
   }
 
 
   &__articles {
-    padding: 2% 8%;
+    padding: 0 8%;
     text-align: left;
+    margin-bottom: toem(80px);
 
     article {
-      margin-bottom: torem(80px);
+      padding: 2%;
+      margin-bottom: torem(40px);
+    }
+
+    &--selected {
+      border: toem(2px) solid $color-gray;
+      border-radius: toem(15px);
     }
 
     &--header {
@@ -86,21 +111,29 @@
           width: torem(85px);
           border-radius: 50%;
           margin-right: toem(20px);
+
+          @include respond-to('ismobile') {
+            height: toem(60px);
+            width: toem(60px);
+          }
         }
 
         &__wrapper {
           flex: 8;
 
           h5 {
-            margin: 0;
             padding-top: toem(3px);
             font-style: italic;
           }
 
           &--flag {
             border-radius: 0px;
-            height: toem(60px);
-            width: toem(48px);
+            height: auto;
+            width: toem(45px);
+
+            @include respond-to('ismobile') {
+              width: toem(30px);
+            }
           }
         }
 
@@ -117,10 +150,12 @@
             background-color: $color-blue;
             color: $color-white;
             text-align: center;
-            line-height: toem(5px);
+            line-height: toem(80px);
 
             @include respond-to('ismobile') {
-              display: none;
+              height: toem(50px);
+              width: toem(50px);
+              line-height: toem(50px);
             }
           }
         }
@@ -128,9 +163,10 @@
     }
 
     &--text {
+      margin-bottom: toem(20px);
 
       h4 {
-        margin: 0;
+        margin-bottom: toem(10px);
       }
     }
 
@@ -145,9 +181,17 @@
 
       p {
         padding-right: toem(20px);
-        padding-left: toem(10px);
+        padding-left: toem(5px);
         color: $color-orange;
       }
     }
+
+    @include respond-to('ismobile') {
+      padding: 0 3%;
+    }
+  }
+
+  @include respond-to('ismobile') {
+    padding: 10% 0;
   }
 }
