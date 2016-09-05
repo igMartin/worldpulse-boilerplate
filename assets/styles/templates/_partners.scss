@@ -81,6 +81,10 @@
     @include respond-to('ismobile') {
        display: none;
      }
+
+     @include respond-to('ipad') {
+        display: none;
+      }
   }
 
   &__mobile {
@@ -136,6 +140,10 @@
     }
 
     @include respond-to('ismobile'){
+      display: flex;
+    }
+
+    @include respond-to('ipad'){
       display: flex;
     }
   }
