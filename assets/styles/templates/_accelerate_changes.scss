@@ -29,6 +29,7 @@
         @include respond-to('ismobile') {
           width:torem(80px);
           height:auto;
+          margin-right: 5%;
         }
       }
     }
