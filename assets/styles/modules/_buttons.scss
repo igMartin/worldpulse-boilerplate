@@ -14,10 +14,12 @@
 @mixin button_size {
     &--medium {
       padding: 15px 50px;
-      @include respond-to('ismobile') {
-        padding: 10px 35px;
-      }
       font-size: $msuif-font-size-jumbo;
+
+      @include respond-to('ismobile') {
+        padding: 12px 40px;
+        font-size: $msuif-font-size-big;
+      }
     }
     &--small {
       padding: 5px;
@@ -80,17 +82,17 @@
     @include button_size;
 
     &--primary {
-      @include button($color-white, transparent, $color-white, 3px);
+      @include button($color-white, transparent, $color-white, 2px);
       border-radius: torem(50px);
     }
 
     &--secondary {
-      @include button($color-white, $color-red, $color-white, 3px);
+      @include button($color-white, $color-red, $color-white, 2px);
       border-radius: torem(50px);
     }
 
     &--tertiary {
-      @include button($color-orange, transparent, $color-orange, 3px);
+      @include button($color-orange, transparent, $color-orange, 2px);
       border-radius: torem(50px);
     }
   }
