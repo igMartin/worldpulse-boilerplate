@@ -6,14 +6,13 @@
   align-items: baseline;
   width: 95%;
   margin: auto;
-  margin-bottom: toem(50px);
+  // margin-bottom: toem(50px);
 }
 
 @mixin individual {
   width: 31.5%;
   padding: 20px 20px 0 20px;
   background-color: $color-ivory;
-  border: torem(3px) solid $color-gray;
   border-radius: torem(15px);
   min-height: toem(420px);
 }
@@ -33,14 +32,17 @@
   width: 100%;
   height: auto;
   text-align: center;
-  padding: 5% 8% 1% 8%;
-  background-color: $color-ivory;
+  background-color: $color-lightgray;
 
   h1 {
-    margin-bottom: torem(60px);
+    padding: toem(20px);
     color: $color-orange;
   }
 
+  button {
+    margin-top: toem(20px);
+    margin-bottom: toem(40px);
+  }
 
   &__profile {
     @include profile;
@@ -58,6 +60,10 @@
       }
 
       &__naming {
+
+        h4:first-child {
+          margin-top: toem(10px);
+        }
 
         p {
           text-align: center;
@@ -84,7 +90,9 @@
     margin-bottom: toem(20px);
 
     &--arrow {
-      font-size: $msuif-font-size-jumbo;
+      font-size: $msuif-font-size-super;
+      color: $color-orange;
+      padding: 0 5px;
     }
 
     &--profile {
@@ -93,8 +101,8 @@
 
       &__individual {
         @include individual;
-        width: 90%;
-        min-height: toem(300px);
+        width: 100%;
+        min-height: toem(260px);
 
         &__photo {
           display: flex;
@@ -102,10 +110,16 @@
 
           &--unit {
             @include photo;
+            height: 150px;
+            width: 150px;
           }
         }
 
         &__naming {
+
+          h4:first-child {
+            margin-top: toem(10px);
+          }
 
           p {
             margin-top: toem(10px);
@@ -114,7 +128,7 @@
 
           img {
             height: auto;
-            width: toem(35px);
+            width: toem(25px);
             border-radius: 0px;
           }
         }

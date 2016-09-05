@@ -81,7 +81,7 @@ module.exports = function (grunt) {
         tasks: [
           'sass:ui',
           'postcss',
-          'sassdoc'
+          // 'sassdoc'
         ],
         options: {
           spawn: false
