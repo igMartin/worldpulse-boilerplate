@@ -37,7 +37,9 @@
     text-align: center;
 
     @include respond-to('ismobile') {
-        width: torem(280px);
+        width: torem(180px);
+        height: torem(50px);
+        font-size: $msuif-font-size-big
     };
   }
 }
