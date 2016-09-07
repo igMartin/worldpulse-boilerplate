@@ -107,8 +107,8 @@ $msuif-font-color-tertiary: tint($color-black,45%);
 /// Breakpoints ///
 ///
 $msuif-breakpoints: (
-  'desktop': (min-width: 1025px),
-  'ipad': (min-width: 501px, max-width: 1024px),
+  'desktop': (min-width: 1026px),
+  'ipad': (min-width: 501px, max-width: 1025px),
   'ismobile': (max-width: 500px)
 );
 

@@ -60,7 +60,7 @@
       display: flex;
       align-items: center;
 
-      i {
+      span {
         margin-left: torem(8px);
         font-size: torem(25px);
       }
@@ -69,7 +69,7 @@
     &--search {
       display: flex;
       align-items: center;
-      i {
+      span {
         margin-right: torem(8px);
         font-size: torem(20px);
       }
