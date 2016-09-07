@@ -13,7 +13,7 @@
     background-color: $color-red; //fallback color
 
     &--wrapper {
-      padding: 10% 0 3% 0;
+      padding: 20% 0 0 0;
       width: 65%;
       margin: auto;
       text-align: center;
@@ -27,7 +27,6 @@
       &__inner {
         width: 92%;
         h2 {
-          margin-top: toem(120px);
           margin-bottom: toem(20px);
         }
       }
