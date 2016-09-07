@@ -2,19 +2,25 @@
 
 .blockquote {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  background-color: $color-lighterblue;
+  background-color: $color-blue;
   text-align: center;
 
   &__wrapper {
     flex: 6;
-    color: $color-blue;
-    padding: 5% 0 5% 0;
+    color: $color-white;
+    padding: 8% 5%;
 
     img {
+      margin: 30px 0;
       border-radius: 50%;
-      border: torem(6px) solid $color-white;
+      border: torem(2px) solid $color-white;
+    }
+
+    h4 {
+      margin-bottom: toem(20px);
+      color: $color-white;
     }
   }
 
@@ -22,23 +28,47 @@
     flex: 1;
     color: $color-white;
     font-size: $msuif-font-size-super;
+
+    @include respond-to('ismobile') {
+      display: none;
+    }
   }
 }
 
 .companies {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: torem(180px);
-  width: 100%;
   background-color: $color-sand;
 
   &::before {
     content: "";
     position: absolute;
-    left: 48%;
+    left: calc(50% - 3em);
     width: 0;
     height: 0;
-    border: 2em solid $color-lighterblue;
-    border-color: transparent transparent $color-lighterblue $color-lighterblue;
+    border: 30px solid $color-blue;
+    border-color: transparent transparent $color-blue $color-blue;
     transform-origin: 0 0;
     transform: rotate(-45deg);
+  }
+
+  &__wrapper {
+    flex: 6;
+  }
+
+  &__arrow {
+    flex: 1;
+    color: $color-blue;
+    font-size: $msuif-font-size-super;
+
+    @include respond-to('desktop') {
+      display: none;
+    }
+
+    @include respond-to('ipad') {
+      display: none;
+    }
   }
 }

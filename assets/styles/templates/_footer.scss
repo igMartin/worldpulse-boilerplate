@@ -6,53 +6,157 @@
 
 .footer {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   background-color: $color-red;
   color: $color-white;
-  font-weight: bold;
-  padding: 0 0 0 2%;
+  padding: 2%;
+
+  @include respond-to('ismobile') {
+    display: block;
+  }
+
+  @include respond-to('ipad') {
+    display: block;
+  }
 
   &__links {
-    flex: 5;
+    flex: 4;
     padding-right: 2%;
 
     ul {
       display: flex;
       justify-content: space-around;
 
-      li>a:first-child>p {
-        margin-bottom: torem(30px);
+      li>a>p {
+        margin-bottom: toem(20px);
       }
+    }
+
+    &--mobile {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        margin-top: toem(30px);
+
+        li>a>p {
+          margin-bottom: toem(20px);
+        }
+      }
+
+      @include respond-to('desktop') {
+        display: none;
+      }
+    }
+
+    @include respond-to('ismobile') {
+      display: none;
+    }
+
+    @include respond-to('ipad') {
+      display: none;
     }
   }
 
   &__email {
-    flex: 3;
+    flex: 4;
+
+    p {
+      margin-bottom: toem(10px);
+
+      @include respond-to('ismobile') {
+        margin-top: toem(15px);
+      }
+
+      @include respond-to('ipad') {
+        margin-top: toem(15px);
+      }
+    }
 
     &--wrapper {
       display: flex;
+      flex-wrap: wrap;
 
       input {
-        flex-grow: 2;
+        margin-bottom: toem(8px);
+        color: $color-black;
+        font-size: $msuif-font-size-small;
+
+        &[type="text"] {
+          flex: 1;
+
+          @include respond-to('ismobile') {
+            width: 49%;
+          }
+
+          @include respond-to('ipad') {
+            width: 49%;
+          }
+
+          &:first-child {
+            margin-right: toem(8px);
+          }
+        }
+
+        &[type="email"] {
+          width: 100%;
+        }
+
+        &::placeholder {
+          color: $color-black;
+          font-size: $msuif-font-size-small;
+        }
+      }
+
+      button {
+        margin-top: toem(8px);
       }
     }
   }
 
   &__social {
-    flex: 1;
-    padding: 0 0 0 5%;
-    align-content: space-around;
+    display: flex;
+    justify-content: space-around;
+    flex: 2;
+    padding-left: 3%;
 
     ul {
       display: flex;
+      align-items: center;
       flex-flow: row wrap;
-      font-size: torem(25px);
+      margin: 0;
+
+      @include respond-to('ismobile') {
+        justify-content: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin-top: toem(25px);
+      }
+
+      @include respond-to('ipad') {
+        justify-content: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin-top: toem(25px);
+      }
 
       li {
-        flex-basis: 30%;
+        flex-basis: 33%;
+        font-size: 35px;
 
-        &:nth-child(-n+3){
-          margin-bottom: torem(20px);
+        @include respond-to('ismobile') {
+          text-align: center;
+        }
+
+        @include respond-to('ipad') {
+          text-align: center;
+        }
+
+        &:nth-child(-n+3) {
+          margin-bottom: toem(8px);
+        }
+
+        &:nth-child(n+4) {
+          font-size: 50px;
         }
       }
     }

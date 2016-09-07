@@ -12,37 +12,44 @@
 }
 
 @mixin button_size {
-    &--medium {
-      padding: 15px 50px;
-      font-size: $msuif-font-size-jumbo;
 
-      @include respond-to('ismobile') {
-        padding: 12px 40px;
-        font-size: $msuif-font-size-big;
-      }
+  &--small {
+    padding: 8px 25px;
+    font-size: $msuif-font-size-small;
+    width: auto;
+  }
+
+  &--medium {
+    padding: 15px 50px;
+    font-size: $msuif-font-size-jumbo;
+
+    @include respond-to('ismobile') {
+      padding: 12px 40px;
+      font-size: $msuif-font-size-big;
     }
-    &--small {
-      padding: 5px;
-      width: auto;
-    }
-    &--large {
-      padding:0;
-      width: torem(315px);
-      height: torem(70px);
-      font-size: $msuif-font-size-jumbo;
-      @include respond-to('ismobile') {
-          width: torem(280px);
-      };
-      text-align: center;
-    }
+  }
+
+  &--large {
+    padding:0;
+    width: torem(315px);
+    height: torem(70px);
+    font-size: $msuif-font-size-jumbo;
+    text-align: center;
+
+    @include respond-to('ismobile') {
+        width: torem(280px);
+    };
+  }
 }
+
+
 .button {
 
   &__square{
     @include button_size;
+
     &--primary {
       @include button($color-white, $color-black, $color-black, 1px);
-
     }
 
     &--secondary {
@@ -54,27 +61,6 @@
       padding: 5px 8px 5px 8px;
       font-weight: normal;
       font-size: $msuif-font-size-small;
-    }
-  }
-
-  &__roundside {
-    @include button_size;
-    &--primary {
-      @include button($color-white, $color-blue, $color-blue, 2px);
-      border-radius: 0 50px 50px 0;
-      padding: 8px 40px;
-    }
-
-    &--secondary {
-      @include button($color-orange, $color-white, $color-white, 2px);
-      border-radius: 0 50px 50px 0;
-      padding: 8px 40px;
-    }
-
-    &--tertiary {
-      @include button($color-white, $color-red, $color-white, 2px);
-      border-radius: 0 50px 50px 0;
-      padding: 8px 40px;
     }
   }
 
@@ -94,6 +80,28 @@
     &--tertiary {
       @include button($color-orange, transparent, $color-orange, 2px);
       border-radius: torem(50px);
+    }
+  }
+
+  &__roundside {
+    @include button_size;
+
+    &--primary {
+      @include button($color-white, $color-blue, $color-blue, 2px);
+      border-radius: 0 50px 50px 0;
+      padding: 8px 40px;
+    }
+
+    &--secondary {
+      @include button($color-orange, $color-white, $color-white, 2px);
+      border-radius: 0 50px 50px 0;
+      padding: 8px 40px;
+    }
+
+    &--tertiary {
+      @include button($color-white, $color-red, $color-white, 2px);
+      border-radius: 0 50px 50px 0;
+      padding: 8px 40px;
     }
   }
 }
