@@ -17,27 +17,9 @@
   min-height: toem(420px);
 }
 
-@mixin photo{
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50%;
-  overflow: hidden;
-  height: 180px;
-  width: 180px;
-}
-
 
 .partners {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  background-color: $color-lightgray;
-
-  h1 {
-    padding: toem(20px);
-    color: $color-orange;
-  }
+  @include main-wrapper($color-lightgray);
 
   button {
     margin-top: toem(20px);
@@ -55,7 +37,7 @@
         justify-content: center;
 
         &--unit {
-          @include photo;
+          @include photo-circle;
         }
       }
 
@@ -71,9 +53,7 @@
         }
 
         img {
-          height: auto;
-          width: toem(45px);
-          border-radius: 0px;
+          @include flag-image();
         }
       }
     }
@@ -113,7 +93,7 @@
           justify-content: center;
 
           &--unit {
-            @include photo;
+            @include photo-circle();
             height: 150px;
             width: 150px;
           }

@@ -1,23 +1,7 @@
 // hear-her-story section
 
 .hear-her-story {
-  position: relative;
-  background-color: $color-ivory;
-  text-align: center;
-  padding: 5% 15%;
-
-  h1 {
-    color: $color-orange;
-    margin-bottom: torem(30px);
-
-    @include respond-to('ismobile') {
-      padding: 0 40px;
-    }
-
-    @include respond-to('ipad') {
-      padding: 0 40px;
-    }
-  }
+  @include main-wrapper($color-ivory,15%);
 
   &__nav {
     color: $color-gray;
@@ -125,20 +109,8 @@
         margin-bottom: toem(10px);
 
         &__photo {
-          height: torem(85px);
-          width: torem(85px);
-          border-radius: 50%;
+          @include photo-circle(small);
           margin-right: toem(20px);
-
-          @include respond-to('ismobile') {
-            height: toem(60px);
-            width: toem(60px);
-          }
-
-          @include respond-to('ipad') {
-            height: toem(60px);
-            width: toem(60px);
-          }
         }
 
         &__wrapper {
@@ -150,17 +122,7 @@
           }
 
           &--flag {
-            border-radius: 0px;
-            height: auto;
-            width: toem(45px);
-
-            @include respond-to('ismobile') {
-              width: toem(30px);
-            }
-
-            @include respond-to('ipad') {
-              width: toem(30px);
-            }
+            @include flag-image();
           }
         }
 
@@ -207,10 +169,35 @@
       display: flex;
       align-items: center;
 
-      span {
+      .ms-icon {
         font-size: $msuif-font-size-jumbo;
         color: $color-orange;
+        @mixin icon-value-position{
+          position: relative;
+          font-size: 10px;
+          text-align: center;
+          font-family: $msuif-font-family-secondary;
+        }
+
+        .icon-speach__value {
+          @include icon-value-position;
+          top: -8px;
+          left: -18px;
+        }
+        .icon-heart__value{
+          @include icon-value-position;
+          top: -8px;
+          left: -18px;
+        }
       }
+
+      .icon-over_heart,
+      .icon-over_speach {
+       .icon-speach__value, .icon-heart__value {
+         color: $color-white;
+         left: -20px;
+       }
+     }
 
       p {
         padding-right: toem(20px);

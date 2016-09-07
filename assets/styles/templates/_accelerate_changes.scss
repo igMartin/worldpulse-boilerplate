@@ -1,5 +1,5 @@
 .accelerate{
-  @include main_wrapper($color-lightgray);
+  @include main-wrapper($color-lightgray);
 
   &__container{
     display: flex;
