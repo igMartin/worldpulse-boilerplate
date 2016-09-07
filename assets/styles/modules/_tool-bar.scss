@@ -2,11 +2,20 @@
 
 .tool-bar {
   background-color: $color-white;
+  color: $msuif-font-color-tertiary;
 
   &__wrapper {
     display: flex;
     justify-content: flex-end;
     height: torem(45px);
+
+    @include respond-to('ipad') {
+      justify-content: center;
+    }
+
+    @include respond-to('ismobile') {
+      display: none;
+    }
   }
 
   &__links {
@@ -15,7 +24,21 @@
     justify-content: flex-end;
 
     >li {
-      margin-right: 60px;
+      margin-right: toem(60px);
+
+      @include respond-to('ipad') {
+        justify-content: space-between;
+        margin-right: toem(40px);
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      // @include respond-to('ismobile') {
+      //   margin-right: toem(30px);
+      // }
+
 
       ul {
         display: flex;

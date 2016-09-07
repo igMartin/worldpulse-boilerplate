@@ -94,17 +94,19 @@ $color-white: #FFFFFF;
 ///
 $color-ivory: #FCFCFC;
 ///
-$msuif-font-color: tint($color-black,35%);
-///
 $msuif-background: $color-red;
 ///
+$msuif-font-color: tint($color-black,35%);
+///
 $msuif-font-color-secondary: tint($color-black,30%);
+///
+$msuif-font-color-tertiary: tint($color-black,45%);
+///
 
 
 /// Breakpoints ///
 ///
 $msuif-breakpoints: (
-  'desktop-fhd': (max-width: 1920px),
   'desktop': (min-width: 1025px),
   'ipad': (min-width: 501px, max-width: 1024px),
   'ismobile': (max-width: 500px)
