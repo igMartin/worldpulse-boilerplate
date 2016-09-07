@@ -83,7 +83,7 @@
 }
 
 // Main wrapper
-@mixin main-wrapper ($background-color:$color-white,$lateral-padding:8%) {
+@mixin main_wrapper ($background-color:$color-white,$lateral-padding:8%) {
 	background-color: $background-color;
   text-align: center;
   padding: 5% $lateral-padding;
@@ -93,56 +93,5 @@
 	h1 {
     color: $color-orange;
     margin-bottom: torem(30px);
-		@include respond-to('ismobile') {
-      padding: 0 40px;
-    }
-
-    @include respond-to('ipad') {
-      padding: 0 40px;
-    }
   }
-}
-
-//photo profile inside of circle
-@mixin photo-circle ($size:large) {
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: cover;
-  border-radius: 50%;
-  overflow: hidden;
-
-  @if $size == large {
-    height: 180px;
-    width: 180px;
-
-  }@else if $size == small {
-
-    height: torem(85px);
-    width: torem(85px);
-    @include respond-to('ismobile') {
-      height: toem(60px);
-      width: toem(60px);
-  	}
-
-    @include respond-to('ipad') {
-      height: toem(60px);
-      width: toem(60px);
-    }
-
-  }
-}
-
-//global flags images
-@mixin flag-image {
-	border-radius: 0px;
-	height: auto;
-	width: toem(30px);
-
-	@include respond-to('ismobile') {
-		width: toem(20px);
-	}
-
-	@include respond-to('ipad') {
-		width: toem(20px);
-	}
 }

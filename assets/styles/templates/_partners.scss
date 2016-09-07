@@ -17,9 +17,27 @@
   min-height: toem(420px);
 }
 
+@mixin photo{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 180px;
+  width: 180px;
+}
+
 
 .partners {
-  @include main-wrapper($color-lightgray);
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: $color-lightgray;
+
+  h1 {
+    padding: toem(20px);
+    color: $color-orange;
+  }
 
   button {
     margin-top: toem(20px);
@@ -37,7 +55,7 @@
         justify-content: center;
 
         &--unit {
-          @include photo-circle;
+          @include photo;
         }
       }
 
@@ -53,7 +71,9 @@
         }
 
         img {
-          @include flag-image();
+          height: auto;
+          width: toem(45px);
+          border-radius: 0px;
         }
       }
     }
@@ -93,7 +113,7 @@
           justify-content: center;
 
           &--unit {
-            @include photo-circle();
+            @include photo;
             height: 150px;
             width: 150px;
           }
