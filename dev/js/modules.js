@@ -14,7 +14,7 @@ $('.c-tabs__tab').on('click',function(){
 });
 
 
-//dropdown
+//hear-her-story dropdown
 
 $('.more-id').on("click",function(){
   var more =  $(this).attr("id");
@@ -24,4 +24,16 @@ $('.more-id').on("click",function(){
 $('#more').on('click', function(){
   $(this).toggleClass('hear-her-story__nav--active');
   $('#more-drop').toggle();
+});
+
+// menu dropdown
+
+$('.nav__mobile--menu').on('click', function(){
+  $('.nav__mobile--dropdown').show();
+});
+
+// menu dropdown close
+
+$('.nav__mobile--dropdown--close').on('click', function(){
+  $('.nav__mobile--dropdown').hide();
 });

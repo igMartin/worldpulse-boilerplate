@@ -69,9 +69,10 @@
     </ul>
   </div>
   <div class="nav__mobile">
-    <span class="nav__mobile--menu"><i class="fa fa-bars" aria-hidden="true"></i></span>
+    <a class="nav__mobile--menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
     <div class="nav__mobile--dropdown">
       <ul>
+        <li class="nav__mobile--dropdown--close">X</li>
         <li><p><a href="#">Changemakers</a></p></li>
         <li><p><a href="#">Story Awards</a></p></li>
         <li><p><a href="#">Resources</a></p></li>
@@ -82,15 +83,17 @@
         <hr>
         <li><p class="small-p"><a href="#">English</a></p></li>
         <li><p class="small-p"><a href="#">Francais</a></p></li>
-        <li><p class="small-p"><a href="#">Select Other Language</a></p></li>
-        <span class="fa fa-caret-down"></span>
-        <hr>
-        <li class="">
-          <span class="fa fa-search"></span>
-          <p class="small-p">Search</p>
+        <li  class="nav__mobile--dropdown--flex">
+          <p class="small-p"><a href="#">Select Other Language</a></p>
+          <span class="fa fa-caret-right"></span>
         </li>
         <hr>
-        <li><p class="small-p"><a href="#">Give</a></p></li>
+        <li class="nav__mobile--dropdown--flex">
+          <span class="fa fa-search"></span>
+          <p>Search</p>
+        </li>
+        <hr>
+        <li><p><a href="#">Give</a></p></li>
       </ul>
     </div>
   </div>
