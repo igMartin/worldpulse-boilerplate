@@ -1,21 +1,30 @@
 .accelerate{
   @include main-wrapper($color-lightgray);
-
+  @include respond-to('ismobile'){
+    h1{
+        padding: 0 9px;
+    }
+  }
   &__container{
     display: flex;
     justify-content: space-between;
-    @include respond-to('ismobile'){
-      justify-content: center;
-    }
     flex-flow: row wrap;
     padding:5% 0;
     margin: auto;
+    @include respond-to('ismobile'){
+      justify-content: center;
+      margin: 0 2%;
+    }
     &__box{
       max-width: torem(280px);
-      &--item {
-        @include respond-to('ismobile') {
+      @include respond-to('ismobile') {
+        max-width: none;
+        &--item {
           display:flex;
           flex-flow:row;
+        }
+        div{
+          margin: auto;
         }
       }
       h6, h4{
@@ -27,8 +36,9 @@
         width:auto;
         height:torem(200px);
         @include respond-to('ismobile') {
-          width:torem(80px);
-          height:auto;
+          width:30%;
+          height:30%;
+          margin-bottom: 0;
           margin-right: 5%;
         }
       }

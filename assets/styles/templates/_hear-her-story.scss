@@ -133,18 +133,18 @@
           justify-content: flex-end;
 
           span {
-            height: toem(85px);
-            width: toem(85px);
+            height: toem(50px);
+            width: toem(50px);
             border-radius: 50%;
             background-color: $color-blue;
             color: $color-white;
             text-align: center;
-            line-height: toem(80px);
+            line-height: toem(45px);
 
             @include respond-to('ismobile') {
-              height: toem(50px);
-              width: toem(50px);
-              line-height: toem(50px);
+              height: toem(45px);
+              width: toem(45px);
+              line-height: toem(45px);
             }
 
             @include respond-to('ipad') {
@@ -181,7 +181,7 @@
 
         .icon-speach__value {
           @include icon-value-position;
-          top: -8px;
+          top: -9px;
           left: -18px;
         }
         .icon-heart__value{
