@@ -18,8 +18,7 @@ $('.c-tabs__tab').on('click',function(){
 
 $('.more-id').on("click",function(){
   var more =  $(this).attr("id");
-  //post code
-})
+});
 
 $('#more').on('click', function(){
   $(this).toggleClass('hear-her-story__nav--active');
@@ -35,5 +34,9 @@ $('.nav__mobile--menu').on('click', function(){
 // menu dropdown close
 
 $('.nav__mobile--dropdown--close').on('click', function(){
+  $('.nav__mobile--dropdown').hide();
+});
+
+$('.nav__mobile--dropdown--close--text').on('click', function(){
   $('.nav__mobile--dropdown').hide();
 });
