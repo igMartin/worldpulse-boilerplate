@@ -25,9 +25,25 @@ $modal-transition-delay:       $msuif-transition-duration !default;
 
   &__buttons {
 
+    a {
+      display: inline-block;
+      width: toem(300px);
+
+      @include respond-to('ismobile') {
+        width: 100%;
+        font-size: toem(13px);
+      }
+
+      @include respond-to('ipad') {
+        width: 100%;
+        font-size: toem(13px);
+      }
+    }
+
     button {
       margin-top: toem(20px);
       width: toem(300px);
+
 
       @include respond-to('ismobile') {
         width: 100%;
