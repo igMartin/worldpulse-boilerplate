@@ -1,6 +1,7 @@
 //  nav
 
 .nav {
+  position: relative;
   display: flex;
   align-items: center;
   background-color: $color-white;
@@ -72,15 +73,55 @@
     color: $msuif-font-color;
 
     &--menu {
-      margin-right: toem(10px);
+      margin-right: toem(8px);
       font-size: toem(30px);
+      color: $color-orange;
     }
 
     &--dropdown {
-      position: absolute;
       display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: $color-white;
       border: toem(1px) solid $color-orange;
       padding: 10px 0;
+      border-radius: 10px 0 0 0;
+
+
+      li:not(:first-child) {
+        margin: 10px 40px 0 10px;
+      }
+
+      p:not(.small-p) {
+        font-size: $msuif-font-size-big;
+      }
+
+      &--close {
+        position: absolute;
+        top: toem(5px);
+        right: toem(5px);
+        font-size: $msuif-font-size-big;
+        color: $color-orange;
+      }
+
+      &--flex {
+        display: flex;
+        align-items: center;
+
+        span {
+          color: $color-orange;
+
+          &:first-child {
+            margin-right: toem(5px);
+            font-size: $msuif-font-size-jumbo;
+          }
+
+          &:last-child {
+            margin-left: toem(5px);
+          }
+        }
+      }
     }
 
     @include respond-to('desktop') {
