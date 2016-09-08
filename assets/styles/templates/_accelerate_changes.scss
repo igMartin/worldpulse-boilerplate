@@ -1,32 +1,21 @@
 .accelerate{
   @include main-wrapper($color-lightgray);
-  @include respond-to('ismobile'){
-    h1{
-      padding: 0 20px;
-    }
-  }
+
   &__container{
     display: flex;
     justify-content: space-between;
     @include respond-to('ismobile'){
       justify-content: center;
-      margin: 0 2%;
     }
     flex-flow: row wrap;
     padding:5% 0;
     margin: auto;
     &__box{
-      @include respond-to('desktop') {
-       max-width: torem(280px);
-      }
-
-      @include respond-to('ismobile') {
-          &--item {
+      max-width: torem(280px);
+      &--item {
+        @include respond-to('ismobile') {
           display:flex;
           flex-flow:row;
-          div{
-              margin: auto;
-          }
         }
       }
       h6, h4{
@@ -38,10 +27,9 @@
         width:auto;
         height:torem(200px);
         @include respond-to('ismobile') {
-          margin: 0;
-          width:40%;
-          height:40%;
-
+          width:torem(80px);
+          height:auto;
+          margin-right: 5%;
         }
       }
     }
