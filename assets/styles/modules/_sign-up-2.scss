@@ -1,0 +1,108 @@
+////
+/// Modal Dialogs
+/// @group Component - Modal Dialogs
+/// @author MS
+////
+
+///
+$modal-backdrop-background:    rgba(#000, 0.5) !default;
+///
+$modal-transition-delay:       $msuif-transition-duration !default;
+
+
+
+.sign-up-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: $modal-backdrop-background;
+  transition: visibility $msuif-transition-duration 0s, opacity $msuif-transition-duration $msuif-transition-timing;
+
+    @at-root {
+      &__content {
+        @include align(both);
+        max-width: torem(800px);
+        padding: 40px 60px 40px 60px;
+        opacity: 0;
+        background-color: $color-white;
+        transition: opacity $msuif-transition-duration $msuif-transition-timing $modal-transition-delay, margin $msuif-transition-duration $msuif-transition-timing $modal-transition-delay;
+
+        @include respond-to('ismobile') {
+          width: 100%;
+        }
+
+        // @include respond-to('ismobile') {
+        //   width: 100%;
+        // }
+
+        &--header {
+          text-align: center;
+        }
+
+        &--center {
+          text-align: center;
+          padding: 20px 40px 30px 40px;
+
+          input {
+            @include stack();
+            max-width: 400px;
+            margin-bottom: torem(10px);
+
+            &:focus {
+              border-color: $color-green;
+              border-width: torem(1.5px);
+            }
+          }
+        }
+
+      }
+
+      &__close {
+        position: absolute;
+        top: torem(12px);
+        right: torem(15px);
+        color: $color-black;
+      }
+
+      &__social {
+        @include center();
+        width: 50%;
+        border: 1px solid #000;
+
+        ul {
+          display: flex;
+          justify-content: space-around;
+
+          li>i {
+            font-size: torem(20px);
+          }
+        }
+
+        span {
+          position: absolute;
+          margin-top: -3%;
+          margin-left: 11.5%;
+          padding: 10px 10px 5px 10px;
+          background: $color-white;
+        }
+      }
+    }
+
+    // Show modal dialog and it's content
+    &:target,
+    &--is-visible {
+      visibility: visible;
+      opacity: 1;
+
+      // Would be great to use '&' for consistency, but for some reason, it compiles to .modal:target__content
+      .sign-up-2__content {
+          margin-top: 0;
+          opacity: 1;
+      }
+    }
+  }
