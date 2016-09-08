@@ -9,7 +9,7 @@
       <nav class="hello-bar">
   <div class="hello-bar__text">
     <p><span class="uppercase bold">update: </span>The World Pulse team is thrilled to share our newest initiative: <span class="bold capitalize">the sistership project!</span></p>
-    <button type="button" name="button" class="button__square--tertiary">Learn More</button>
+    <button type="button" name="button" class="button__pill--primary button__pill--small">Learn More</button>
   </div>
   <div  class="hello-bar__close">
     <a href="#!">X</a>
@@ -20,17 +20,17 @@
     <ul class="tool-bar__links">
       <li>
         <ul>
-          <li><a href="#"><p>English</p></a></li>
+          <li><a href="#"><p class="small-p">English</p></a></li>
           <li><span>|</span></li>
-          <li><a href="#"><p>Francais</p></a></li>
+          <li><a href="#"><p class="small-p">Francais</p></a></li>
           <li><span>|</span></li>
           <li>
             <ul>
               <li class="tool-bar__links--otherlang">
-                <p>
+                <p class="small-p">
                   Select Other Language
                 </p>
-                <i class="fa fa-caret-down"></i>
+                <span class="fa fa-caret-down"></span>
               </li>
             </ul>
           </li>
@@ -38,17 +38,17 @@
       </li>
       <li>
         <ul>
-          <li><a href="#"><p>Sign In</p></a></li>
+          <li><a href="#"><p class="small-p">Sign In</p></a></li>
           <li><span>|</span></li>
-          <li><a href="#"><p>Sign Up</p></a></li>
+          <li><a href="#"><p class="small-p">Sign Up</p></a></li>
         </ul>
       </li>
       <li class="tool-bar__links--search">
-        <i class="fa fa-search"></i>
-        <p>Search</p>
+        <span class="fa fa-search"></span>
+        <p class="small-p">Search</p>
       </li>
       <li>
-        <a href="#">Give</a>
+        <a href="#"><p class="small-p">Give</p></a>
       </li>
     </ul>
   </div>
@@ -56,8 +56,7 @@
       <nav class="nav">
   <div class="nav__logo">
     <a href="#">
-      <span aria-hidden="true" class="ms-icon icon-world"></span>
-      <p class="uppercase bold">world pulse</p>
+      <span aria-hidden="true" style="background-image: url('fonts/Logo_horizontal.svg');"></span>
     </a>
   </div>
   <div class="nav__links">
@@ -68,6 +67,32 @@
       <li><p><a href="#">Resources</a></p></li>
       <li><p><a href="#">About</a></p></li>
     </ul>
+  </div>
+  <div class="nav__mobile">
+    <span class="nav__mobile--menu"><i class="fa fa-bars" aria-hidden="true"></i></span>
+    <div class="nav__mobile--dropdown">
+      <ul>
+        <li><p><a href="#">Changemakers</a></p></li>
+        <li><p><a href="#">Story Awards</a></p></li>
+        <li><p><a href="#">Resources</a></p></li>
+        <li><p><a href="#">About</a></p></li>
+        <hr>
+        <li><p><a href="#">Sign In</a></p></li>
+        <li><p><a href="#">Sign Up</a></p></li>
+        <hr>
+        <li><p class="small-p"><a href="#">English</a></p></li>
+        <li><p class="small-p"><a href="#">Francais</a></p></li>
+        <li><p class="small-p"><a href="#">Select Other Language</a></p></li>
+        <span class="fa fa-caret-down"></span>
+        <hr>
+        <li class="">
+          <span class="fa fa-search"></span>
+          <p class="small-p">Search</p>
+        </li>
+        <hr>
+        <li><p class="small-p"><a href="#">Give</a></p></li>
+      </ul>
+    </div>
   </div>
 </nav>
     </section>

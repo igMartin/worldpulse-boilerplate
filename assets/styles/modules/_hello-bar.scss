@@ -6,23 +6,46 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  height: torem(45px);
+  padding: 8px 0;
   top: 0;
   background-color: $color-green;
 
   &__text {
     display: flex;
     flex: 30;
+    align-items: center;
     justify-content: center;
+    text-align: center;
     color: $color-white;
+    line-height: 1.2;
+
+    @include respond-to('ismobile') {
+      display: block;
+    }
+
+    @include respond-to('ipad') {
+      display: block;
+    }
 
     p {
-      margin: 10px 0 10px 0;
+      margin: 10px 0;
+      text-align: center;
+
+      @include respond-to('ismobile') {
+        margin: 30px 0 10px 0;
+      }
+
+      @include respond-to('ipad') {
+        margin: 30px 20px 10px 0;
+      }
     }
 
     button {
-      margin: 5px 0 5px 20px;
-      padding: 0 15px 0 15px;
+      margin: 0 20px;
+
+      @include respond-to('ismobile') {
+        margin-bottom: toem(10px);
+      }
     }
   }
 
@@ -31,5 +54,17 @@
     justify-content: center;
     flex: 1;
     color: $color-white;
+
+    @include respond-to('ismobile') {
+      position: absolute;
+      top: toem(10px);
+      right: toem(10px);
+    }
+
+    @include respond-to('ipad') {
+      position: absolute;
+      top: toem(10px);
+      right: toem(10px);
+    }
   }
 }

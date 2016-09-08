@@ -8,15 +8,16 @@
   background-color: $background-color;
   font-family: $msuif-font-family-primary;
   font-weight: $msuif-font-weight-bold;
-  letter-spacing: torem(1px);
 }
 
 @mixin button_size {
 
   &--small {
-    padding: 8px 25px;
-    font-size: $msuif-font-size-small;
+    padding: 5px 15px;
+    font-size: $msuif-font-size;
     width: auto;
+    max-height: toem(35px);
+    border-width: toem(1px) !important;
   }
 
   &--medium {

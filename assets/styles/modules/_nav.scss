@@ -3,13 +3,12 @@
 .nav {
   display: flex;
   align-items: center;
-  background-color: $color-sand;
+  background-color: $color-white;
   color: $color-red;
-  font-weight: $msuif-font-weight-semibold;
+  padding: 15px 0;
 
   &__logo {
     flex: 1;
-    margin-left: torem(60px);
 
     a {
       display: flex;
@@ -17,15 +16,25 @@
     }
 
     span {
-      padding-right: torem(10px);
-      font-size: torem(60px);
-      color: $color-red;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: toem(50px);
+      width: toem(200px);
+      margin-left: toem(60px);
+
+      @include respond-to('ismobile') {
+        height: toem(45px);
+        margin-left: toem(10px);
+      }
+
+      @include respond-to('ipad') {
+        height: toem(45px);
+        margin-left: toem(10px);
+      }
     }
 
     p {
       justify-content: flex-start;
-      font-size: $msuif-font-size-jumbo;
-      font-weight: $msuif-font-weight-bold;
     }
   }
 
@@ -34,15 +43,21 @@
     text-align: center;
     overflow: hidden;
 
+    @include respond-to('ismobile') {
+      display: none;
+    }
+
+    @include respond-to('ipad') {
+      display: none;
+    }
+
     ul {
-      position: relative;
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-end;
     }
 
     ul>li {
-      position: relative;
       display: list-item;
       padding: 0 30px 0 30px;
       font-size: 20px;
@@ -50,6 +65,26 @@
       &:last-child {
         padding-right: 60px;
       }
+    }
+  }
+
+  &__mobile {
+    color: $msuif-font-color;
+
+    &--menu {
+      margin-right: toem(10px);
+      font-size: toem(30px);
+    }
+
+    &--dropdown {
+      position: absolute;
+      display: none;
+      border: toem(1px) solid $color-orange;
+      padding: 10px 0;
+    }
+
+    @include respond-to('desktop') {
+      display: none;
     }
   }
 }
