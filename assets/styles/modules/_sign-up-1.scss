@@ -28,6 +28,16 @@ $modal-transition-delay:       $msuif-transition-duration !default;
     button {
       margin-top: toem(20px);
       width: toem(300px);
+
+      @include respond-to('ismobile') {
+        width: 100%;
+        font-size: toem(13px);
+      }
+
+      @include respond-to('ipad') {
+        width: 100%;
+        font-size: toem(13px);
+      }
     }
   }
 
@@ -46,21 +56,32 @@ $modal-transition-delay:       $msuif-transition-duration !default;
 
         ul>li {
           display: flex;
+          align-items: center;
+          margin-bottom: toem(20px);
 
           span {
-            width: toem(30px);
-            height: toem(30px);
+            width: toem(50px);
+            height: toem(50px);
             border-radius: 50%;
-            line-height: toem(40px);
+            line-height: toem(50px);
             text-align: center;
             background-color: $color-orange;
             color: $color-white;
-            margin-right: toem(10px);
+            margin-right: toem(15px);
+
+            h5 {
+              flex-basis: 20%;
+            }
+          }
+
+          p {
+            flex-basis: 80%;
           }
         }
 
         &--header {
           text-align: center;
+          padding: 0 40px 20px 40px;
         }
 
         &--center {
