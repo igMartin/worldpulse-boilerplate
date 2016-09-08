@@ -10,20 +10,7 @@ $modal-backdrop-background:    rgba(#000, 0.5) !default;
 $modal-transition-delay:       $msuif-transition-duration !default;
 
 
-/// Component Dialog -
-/// This is a CSS-only modal that takes
-/// advantage of :target event to show
-/// a modal-like component using HTML anchors.
-/// @example
-///   <a href="#modal">Show modal dialog</a>
-///   <div class="c-modal" id="modal">
-///     <a href="#!" class="c-modal__close">Close</a>
-///     <div class="c-modal__content">Modal dialog content goes here.</div>
-///   </div>
-
-
-
-.c-modal {
+.sign-up-1 {
   position: absolute;
   top: 0;
   right: 0;
@@ -31,15 +18,24 @@ $modal-transition-delay:       $msuif-transition-duration !default;
   left: 0;
   z-index: 0;
   visibility: hidden;
+  text-align: center;
   opacity: 0;
   background-color: $modal-backdrop-background;
   transition: visibility $msuif-transition-duration 0s, opacity $msuif-transition-duration $msuif-transition-timing;
 
+  &__buttons {
+
+    button {
+      margin-top: toem(20px);
+      width: toem(300px);
+    }
+  }
+
     @at-root {
       &__content {
         @include align(both);
-        max-width: torem(800px);
-        padding: 40px 60px 40px 60px;
+        max-width: torem(600px);
+        padding: 40px 60px;
         opacity: 0;
         background-color: $color-white;
         transition: opacity $msuif-transition-duration $msuif-transition-timing $modal-transition-delay, margin $msuif-transition-duration $msuif-transition-timing $modal-transition-delay;
@@ -48,9 +44,20 @@ $modal-transition-delay:       $msuif-transition-duration !default;
           width: 100%;
         }
 
-        // @include respond-to('ismobile') {
-        //   width: 100%;
-        // }
+        ul>li {
+          display: flex;
+
+          span {
+            width: toem(30px);
+            height: toem(30px);
+            border-radius: 50%;
+            line-height: toem(40px);
+            text-align: center;
+            background-color: $color-orange;
+            color: $color-white;
+            margin-right: toem(10px);
+          }
+        }
 
         &--header {
           text-align: center;
@@ -112,7 +119,7 @@ $modal-transition-delay:       $msuif-transition-duration !default;
       opacity: 1;
 
       // Would be great to use '&' for consistency, but for some reason, it compiles to .modal:target__content
-      .c-modal__content {
+      .sign-up-1__content {
           margin-top: 0;
           opacity: 1;
       }
