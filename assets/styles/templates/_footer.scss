@@ -119,6 +119,16 @@
     flex: 2;
     padding-left: 3%;
 
+    @include respond-to('ismobile') {
+      padding-left: 0;
+      padding-bottom: toem(20px);
+    }
+
+    @include respond-to('ipad') {
+      padding-left: 0;
+      padding-bottom: toem(20px);
+    }
+
     ul {
       display: flex;
       align-items: center;
@@ -153,10 +163,14 @@
 
         &:nth-child(-n+3) {
           margin-bottom: toem(8px);
-        }
 
-        &:nth-child(n+4) {
-          font-size: 50px;
+          @include respond-to('ismobile') {
+            margin-bottom: 0;
+          }
+
+          @include respond-to('ipad') {
+            margin-bottom: 0;
+          }
         }
       }
     }

@@ -7,7 +7,7 @@
   }
   &__container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-flow: row wrap;
     padding:5% 0;
     margin: auto;
@@ -17,8 +17,12 @@
     }
     &__box{
       max-width: torem(280px);
+      &:not(:last-child){
+          margin-right: torem(30px);
+      }
       @include respond-to('ismobile') {
         max-width: none;
+        margin-right: 0;
         &--item {
           display:flex;
           flex-flow:row;
@@ -34,12 +38,12 @@
       img{
         margin-bottom: torem(15px);
         width:auto;
-        height:torem(200px);
+        height:torem(250px);
         @include respond-to('ismobile') {
           width:30%;
           height:30%;
           margin-bottom: 0;
-          margin-right: 5%;
+          margin-right: 2%;
         }
       }
     }
