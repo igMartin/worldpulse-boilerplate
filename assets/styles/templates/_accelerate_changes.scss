@@ -1,5 +1,10 @@
 .accelerate{
   @include main-wrapper($color-lightgray);
+
+  h1 {
+    margin-bottom: 0;
+  }
+
   @include respond-to('ismobile'){
     h1{
         padding: 0 9px;
@@ -7,22 +12,27 @@
   }
   &__container{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-flow: row wrap;
     padding:5% 0;
     margin: auto;
+
     @include respond-to('ismobile'){
       justify-content: center;
       margin: 0 2%;
     }
+
+    @include respond-to('ipad'){
+      justify-content: center;
+      margin: 0 2%;
+    }
+
     &__box{
-      max-width: torem(280px);
-      &:not(:last-child){
-          margin-right: torem(30px);
-      }
+      max-width: toem(280px);
+
       @include respond-to('ismobile') {
         max-width: none;
-        margin-right: 0;
+
         &--item {
           display:flex;
           flex-flow:row;
@@ -31,15 +41,38 @@
           margin: auto;
         }
       }
+
+      @include respond-to('ipad') {
+        max-width: none;
+
+        &--item {
+          display:flex;
+        }
+
+        div{
+          margin: auto;
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+
       h6, h4{
        text-align: left;
        margin: 1% 0;
       }
       img{
-        margin-bottom: torem(15px);
-        width:auto;
-        height:torem(250px);
+        margin-bottom: toem(15px);
+        height: toem(300px);
+        width: auto;
+
         @include respond-to('ismobile') {
+          width:30%;
+          height:30%;
+          margin-bottom: 0;
+          margin-right: 2%;
+        }
+
+        @include respond-to('ipad') {
           width:30%;
           height:30%;
           margin-bottom: 0;

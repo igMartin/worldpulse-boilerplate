@@ -137,12 +137,4 @@
 	border-radius: 0px;
 	height: auto;
 	width: toem(30px);
-
-	@include respond-to('ismobile') {
-		width: toem(20px);
-	}
-
-	@include respond-to('ipad') {
-		width: toem(20px);
-	}
 }

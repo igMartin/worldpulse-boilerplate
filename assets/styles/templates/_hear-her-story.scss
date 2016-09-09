@@ -1,5 +1,6 @@
 // hear-her-story section
 
+
 .hear-her-story {
   @include main-wrapper($color-ivory,15%);
   position: relative;
@@ -40,8 +41,8 @@
       display: none;
       position: absolute;
       z-index: 1;
-      top: 14%;
-      right: 8%;
+      top: 13.5%;
+      right: 11%;
       text-align: left;
       padding: 1.5%;
       border: toem(2px) solid $color-orange;
@@ -58,12 +59,14 @@
       }
 
       @include respond-to('ismobile') {
-        top: 12%;
+        top: 11.8%;
+        right: 0;
         font-size: $msuif-font-size;
       }
 
       @include respond-to('ipad') {
-        top: 12%;
+        top: 14%;
+        right: 0;
         font-size: $msuif-font-size;
       }
     }
@@ -91,16 +94,10 @@
   &__articles {
     padding: 0 8%;
     text-align: left;
-    margin-bottom: toem(80px);
 
     article {
       padding: 2%;
       margin-bottom: torem(40px);
-    }
-
-    &--selected {
-      border: toem(2px) solid $color-gray;
-      border-radius: toem(15px);
     }
 
     &--header {
@@ -126,35 +123,6 @@
             @include flag-image();
           }
         }
-
-        &__category {
-          display: flex;
-          // width: 67%;
-          flex: 4;
-          justify-content: flex-end;
-
-          span {
-            height: toem(50px);
-            width: toem(50px);
-            border-radius: 50%;
-            background-color: $color-blue;
-            color: $color-white;
-            text-align: center;
-            line-height: toem(45px);
-
-            @include respond-to('ismobile') {
-              height: toem(45px);
-              width: toem(45px);
-              line-height: toem(45px);
-            }
-
-            @include respond-to('ipad') {
-              height: toem(50px);
-              width: toem(50px);
-              line-height: toem(50px);
-            }
-          }
-        }
       }
     }
 
@@ -170,33 +138,46 @@
       display: flex;
       align-items: center;
 
+      .small-p {
+        padding-left: 0;
+        font-size: $msuif-font-size;
+      }
+
       .ms-icon {
-        font-size: $msuif-font-size-jumbo;
+        font-size: $msuif-font-size-jumbo-plus;
         color: $color-orange;
+        width: toem(20px);
+
+
         @mixin icon-value-position{
           position: relative;
-          font-size: 10px;
+          font-size: toem(6px);
           text-align: center;
           font-family: $msuif-font-family-secondary;
         }
 
         .icon-speach__value {
           @include icon-value-position;
-          top: -9px;
-          left: -18px;
+          top: -12px;
+          left: -26px;
         }
         .icon-heart__value{
           @include icon-value-position;
-          top: -8px;
-          left: -18px;
+          top: -11px;
+          left: -26px;
         }
       }
 
       .icon-over_heart,
       .icon-over_speach {
-       .icon-speach__value, .icon-heart__value {
+
+       .icon-heart__value {
          color: $color-white;
-         left: -20px;
+         left: -26px;
+       }
+       .icon-speach__value {
+         color: $color-white;
+         left: -29px;
        }
      }
 

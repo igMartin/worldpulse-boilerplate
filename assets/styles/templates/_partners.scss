@@ -6,7 +6,6 @@
   align-items: baseline;
   width: 95%;
   margin: auto;
-  // margin-bottom: toem(50px);
 }
 
 @mixin individual {
@@ -22,8 +21,18 @@
   @include main-wrapper($color-lightgray);
 
   button {
-    margin-top: toem(20px);
-    margin-bottom: toem(40px);
+    margin-top: toem(30px);
+    margin-bottom: toem(-20px);
+
+    @include respond-to('ismobile') {
+      margin-top: toem(10px);
+      margin-bottom: toem(10px);
+    }
+
+    @include respond-to('ipad') {
+      margin-top: toem(10px);
+      margin-bottom: toem(10px);
+    }
   }
 
   &__profile {
