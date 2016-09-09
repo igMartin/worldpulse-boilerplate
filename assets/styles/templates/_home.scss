@@ -13,17 +13,19 @@
     background-color: $color-red; //fallback color
 
     &--wrapper {
-      padding: 20% 0 10% 0;
+      padding: 300px 0 10px 0;
       width: 65%;
       margin: auto;
       text-align: center;
       color: $color-white;
+
       @include respond-to('ismobile'){
         width: auto;
-        padding: 30% 2% 8% 2%;
+        padding: 30% 2% 0 2%;
       }
       h4 {
-        margin-bottom: toem(20px);
+        margin: auto;
+        width: 90%;
         color: $color-white;
       }
 
@@ -33,18 +35,28 @@
           width: auto;
         }
         h2 {
-          margin-bottom: toem(20px);
+          margin-bottom: toem(15px);
         }
       }
 
       &--button__container {
         display: flex;
-        justify-content: space-between;
-        margin: auto;
-        max-width: 700px;
+        justify-content: space-around;
+        align-items: center;
+        padding: 60px 200px;
+
+        button:first-child {
+          background-color: $modal-backdrop-background;
+        }
+
+        @include respond-to('ipad'){
+          width: auto;
+          padding: 40px 0;
+        }
+
         @include respond-to('ismobile'){
           width: auto;
-          flex-wrap: wrap;
+          padding: 40px 0;
         }
       }
     }

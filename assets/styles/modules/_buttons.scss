@@ -21,11 +21,19 @@
   }
 
   &--medium {
-    padding: 15px 50px;
+    padding: 20px 25px;
+    min-width: toem(150px);
     font-size: $msuif-font-size-jumbo;
 
+    @include respond-to('ipad') {
+      min-width: toem(130px);
+      padding: 15px 6px;
+      font-size: $msuif-font-size-big;
+    }
+
     @include respond-to('ismobile') {
-      padding: 12px 40px;
+      min-width: toem(130px);
+      padding: 15px 6px;
       font-size: $msuif-font-size-big;
     }
   }

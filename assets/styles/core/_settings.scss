@@ -64,6 +64,14 @@ $msuif-font-family-tertiary: "Noto Serif", "Helvetica Neue", Helvetica, sans-ser
 $msuif-font-family-quaternary: "Campton-Bold", "Campton-SemiBold",  "Helvetica Neue", "Noto Serif", Helvetica, sans-serif;
 
 
+
+/// Transition/Animation ///
+///
+$msuif-transition-duration: 0.25s;
+///
+$msuif-transition-timing: ease;
+///
+
 /// Colors ///
 ///
 $color-red: #961E23;
@@ -102,6 +110,11 @@ $msuif-font-color-secondary: tint($color-black,30%);
 ///
 $msuif-font-color-tertiary: tint($color-black,45%);
 ///
+$modal-backdrop-background:    rgba(0, 0, 0, 0.5);
+///
+$modal-transition-delay:       $msuif-transition-duration !default;
+///
+
 
 
 /// Breakpoints ///
@@ -111,11 +124,3 @@ $msuif-breakpoints: (
   'ipad': (min-width: 501px, max-width: 1025px),
   'ismobile': (max-width: 500px)
 );
-
-
-
-/// Transition/Animation ///
-///
-$msuif-transition-duration: 0.25s;
-///
-$msuif-transition-timing: ease;
