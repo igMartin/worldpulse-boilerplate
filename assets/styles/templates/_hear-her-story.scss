@@ -2,6 +2,7 @@
 
 .hear-her-story {
   @include main-wrapper($color-ivory,15%);
+  position: relative;
 
   &__nav {
     color: $color-gray;

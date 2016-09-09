@@ -10,7 +10,8 @@ $modal-backdrop-background:    rgba(#000, 0.5) !default;
 $modal-transition-delay:       $msuif-transition-duration !default;
 
 
-.sign-up-1 {
+
+.sign-up-2 {
   position: absolute;
   top: 0;
   right: 0;
@@ -18,50 +19,15 @@ $modal-transition-delay:       $msuif-transition-duration !default;
   left: 0;
   z-index: 0;
   visibility: hidden;
-  text-align: center;
   opacity: 0;
   background-color: $modal-backdrop-background;
   transition: visibility $msuif-transition-duration 0s, opacity $msuif-transition-duration $msuif-transition-timing;
 
-  &__buttons {
-
-    a {
-      display: inline-block;
-      width: toem(300px);
-
-      @include respond-to('ismobile') {
-        width: 100%;
-        font-size: toem(13px);
-      }
-
-      @include respond-to('ipad') {
-        width: 100%;
-        font-size: toem(13px);
-      }
-    }
-
-    button {
-      margin-top: toem(20px);
-      width: toem(300px);
-
-
-      @include respond-to('ismobile') {
-        width: 100%;
-        font-size: toem(13px);
-      }
-
-      @include respond-to('ipad') {
-        width: 100%;
-        font-size: toem(13px);
-      }
-    }
-  }
-
     @at-root {
       &__content {
         @include align(both);
-        max-width: torem(600px);
-        padding: 40px 60px;
+        max-width: torem(800px);
+        padding: 40px 60px 40px 60px;
         opacity: 0;
         background-color: $color-white;
         transition: opacity $msuif-transition-duration $msuif-transition-timing $modal-transition-delay, margin $msuif-transition-duration $msuif-transition-timing $modal-transition-delay;
@@ -70,34 +36,12 @@ $modal-transition-delay:       $msuif-transition-duration !default;
           width: 100%;
         }
 
-        ul>li {
-          display: flex;
-          align-items: center;
-          margin-bottom: toem(20px);
-
-          span {
-            width: toem(50px);
-            height: toem(50px);
-            border-radius: 50%;
-            line-height: toem(50px);
-            text-align: center;
-            background-color: $color-orange;
-            color: $color-white;
-            margin-right: toem(15px);
-
-            h5 {
-              flex-basis: 20%;
-            }
-          }
-
-          p {
-            flex-basis: 80%;
-          }
-        }
+        // @include respond-to('ismobile') {
+        //   width: 100%;
+        // }
 
         &--header {
           text-align: center;
-          padding: 0 40px 20px 40px;
         }
 
         &--center {
@@ -156,7 +100,7 @@ $modal-transition-delay:       $msuif-transition-duration !default;
       opacity: 1;
 
       // Would be great to use '&' for consistency, but for some reason, it compiles to .modal:target__content
-      .sign-up-1__content {
+      .sign-up-2__content {
           margin-top: 0;
           opacity: 1;
       }
