@@ -15,9 +15,13 @@
   &--small {
     padding: 5px 15px;
     font-size: $msuif-font-size;
-    width: auto;
+    min-width: toem(165px);
     max-height: toem(35px);
-    border-width: toem(1px) !important;
+
+    @include respond-to('ismobile') {
+      padding: 5px 5px;
+      font-size: $msuif-font-size-small;
+    }
   }
 
   &--medium {
@@ -56,6 +60,78 @@
 
 .button {
 
+  &__pill {
+    @include button_size;
+
+    &--primary {
+      @include button($color-white, transparent, $color-white, 2px);
+      border-radius: torem(50px);
+    }
+
+    &--secondary {
+      @include button($color-red, transparent, $color-red, 2px);
+      border-radius: torem(50px);
+    }
+
+    &--tertiary {
+      @include button($color-orange, transparent, $color-orange, 2px);
+      border-radius: torem(50px);
+    }
+  }
+
+
+  &__roundside {
+    @include button_size;
+
+    &--primary {
+      @include button($color-white, $color-blue, $color-blue, 2px);
+      border-radius: 0 50px 50px 0;
+      padding: 2px 20px;
+      min-width: auto;
+      font-size: $msuif-font-size-big;
+      text-transform: uppercase;
+    }
+
+    &--secondary {
+
+      &__right {
+        @include button($color-orange, $color-white, $color-orange, 2px);
+        border-radius: 0 50px 50px 0;
+        padding: 15px 10px;
+        min-width: toem(120px);
+        font-size: $msuif-font-size-big;
+
+        @include respond-to('ismobile') {
+          min-width: toem(100px);
+        }
+
+        &--active {
+          @extend .button__roundside--secondary__right;
+          background-color: $color-orange;
+          color: $color-white;
+        }
+      }
+
+      &__left {
+        @extend .button__roundside--secondary__right;
+        border-radius: 50px 0 0 50px;
+
+        &--active {
+          @extend .button__roundside--secondary__left;
+          background-color: $color-orange;
+          color: $color-white;
+        }
+      }
+    }
+
+    &--tertiary {
+      @include button($color-white, $color-red, $color-white, 2px);
+      border-radius: 0 50px 50px 0;
+      padding: 8px 40px;
+    }
+  }
+
+
   &__square{
     @include button_size;
 
@@ -75,44 +151,4 @@
     }
   }
 
-  &__pill {
-    @include button_size;
-
-    &--primary {
-      @include button($color-white, transparent, $color-white, 2px);
-      border-radius: torem(50px);
-    }
-
-    &--secondary {
-      @include button($color-white, $color-red, $color-white, 2px);
-      border-radius: torem(50px);
-    }
-
-    &--tertiary {
-      @include button($color-orange, transparent, $color-orange, 2px);
-      border-radius: torem(50px);
-    }
-  }
-
-  &__roundside {
-    @include button_size;
-
-    &--primary {
-      @include button($color-white, $color-blue, $color-blue, 2px);
-      border-radius: 0 50px 50px 0;
-      padding: 8px 40px;
-    }
-
-    &--secondary {
-      @include button($color-orange, $color-white, $color-white, 2px);
-      border-radius: 0 50px 50px 0;
-      padding: 8px 40px;
-    }
-
-    &--tertiary {
-      @include button($color-white, $color-red, $color-white, 2px);
-      border-radius: 0 50px 50px 0;
-      padding: 8px 40px;
-    }
-  }
 }

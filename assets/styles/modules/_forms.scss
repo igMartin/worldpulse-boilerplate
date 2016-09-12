@@ -25,6 +25,7 @@
       @include input($color-gray, 1px);
       font-style: italic;
       font-weight: $msuif-font-weight-regular;
+      border-width: 2px 0 2px 2px;
     }
 
     &--secondary {
@@ -70,6 +71,7 @@
   padding: torem(8px);
   outline: none;
   background-color: $color-white;
+  min-width: 50%;
 
   &:hover {
     background-color: $border-color;
