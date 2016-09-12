@@ -91,7 +91,7 @@
 	@include respond-to('ismobile'){
 		padding: 5% 0;
 	};
-	
+
 	h1 {
     color: $color-orange;
     margin-bottom: torem(30px);
@@ -157,4 +157,26 @@
   padding: 20px 20px 0 20px;
   border-radius: torem(15px);
   min-height: toem(420px);
+}
+
+// MY Pulse
+
+@mixin myPulse {
+	@include main-wrapper;
+	width: 75%;
+	background-color: $color-white;
+	border-top: toem(4px) solid $color-gray;
+	padding-bottom: toem(50px);
+
+	@include respond-to('ismobile') {
+		width: 100%;
+		padding: 5% 2%;
+		border-top: toem(2px) solid $color-gray;
+	}
+
+	@include respond-to('ipad') {
+		width: 100%;
+		padding: 5% 5%;
+		border-top: toem(2px) solid $color-gray;
+	}
 }

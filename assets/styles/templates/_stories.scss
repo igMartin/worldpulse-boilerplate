@@ -1,0 +1,96 @@
+// Stories
+
+.stories {
+  @include myPulse;
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__nav {
+    color: $color-gray;
+    font-size: $msuif-font-size-big;
+    margin-bottom: torem(80px);
+
+    ul{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      li {
+        padding-bottom: toem(20px);
+        padding-left: toem(5px);
+
+        &:last-child {
+          padding-right: toem(5px);
+        }
+      }
+    }
+
+    &--active {
+      padding: 0 5% 2% 5%;
+      color: $color-orange;
+      font-weight: $msuif-font-weight-bold;
+      border-bottom: toem(3px) solid $color-orange;
+
+      &--drop {
+        @extend .hear-her-story__nav--active;
+        padding: 0 2% 1% 0;
+      }
+    }
+
+    &--dropdown {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      top: 13.5%;
+      right: 11%;
+      text-align: left;
+      padding: 1.5%;
+      border: toem(2px) solid $color-orange;
+      background-color: inherit;
+      color: $color-gray;
+      font-size: $msuif-font-size-big;
+
+      ul {
+        margin: 0;
+
+        li {
+          margin-bottom: torem(5px);
+        }
+      }
+
+      @include respond-to('ismobile') {
+        top: 11.8%;
+        right: 0;
+        font-size: $msuif-font-size;
+      }
+
+      @include respond-to('ipad') {
+        top: 14%;
+        right: 0;
+        font-size: $msuif-font-size;
+      }
+    }
+
+    @include respond-to('ismobile') {
+      font-size: $msuif-font-size;
+      margin-bottom: toem(20px);
+
+      li:nth-child(n+4):not(:last-child){
+        display: none;
+      }
+    }
+
+    @include respond-to('ipad') {
+      font-size: $msuif-font-size;
+      margin-bottom: toem(20px);
+
+      li:nth-child(n+4):not(:last-child){
+        display: none;
+      }
+    }
+  }
+}
