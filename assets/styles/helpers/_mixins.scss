@@ -164,18 +164,18 @@
 	@include main-wrapper;
 	width: 75%;
 	background-color: $color-white;
-	border-top: toem(4px) solid $msuif-font-color-secondary;
+	border-top: toem(4px) solid $msuif-font-color-tertiary;
 	padding: 60px 45px;
 
 	@include respond-to('ismobile') {
 		width: 100%;
 		padding: 60px 20px;
-		border-top: toem(1px) solid $msuif-font-color-secondary;
+		border-top: toem(1px) solid $msuif-font-color-tertiary;
 	}
 
 	@include respond-to('ipad') {
 		width: 100%;
 		padding: 60px 20px;
-		border-top: toem(1px) solid $msuif-font-color-secondary;
+		border-top: toem(1px) solid $msuif-font-color-tertiary;
 	}
 }
