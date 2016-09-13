@@ -2,7 +2,7 @@
 
 .members {
   @include myPulse;
-
+  display: inline-block;
 
   &__buttons {
     display: flex;

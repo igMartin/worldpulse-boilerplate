@@ -164,3 +164,11 @@
   font-weight: bold;
   border-bottom: toem(3px) solid $color-orange;
 }
+
+// Enhaced titles
+
+.enhaced-title {
+  color: $color-red;
+  border-bottom: toem(2px) solid $color-red;
+  padding-bottom: 5px;
+}

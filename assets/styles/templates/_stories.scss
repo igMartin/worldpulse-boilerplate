@@ -3,6 +3,7 @@
 .stories {
   @include myPulse;
   position: relative;
+  display: inline-block;
 
   &__buttons {
     display: flex;
