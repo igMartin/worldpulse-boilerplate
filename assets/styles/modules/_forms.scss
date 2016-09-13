@@ -25,7 +25,7 @@
       @include input($color-gray, 1px);
       font-style: italic;
       font-weight: $msuif-font-weight-regular;
-      border-width: 2px 0 2px 2px;
+      border-width: 1px 0 1px 1px;
     }
 
     &--secondary {
@@ -64,7 +64,7 @@
 ///Dropdowns
 
 @mixin dropdown($border-color, $border-radius) {
-  border: torem(2px) solid $border-color;
+  border: torem(1px) solid $border-color;
   border-radius: torem($border-radius);
   font-weight: $msuif-font-weight-bold;
   color: $color-gray;

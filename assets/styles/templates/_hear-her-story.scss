@@ -25,24 +25,12 @@
       }
     }
 
-    &--active {
-      padding: 0 5% 2% 5%;
-      color: $color-orange;
-      font-weight: $msuif-font-weight-bold;
-      border-bottom: toem(3px) solid $color-orange;
-
-      &--drop {
-        @extend .hear-her-story__nav--active;
-        padding: 0 2% 1% 0;
-      }
-    }
-
     &--dropdown {
       display: none;
       position: absolute;
       z-index: 1;
-      top: 13.5%;
-      right: 11%;
+      top: toem(160px);
+      right: toem(150px);
       text-align: left;
       padding: 1.5%;
       border: toem(2px) solid $color-orange;
@@ -59,13 +47,12 @@
       }
 
       @include respond-to('ismobile') {
-        top: 11.8%;
         right: 0;
         font-size: $msuif-font-size;
       }
 
       @include respond-to('ipad') {
-        top: 14%;
+        top: toem(200px);
         right: 0;
         font-size: $msuif-font-size;
       }

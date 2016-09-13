@@ -154,7 +154,6 @@
 }
 
 @mixin individual {
-  padding: 20px 20px 0 20px;
   border-radius: torem(15px);
   min-height: toem(420px);
 }
@@ -165,18 +164,18 @@
 	@include main-wrapper;
 	width: 75%;
 	background-color: $color-white;
-	border-top: toem(4px) solid $color-gray;
-	padding-bottom: toem(50px);
+	border-top: toem(4px) solid $msuif-font-color-secondary;
+	padding: 60px 45px;
 
 	@include respond-to('ismobile') {
 		width: 100%;
-		padding: 5% 2%;
-		border-top: toem(2px) solid $color-gray;
+		padding: 60px 20px;
+		border-top: toem(1px) solid $msuif-font-color-secondary;
 	}
 
 	@include respond-to('ipad') {
 		width: 100%;
-		padding: 5% 5%;
-		border-top: toem(2px) solid $color-gray;
+		padding: 60px 20px;
+		border-top: toem(1px) solid $msuif-font-color-secondary;
 	}
 }

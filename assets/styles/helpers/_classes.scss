@@ -145,13 +145,22 @@
 // Colors
 
 .red {
-  color: $color-red;
+  color: $color-red !important;
 }
 
 .blue {
-  color: $color-blue;
+  color: $color-blue !important;
 }
 
 .green {
-  color: $color-green;
+  color: $color-green !important;
+}
+
+
+// Links
+
+.active {
+  color: $color-orange;
+  font-weight: bold;
+  border-bottom: toem(3px) solid $color-orange;
 }

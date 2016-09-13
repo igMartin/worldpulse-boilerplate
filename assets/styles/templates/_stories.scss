@@ -2,6 +2,7 @@
 
 .stories {
   @include myPulse;
+  position: relative;
 
   &__buttons {
     display: flex;
@@ -12,32 +13,17 @@
   &__nav {
     color: $color-gray;
     font-size: $msuif-font-size-big;
-    margin-bottom: torem(80px);
+    margin-top: toem(40px);
+    margin-bottom: toem(40px);
 
     ul{
       display: flex;
-      justify-content: space-around;
+      justify-content: flex-start;
       flex-wrap: wrap;
 
-      li {
-        padding-bottom: toem(20px);
-        padding-left: toem(5px);
-
-        &:last-child {
-          padding-right: toem(5px);
-        }
-      }
-    }
-
-    &--active {
-      padding: 0 5% 2% 5%;
-      color: $color-orange;
-      font-weight: $msuif-font-weight-bold;
-      border-bottom: toem(3px) solid $color-orange;
-
-      &--drop {
-        @extend .hear-her-story__nav--active;
-        padding: 0 2% 1% 0;
+      li:not(:first-child) {
+        padding-bottom: toem(12px);
+        padding-left: toem(20px);
       }
     }
 
@@ -45,8 +31,8 @@
       display: none;
       position: absolute;
       z-index: 1;
-      top: 13.5%;
-      right: 11%;
+      top: toem(200px);
+      right: toem(250px);
       text-align: left;
       padding: 1.5%;
       border: toem(2px) solid $color-orange;
@@ -63,14 +49,14 @@
       }
 
       @include respond-to('ismobile') {
-        top: 11.8%;
+        top: toem(215px);
         right: 0;
         font-size: $msuif-font-size;
       }
 
       @include respond-to('ipad') {
-        top: 14%;
-        right: 0;
+        top: toem(220px);
+        right: toem(80px);
         font-size: $msuif-font-size;
       }
     }
@@ -79,18 +65,131 @@
       font-size: $msuif-font-size;
       margin-bottom: toem(20px);
 
-      li:nth-child(n+4):not(:last-child){
-        display: none;
+      ul:last-child {
+        li:nth-child(n+3):not(:last-child){
+          display: none;
+        }
       }
     }
 
     @include respond-to('ipad') {
       font-size: $msuif-font-size;
       margin-bottom: toem(20px);
+    }
+  }
 
-      li:nth-child(n+4):not(:last-child){
-        display: none;
+  &__articles {
+    text-align: left;
+
+    article {
+      margin-bottom: torem(60px);
+    }
+
+    &--header {
+
+      &__profile {
+        display: flex;
+        margin-bottom: toem(10px);
+
+        &__photo {
+          @include photo-circle(small);
+          margin-right: toem(10px);
+        }
+
+        &__wrapper {
+          flex: 8;
+
+          h5 {
+            padding-top: toem(3px);
+            font-style: italic;
+          }
+
+          &--flag {
+            @include flag-image();
+          }
+        }
       }
     }
+
+    &--text {
+      margin-bottom: toem(20px);
+
+      h4 {
+        margin-bottom: toem(10px);
+      }
+    }
+
+    &--actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      >span {
+        color: $color-green !important;
+
+        @include respond-to('ismobile') {
+          margin-top: toem(5px);
+        }
+      }
+
+      .small-p {
+        padding-left: 0;
+        font-size: $msuif-font-size;
+      }
+
+      .green {
+        @include respond-to('ismobile') {
+          margin-top: toem(5px);
+        }
+      }
+
+      .ms-icon {
+        font-size: $msuif-font-size-jumbo-plus;
+        color: $color-orange;
+        width: toem(20px);
+
+
+        @mixin icon-value-position{
+          position: relative;
+          font-size: toem(6px);
+          text-align: center;
+          font-family: $msuif-font-family-secondary;
+        }
+
+        .icon-speach__value {
+          @include icon-value-position;
+          top: -12px;
+          left: -26px;
+        }
+        .icon-heart__value{
+          @include icon-value-position;
+          top: -11px;
+          left: -26px;
+        }
+      }
+
+      .icon-over_heart,
+      .icon-over_speach {
+
+       .icon-heart__value {
+         color: $color-white;
+         left: -26px;
+       }
+       .icon-speach__value {
+         color: $color-white;
+         left: -29px;
+       }
+     }
+
+      p {
+        padding-right: toem(20px);
+        padding-left: toem(5px);
+        color: $color-orange;
+      }
+    }
+  }
+
+  >button {
+    min-width: toem(200px);
   }
 }
