@@ -32,8 +32,8 @@ $msuif-headers-h6-font-size-mobile: torem(16px);
 $msuif-headers-p-font-size: torem(18px);
 $msuif-headers-p-font-size-mobile: torem(16px);
 ///
-$msuif-headers-small-p-font-size: torem(16px);
-$msuif-headers-small-p-font-size-mobile: torem(14px);
+$msuif-headers-small-p-font-size: torem(14px);
+$msuif-headers-small-p-font-size-mobile: torem(12px);
 
 h1 {
   font-size: $msuif-headers-h1-font-size;
@@ -80,7 +80,7 @@ h4 {
 h5 {
   font-size: $msuif-headers-h5-font-size;
   font-weight: $msuif-font-weight-bold;
-  font-family: $msuif-font-family-tertiary;
+  font-family: $msuif-font-family-primary;
 
 
   @include respond-to('ismobile') {
@@ -92,7 +92,7 @@ h6 {
   font-size: $msuif-headers-h6-font-size;
   font-weight: $msuif-font-weight-semibold;
   font-family: $msuif-font-family-primary;
-  color: $msuif-font-color;
+  color: $color-red;
 
   @include respond-to('ismobile') {
     font-size: $msuif-headers-h6-font-size-mobile;

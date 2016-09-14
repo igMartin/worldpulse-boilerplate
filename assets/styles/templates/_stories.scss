@@ -5,6 +5,18 @@
   position: relative;
   display: inline-block;
 
+  &__tell-button {
+    margin-bottom: toem(30px);
+
+    >button {
+      min-width: toem(200px);
+    }
+
+    @include respond-to('desktop') {
+      display: none;
+    }
+  }
+
   &__buttons {
     display: flex;
     justify-content: center;
@@ -33,7 +45,7 @@
       position: absolute;
       z-index: 1;
       top: toem(200px);
-      right: toem(250px);
+      right: toem(110px);
       text-align: left;
       padding: 1.5%;
       border: toem(2px) solid $color-orange;
@@ -50,13 +62,13 @@
       }
 
       @include respond-to('ismobile') {
-        top: toem(215px);
+        top: toem(250px);
         right: 0;
         font-size: $msuif-font-size;
       }
 
       @include respond-to('ipad') {
-        top: toem(220px);
+        top: toem(250px);
         right: toem(80px);
         font-size: $msuif-font-size;
       }
@@ -93,7 +105,7 @@
         margin-bottom: toem(10px);
 
         &__photo {
-          @include photo-circle(small);
+          @include photo-circle(medium);
           margin-right: toem(10px);
         }
 

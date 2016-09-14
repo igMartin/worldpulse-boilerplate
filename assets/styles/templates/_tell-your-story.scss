@@ -11,10 +11,119 @@
   >button {
     min-width: 95%;
     margin-bottom: toem(40px);
+
+    @include respond-to('ismobile') {
+      display: none;
+    }
+
+    @include respond-to('ipad') {
+      display: none;
+    }
   }
 
-  h5 {
-    max-width: 212px;
-    margin: auto;
+  &__community-activity {
+    margin-bottom: toem(100px);
+
+    @include respond-to('ismobile') {
+      margin-bottom: toem(60px);
+    }
+
+    @include respond-to('ipad') {
+      margin-bottom: toem(60px);
+    }
+
+    h5 {
+      max-width: toem(160px);
+      margin: auto;
+      margin-bottom: toem(20px);
+    }
+
+    &__feeds {
+      @include respond-to('ismobile') {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      @include respond-to('ipad') {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      i {
+        font-size: toem(60px);
+        color: $color-peach;
+        cursor: pointer;
+
+        @include respond-to('desktop') {
+          display: none;
+        }
+      }
+
+      article {
+        @include respond-to('ismobile') {
+          max-width: toem(200px);
+        }
+
+        @include respond-to('ipad') {
+          max-width: toem(250px);
+        }
+      }
+
+      &--hide-mobile {
+        @include respond-to('ismobile') {
+          display: none;
+        }
+
+        @include respond-to('ipad') {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__earn-badge {
+
+    h5 {
+      max-width: toem(170px);
+      margin: auto;
+      margin-bottom: toem(20px);
+    }
+
+    p {
+      margin: auto;
+      text-align: center;
+      max-width: 50%;
+      margin-bottom: toem(30px);
+      line-height: 1.5;
+
+      &:last-child {
+        border-bottom: none;
+        text-decoration: underline;
+        max-width: 70%;
+
+        @include respond-to('ismobile') {
+          max-width: 50%;
+        }
+
+        @include respond-to('ipad') {
+          max-width: 25%;
+        }
+      }
+    }
+
+    &--badges {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: toem(8px);
+
+      i {
+        font-size: toem(60px);
+        color: $color-peach;
+        cursor: pointer;
+      }
+    }
   }
 }

@@ -94,7 +94,7 @@
         margin-bottom: toem(10px);
 
         &__photo {
-          @include photo-circle(small);
+          @include photo-circle(medium);
           margin-right: toem(20px);
         }
 

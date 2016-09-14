@@ -1,0 +1,17 @@
+// Feeds
+
+.feed {
+  display: flex;
+  align-items: center;
+  margin-bottom: toem(40px);
+
+  &__profile-photo {
+    @include photo-circle(small);
+    margin-right: toem(10px);
+  }
+
+  p {
+    width: 80%;
+    font-weight: $msuif-font-weight-semibold;
+  }
+}

@@ -77,6 +77,11 @@
       @include button($color-orange, transparent, $color-orange, 2px);
       border-radius: torem(50px);
     }
+
+    &--quaternary {
+      @include button($color-white, $color-red, $color-red, 2px);
+      border-radius: torem(50px);
+    }
   }
 
 
