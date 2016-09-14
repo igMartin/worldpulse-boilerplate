@@ -1,0 +1,25 @@
+// Give section
+
+.give {
+  &__jumbotron {
+    @include jumbotron;
+
+    &--wrapper {
+      padding: 150px 0 150px 0;
+      width: 65%;
+      margin: auto;
+      text-align: center;
+      color: $color-white;
+
+      @include respond-to('ismobile'){
+        width: auto;
+        padding: 30% 2% 0 2%;
+      }
+      h4 {
+        margin: auto;
+        width: 90%;
+        color: $color-white;
+      }
+    }
+  }
+}

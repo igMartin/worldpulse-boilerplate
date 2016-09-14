@@ -82,6 +82,15 @@
   }
 }
 
+// Jumbotron
+
+@mixin jumbotron {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-color: $color-red; //fallback color	
+}
+
 // Main wrapper
 @mixin main-wrapper ($background-color:$color-white,$lateral-padding:8%) {
 	background-color: $background-color;
