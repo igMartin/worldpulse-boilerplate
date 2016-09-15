@@ -59,3 +59,27 @@ $('#goToMembers').on('click', function(){
   $('.members').show();
   $('.stories').hide();
 });
+
+// Rangeslider.js
+
+$(document).ready(function() {
+  $('input[type="range"]').rangeslider({
+
+    polyfill: false,
+    rangeClass: 'rangeslider',
+    disabledClass: 'rangeslider--disabled',
+    horizontalClass: 'rangeslider--horizontal',
+    verticalClass: 'rangeslider--vertical',
+    fillClass: 'rangeslider__fill',
+    handleClass: 'rangeslider__handle',
+
+    onInit: function() {
+    },
+  });
+
+  $('output').val($('#range-slider').val());
+
+  $('#range-slider').change(function() {
+    $('output').val($('#range-slider').val());
+  });
+});

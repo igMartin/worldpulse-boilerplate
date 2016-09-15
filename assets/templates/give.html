@@ -20,6 +20,8 @@
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <!-- Font-awesome -->
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Rangeslider.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.2.1/rangeslider.css">
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
@@ -53,9 +55,53 @@
     <section class="give">
       <div class="give__jumbotron" style="background-image: url('img/Give Image_Urmila and girls_WP Cleared-NEEDS CAPTION0.jpg')">
         <div class="give__jumbotron--wrapper">
-          <h2>Become a Recurring Gift Campaign Name</h2>
-          <h4>Every dollar you give supports women who are creating a multiplier effect empowering other women to find their voice. Only 500 more fund members this year to reach our goal!</h4>
-        </div>  
+          <h3>Change Fund</h3>
+          <h4>Become a monthly contributor and directly fund World Pulse’s top digital changemakers.</h4>
+        </div>
+      </div>
+      <div class="give__donate">
+        <p>
+          We Are About Change. Not Charity. Every dollar supports our digital changemakers and the 2.9 million lives they are impacting. The more you give, the more impact you create.
+        </p>
+        <div class="give__donate--result">
+          <p>$</p><p><output name="result"></output></p>
+        </div>
+        <div class="give__donate--slider">
+          <p>$5</p>
+          <input id="range-slider" type="range" min="5" max="100" step="5" value="20">
+          <p>$100</p>
+        </div>
+        <div class="give__donate--once">
+          <input type="checkbox" id="donate-once">
+          <label><p>I'd like to make a one time gift instead</p></label>
+        </div>
+        <button type="button" name="donate" class="button__pill--quaternary button__pill--medium">Make a Gift</button>
+      </div>
+      <div class="give__support">
+        <div class="give__support--changemakers">
+          <h4 class="capitalize">Help power her revolution</h4>
+          <div class="give__support--changemakers__tiles">
+            <!-- build:include tiles-small.html --><!-- /build -->
+            <!-- build:include tiles-small.html --><!-- /build -->
+            <!-- build:include tiles-small.html --><!-- /build -->
+            <!-- build:include tiles-small.html --><!-- /build -->
+            <!-- build:include tiles-small.html --><!-- /build -->
+          </div>
+          <button type="button" name="button" class="button__pill--primary button__pill--medium">Our Impact</button>
+        </div>
+        <div class="give__support--at-work">
+          <h4 class="capitalize">your recurring contribution at work</h4>
+          <div class="give__support--at-work__wrapper">
+            <div class="give__support--at-work__wrapper--chart">
+              <div class="give__support--at-work__wrapper--chart__circle--1">50%</div>
+              <div class="give__support--at-work__wrapper--chart__circle--2">50%</div>
+            </div>
+            <div class="give__support--at-work__wrapper--text">
+              <p>50% of your gift directly funds World Pulse’s top digital changemakers.</p>
+              <p>50% of your gift funds the delivery of World Pulse programs worldwide.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- build:include footer.html --><!-- /build -->
@@ -73,6 +119,7 @@
   <script>
   window.jQuery || document.write('<script src="./js/vendor/jquery.min.js"><\/script>');
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.2.1/rangeslider.min.js"></script>
   <script src="./js/modules.js"></script>
 </body>
 

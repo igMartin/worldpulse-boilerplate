@@ -5,10 +5,10 @@
     @include jumbotron;
 
     &--wrapper {
-      padding: 150px 0 150px 0;
-      width: 65%;
+      padding: 150px 200px 200px 0;
+      width: 70%;
       margin: auto;
-      text-align: center;
+      text-align: left;
       color: $color-white;
 
       @include respond-to('ismobile'){
@@ -16,9 +16,127 @@
         padding: 30% 2% 0 2%;
       }
       h4 {
-        margin: auto;
-        width: 90%;
+        margin-top: toem(20px);
         color: $color-white;
+      }
+    }
+  }
+
+  &__donate {
+    background-color: $color-white;
+    padding: 5% 25% 10%;
+    text-align: center;
+
+    >p {
+      margin-bottom: toem(40px);
+    }
+
+    &--result {
+      display: flex;
+      justify-content: center;
+      margin-bottom: toem(20px);
+    }
+
+    &--slider {
+      display: flex;
+      align-items: center;
+
+      p {
+        &:first-child {
+          margin-right: toem(20px);
+        }
+
+        &:last-child {
+          margin-left: toem(20px);
+        }
+      }
+    }
+
+    &--once {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: toem(30px);
+      margin-bottom: toem(30px);
+
+      >input {
+        height: toem(20px);
+        width: toem(20px);
+        margin-right: toem(10px);
+      }
+    }
+  }
+
+  &__support {
+    display: flex;
+    text-align: center;
+    color: $color-white;
+
+    &--changemakers {
+      padding: 20px 20px 30px 60px;
+      width: 50%;
+      background-color: $color-blue;
+
+      h4 {
+        margin-bottom: toem(16px);
+        color: $color-white;
+      }
+
+      &__tiles {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+      }
+
+      button {
+        margin-top: toem(30px);
+      }
+    }
+
+    &--at-work {
+      padding: 20px 60px 30px 40px;
+      width: 50%;
+      background-color: $color-green;
+
+      h4 {
+        margin-bottom: toem(20px);
+        color: $color-white;
+      }
+
+      &__wrapper {
+        display: flex;
+
+        &--chart {
+          flex: 4;
+          display: flex;
+
+          &__circle--1 {
+            height:180px;
+            width:90px;
+            border-radius: 90px 0 0 90px;
+            background-color: $color-red;
+            margin-right: toem(3px);
+            line-height: 9;
+            font-size: $msuif-font-size-big;
+          }
+
+          &__circle--2 {
+            height:180px;
+            width:90px;
+            border-radius: 0 90px 90px 0;
+            background-color: $color-orange;
+            line-height: 9;
+            font-size: $msuif-font-size-big;
+          }
+        }
+
+        &--text {
+          flex: 6;
+
+          p {
+            margin-top: toem(30px);
+          }
+        }
       }
     }
   }
