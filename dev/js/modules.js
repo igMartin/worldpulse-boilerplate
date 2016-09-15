@@ -73,8 +73,6 @@ $(document).ready(function() {
     fillClass: 'rangeslider__fill',
     handleClass: 'rangeslider__handle',
 
-    onInit: function() {
-    },
   });
 
   $('output').val($('#range-slider').val());
@@ -82,4 +80,18 @@ $(document).ready(function() {
   $('#range-slider').change(function() {
     $('output').val($('#range-slider').val());
   });
+
+  $('.rangeslider__handle:after').appendTo('nalgas');
+  console.log($('.rangeslider__handle:after'));
 });
+
+
+// Give section, checkbox funcionality
+
+function valueChanged() {
+  if($('#donate-once').is(':checked')) {
+    $('#donate-custom').show();
+  }else {
+    $('#donate-custom').hide();
+  }
+}

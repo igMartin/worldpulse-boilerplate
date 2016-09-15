@@ -35,6 +35,10 @@
       display: flex;
       justify-content: center;
       margin-bottom: toem(20px);
+
+      output, p {
+        font-weight: bold;
+      }
     }
 
     &--slider {
@@ -56,13 +60,22 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: toem(30px);
+      margin-top: toem(40px);
       margin-bottom: toem(30px);
 
       >input {
         height: toem(20px);
         width: toem(20px);
         margin-right: toem(10px);
+      }
+    }
+
+    &--custom {
+
+      input {
+        display: none;
+        margin-bottom: toem(40px);
+        border: toem(1px) solid $msuif-font-color-tertiary;
       }
     }
   }
@@ -78,7 +91,7 @@
       background-color: $color-blue;
 
       h4 {
-        margin-bottom: toem(16px);
+        margin-bottom: toem(25px);
         color: $color-white;
       }
 
@@ -134,7 +147,7 @@
           flex: 6;
 
           p {
-            margin-top: toem(30px);
+            margin-top: toem(25px);
           }
         }
       }

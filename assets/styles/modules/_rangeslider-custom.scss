@@ -1,7 +1,7 @@
 // Custom clases to overide rangeslider ones.
 
 .rangeslider--horizontal{
-  max-height: 10px !important;
+  max-height: 8px !important;
 }
 
 .rangeslider__fill {
@@ -9,6 +9,14 @@
 }
 
 .rangeslider__handle {
-  width: 30px !important;
-  height: 30px !important;
+  width: 25px !important;
+  height: 25px !important;
+
+  &::after {
+    position: absolute !important;
+    width: 10px !important;
+    height: 10px !important;
+    background: transparent !important;
+    margin-top: -25px !important;
+  }
 }

@@ -170,18 +170,21 @@
         </div>
         <div class="give__donate--slider">
           <p>$5</p>
-          <input id="range-slider" type="range" min="5" max="100" step="5" value="20">
+          <input id="range-slider" type="range" min="5" max="100" step="5" value="10">
           <p>$100</p>
         </div>
         <div class="give__donate--once">
-          <input type="checkbox" id="donate-once">
+          <input type="checkbox" id="donate-once" onchange="valueChanged()">
           <label><p>I'd like to make a one time gift instead</p></label>
+        </div>
+        <div class="give__donate--custom">
+          <input id="donate-custom" type="text" class="input__classic--primary" placeholder="Enter desired amount">
         </div>
         <button type="button" name="donate" class="button__pill--quaternary button__pill--medium">Make a Gift</button>
       </div>
       <div class="give__support">
         <div class="give__support--changemakers">
-          <h4 class="capitalize">Help power her revolution</h4>
+          <h4 class="uppercase">Help power her revolution</h4>
           <div class="give__support--changemakers__tiles">
             <section class="tiles">
   <div class="tiles__profile">
@@ -312,7 +315,7 @@
           <button type="button" name="button" class="button__pill--primary button__pill--medium">Our Impact</button>
         </div>
         <div class="give__support--at-work">
-          <h4 class="capitalize">your recurring contribution at work</h4>
+          <h4 class="uppercase">your recurring contribution at work</h4>
           <div class="give__support--at-work__wrapper">
             <div class="give__support--at-work__wrapper--chart">
               <div class="give__support--at-work__wrapper--chart__circle--1">50%</div>
