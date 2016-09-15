@@ -6,11 +6,27 @@
   align-items: center;
   background-color: $color-blue;
   text-align: center;
+  padding: 8% 0;
+
+  &--pointing {
+    content: "";
+    position: absolute;
+    left:60%; //custom depends selection
+    @include respond-to('ismobile') {
+      left: 40%;
+    }
+    width: 0;
+    height: 0;
+    border: 30px solid $color-blue;
+    border-color: transparent transparent $color-blue $color-blue;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+  }
 
   &__wrapper {
     flex: 6;
     color: $color-white;
-    padding: 8% 5%;
+    padding: 0 5%;
 
     img {
       margin: 30px 0;
@@ -42,33 +58,40 @@
   height: torem(180px);
   background-color: $color-sand;
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: calc(50% - 3em);
-    width: 0;
-    height: 0;
-    border: 30px solid $color-blue;
-    border-color: transparent transparent $color-blue $color-blue;
-    transform-origin: 0 0;
-    transform: rotate(-45deg);
-  }
+
 
   &__wrapper {
-    flex: 6;
+    width: 100%;
+    @include respond-to('ismobile') {
+      overflow: hidden;
+      height: 100%;
+      align-items: center;
+      display: flex;
+    }
+    &__mobile{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      @include respond-to('ismobile') {
+        margin-top: -23px;
+        margin-left: -258px;/*custom by selection*/
+      }
+      .ms-icon{
+        font-size: toem(45px);
+        @include respond-to('ismobile') {
+          margin: 0 20%;
+          font-size: toem(35px);
+        }
+      }
+    }
   }
 
   &__arrow {
-    flex: 1;
     color: $color-blue;
     font-size: $msuif-font-size-super;
-
-    @include respond-to('desktop') {
-      display: none;
-    }
-
-    @include respond-to('ipad') {
-      display: none;
+    display: none;
+    @include respond-to('ismobile') {
+      display: block;
     }
   }
 }
