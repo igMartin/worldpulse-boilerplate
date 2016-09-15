@@ -92,7 +92,6 @@ h6 {
   font-size: $msuif-headers-h6-font-size;
   font-weight: $msuif-font-weight-semibold;
   font-family: $msuif-font-family-primary;
-  color: $color-red;
 
   @include respond-to('ismobile') {
     font-size: $msuif-headers-h6-font-size-mobile;
