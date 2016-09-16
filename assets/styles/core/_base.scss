@@ -79,3 +79,9 @@ ul {
   list-style: none;
   padding: 0;
 }
+
+input[type="checkbox"] {
+  height: toem(20px);
+  width: toem(20px);
+  margin-right: toem(10px);
+}

@@ -1,0 +1,84 @@
+// Sign-up second step
+
+
+.sign-up-2 {
+  display: none;
+  background-color: $color-lightgray;
+
+  h3 {
+    text-align: center;
+    padding-top: toem(60px);
+  }
+
+  &__content {
+    padding: 40px 0 120px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+
+    &--form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: toem(50px);
+
+      input {
+        width: 100%;
+        margin-bottom: torem(20px);
+
+        &:focus {
+          border-color: $color-green;
+          border-width: torem(1.5px);
+        }
+      }
+    }
+
+    &--separator {
+      margin-bottom: toem(50px);
+      margin-top: toem(30px);
+
+      p {
+         width: 50%;
+         margin: auto;
+         text-align: center;
+         border-bottom: 1px solid $msuif-font-color;
+         line-height: 0.1em;
+         font-weight: bold;
+      }
+
+      p span {
+          background-color: $color-lightgray;
+          padding: 0 10px;
+      }
+    }
+
+    &--social {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: toem(30px);
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 0;
+        font-size: 0.6em;
+
+        &:first-child {
+          margin-right: toem(20px);
+        }
+
+        i {
+          margin-right: toem(5px);
+          font-size: $msuif-font-size-jumbo;
+        }
+      }
+    }
+
+    &--terms {
+      display: flex;
+      justify-content: center;
+      margin-bottom: toem(30px);
+    }
+  }
+}

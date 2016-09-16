@@ -23,9 +23,8 @@
 
     &--primary {
       @include input($color-gray, 1px);
-      font-style: italic;
-      font-weight: $msuif-font-weight-regular;
-      border-width: 1px 0 1px 1px;
+      font-weight: $msuif-font-weight-bold;
+      font-size: $msuif-font-size-small;
     }
 
     &--secondary {

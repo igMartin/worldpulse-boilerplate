@@ -2,28 +2,25 @@
 @mixin progress-indicator($color){
   position: relative;
   display: inline-block;
-  width: 20%;
+  width: 18%;
   //Lines
   &:after {
     position: absolute;
     display: block;
-    z-index: 1;
-    left: 54%;
+    left: 80%;
     height: 1px;
-    width: 100%;
+    width: 80%;
     content: "";
-    background-color: $color-gray;
+    background-color: $color-peach;
   }
   // Bullets/Balls
   &:before {
     position: absolute;
     z-index: 2;
-    top: -11px;
-    height: 1.5em;
-    width: 1.5em;
-    border-radius: 1.2em;
-    border: none;
-    line-height: 1.2em;
+    top: -15px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
     content: " ";
     background-color: $color;
   }
@@ -35,9 +32,11 @@
 }
 .progress-indicator-container {
   width: 100%;
-  padding: 5em;
   ul{
     text-align: center;
+    width: toem(400px);
+    margin: auto;
+    margin-left: toem(-15px);
   }
 }
 
@@ -48,8 +47,8 @@
 }
 
 .progress-indicator-item {
-  @include progress-indicator($color-gray);
+  @include progress-indicator($color-peach);
   &--selected{
-    @include progress-indicator($color-black);
+    @include progress-indicator($color-orange);
   }
 }
