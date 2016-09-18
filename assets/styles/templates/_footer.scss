@@ -24,12 +24,14 @@
     padding-right: 2%;
 
     ul {
-      display: flex;
-      justify-content: space-around;
-
-      li>a>p {
+      display: table-cell;
+      &:first-child {
+        padding-right: 17%
+      }
+      li{
         margin-bottom: toem(20px);
       }
+
     }
 
     &--mobile {
@@ -38,7 +40,7 @@
         justify-content: space-between;
         margin-top: toem(30px);
 
-        li>a>p {
+        li>a {
           margin-bottom: toem(20px);
         }
       }

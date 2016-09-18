@@ -7,6 +7,18 @@
 @import 'https://fonts.googleapis.com/css?family=Noto+Serif';
 
 @font-face {
+  font-family: 'Campton-Book';
+  src: url('../fonts/Campton-Book.eot');
+  src: url('../fonts/Campton-Book.woff2') format('woff2'),
+       url('../fonts/Campton-Book.woff') format('woff'),
+       url('../fonts/Campton-Book.ttf') format('truetype'),
+       url('../fonts/Campton-Book.svg#Campton-Bold') format('svg'),
+       url('../fonts/Campton-Book.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Campton-Bold';
   src: url('../fonts/Campton-Bold.eot');
   src: url('../fonts/Campton-Bold.woff2') format('woff2'),
@@ -57,6 +69,8 @@ $msuif-font-weight-semibold: 600;
 $msuif-font-weight-bold: 700;
 ///
 ///Family
+$msuif-font-family-default: "Campton-Book", "Helvetica Neue", Helvetica, sans-serif;
+///
 $msuif-font-family-primary: "Campton-SemiBold", "Campton-Bold", "Helvetica Neue", Helvetica, sans-serif;
 ///
 $msuif-font-family-secondary: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
@@ -88,7 +102,7 @@ $color-yellow: #E6C81E;
 ///
 $color-green: #69BEA5;
 ///
-$color-gray: #AAAFA1;
+$color-gray: #41413c;
 ///
 $color-lightgray: #F6F6F6;
 ///
@@ -112,7 +126,7 @@ $msuif-font-color: tint($color-black,35%);
 ///
 $msuif-font-color-secondary: tint($color-black,30%);
 ///
-$msuif-font-color-tertiary: tint($color-black,45%);
+$msuif-font-color-tertiary: #606060;
 ///
 $modal-backdrop-background:    rgba(0, 0, 0, 0.5);
 ///
