@@ -21,13 +21,11 @@
 
   &__links {
     flex: 4;
-    padding-right: 2%;
-
+    padding-right: 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     ul {
-      display: table-cell;
-      &:first-child {
-        padding-right: 17%
-      }
       li{
         margin-bottom: toem(20px);
       }
@@ -35,12 +33,12 @@
     }
 
     &--mobile {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-top: toem(30px);
       ul {
-        display: flex;
-        justify-content: space-between;
-        margin-top: toem(30px);
-
-        li>a {
+        li {
           margin-bottom: toem(20px);
         }
       }
