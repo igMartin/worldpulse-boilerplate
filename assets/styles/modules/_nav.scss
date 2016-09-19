@@ -82,6 +82,7 @@
     color: $msuif-font-color;
 
     &--menu {
+      display: flex;
       margin-right: toem(8px);
       font-size: toem(40px);
       color: $color-orange;

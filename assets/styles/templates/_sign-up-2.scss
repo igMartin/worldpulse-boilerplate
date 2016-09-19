@@ -1,8 +1,7 @@
-// Sign-up second step
+// Sign Up 2
 
 
 .sign-up-2 {
-  display: none;
   background-color: $color-lightgray;
 
   h3 {
@@ -10,96 +9,44 @@
     padding-top: toem(60px);
 
     @include respond-to('ismobile') {
-      padding-top: toem(30px);
+      padding: 60px 20px 0 20px;
     }
   }
 
   &__content {
     padding: 40px 0 120px;
-    max-width: 350px;
+    max-width: toem(320px);
     margin: auto;
-    text-align: center;
-
-    @include respond-to('ismobile') {
-      padding: 40px 5px 120px;
-    }
 
     &--form {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      margin-top: toem(50px);
+      margin-top: toem(10px);
 
-      input {
+      select {
         width: 100%;
-        margin-bottom: torem(20px);
       }
 
-      #disclaimer-email, #disclaimer-name, #disclaimer-password {
-        display: none;
-        margin-bottom: toem(20px);
+      h4 {
+        margin-top: toem(30px);
+        margin-bottom: toem(10px);
+      }
 
-        ul {
-          list-style: circle;
-          text-align: left;
-          margin-left: 40px;
-          font-family: $msuif-font-family-secondary;
-          font-size: $msuif-headers-p-font-size;
-        
-          @include respond-to('ismobile') {
-            font-size: $msuif-headers-p-font-size-mobile;
-          }
-        }
+      .small-p {
+        margin-bottom: toem(10px);
       }
     }
 
-    &--separator {
-      margin-bottom: toem(45px);
-      margin-top: toem(30px);
-
-      p {
-        width: 60%;
-        margin: auto;
-        text-align: center;
-        border-bottom: 1px solid $msuif-font-color;
-        line-height: 0.1em;
-        font-weight: bold;
-
-        span {
-          background-color: $color-lightgray;
-          padding: 0 10px;
-        }
-      }
-    }
-
-    &--social {
+    &--button-wrapper {
       display: flex;
-      justify-content: space-between;
-      margin-bottom: toem(30px);
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: toem(40px);
 
       button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 0;
-        padding: 8px 8px;
-
-
-        &:first-child {
-          margin-right: toem(20px);
-        }
-
-        i {
-          margin-right: toem(5px);
-          font-size: $msuif-font-size-jumbo;
-        }
+        min-width: toem(120px);
+        margin-bottom: toem(20px);
       }
-    }
-
-    &--terms {
-      display: flex;
-      justify-content: baseline;
-      margin-bottom: toem(30px);
     }
   }
 }

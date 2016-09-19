@@ -99,6 +99,21 @@
     &--quaternary {
       @include button($color-white, $color-red, $color-red, 2px);
       border-radius: torem(50px);
+
+      &--disabled {
+        @include button($color-white, $color-red-disabled, $color-red-disabled, 2px);
+        border-radius: torem(50px);
+      }
+    }
+
+    &--quinary {
+      @include button($color-blue, transparent, $color-blue, 2px);
+      border-radius: torem(50px);
+    }
+
+    &--senary {
+      @include button($color-green, transparent, $color-green, 2px);
+      border-radius: torem(50px);
     }
   }
 

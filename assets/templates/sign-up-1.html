@@ -1,23 +1,116 @@
-<div class="sign-up-1" id="sign-up-1">
-  <div class="sign-up-1__content">
-    <h3 class="sign-up-1__content--header capitalize">join our digital uprising!</h3>
-    <ul>
-      <li>
-        <span><h5>1</h5></span>
-        <h6>Connect with inspiring women changemakers from 190 countries.</h6>
-      </li>
-      <li>
-        <span><h5>2</h5></span>
-        <h6>Hear their stories, and feel safe to share your own.</h6>
-      </li>
-      <li>
-        <span><h5>3</h5></span>
-        <h6>Exchange resources and support within our growing global community, and help impact 2.9 million lives and counting.</h6>
-      </li>
-    </ul>
-    <div class="sign-up-1__buttons">
-      <button id="goTo-sign-up-2" type="button" class="button__pill--quaternary button__pill--medium-small">Become a Member</a>
-      <button type="button" class="button__pill--secondary button__pill--medium-small">Sign In (I am a member)</button>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Community Leadership Program | World Pulse</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="#" />
+  <!-- Open Graph metatags -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="" />
+  <!-- Stylesheets and polyfills -->
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <!-- Font-awesome -->
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content=""><!-- Add brand color -->
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+</head>
+
+<body class="">
+
+
+  <!-- Header -->
+  <header>
+  </header>
+  <!-- /End of Header -->
+
+  <!-- Content -->
+  <main role="main">
+
+    <!-- build:include header.html --><!-- /build -->
+
+    <div class="sign-up-1" >
+      <h3>Step 1: Become a Member</h3>
+      <div class="sign-up-1__content">
+        <div class="progress-indicator-container">
+          <ul>
+            <li class="progress-indicator-item--selected"></li>
+            <li class="progress-indicator-item"></li>
+            <li class="progress-indicator-item"></li>
+            <li class="progress-indicator-item"></li>
+            <li class="progress-indicator-item"></li>
+          </ul>
+        </div>
+        <form action="index.html" method="post">
+          <div class="sign-up-1__content--form">
+            <input id="sign-up-email" type="email" name="name" value="" class="input__classic--primary" placeholder="Email Address">
+            <p id="disclaimer-email">We won't share your email with anyone without your consent. All emails from Worldpulse will be sent to your address.</p>
+            <input  id="sign-up-name" type="text" name="name" value="" class="input__classic--primary" placeholder="Username">
+            <p id="disclaimer-name"><span class="bold">Tip: </span>Consider using an alias or "pen name" if you are in a country or environment that punishes free speach.</p>
+            <input  id="sign-up-password" type="password" name="name" value="" class="input__classic--primary" placeholder="Password">
+            <div id="disclaimer-password">
+              <p><span class="bold">Tip: </span>Create strong passwords and change them often. A strong passwords has: </p>
+               <ul>
+                <li>8 characters or more.</li>
+                <li>UPPERCASE letters, lowercase letters, and numbers.</li>
+                <li>At least one special character !@#%?</li>
+              </ul>
+            </div>
+          </div>
+          <div class="sign-up-1__content--separator">
+            <p><span>or</span></p>
+          </div>
+          <div class="sign-up-1__content--social">
+            <button type="button" name="button" class="button__square--primary button__square--medium-small"><i class="fa fa-facebook"></i><span class="mini-p">Sign In with Facebook</span></button>
+            <button type="button" name="button" class="button__square--secondary button__square--medium-small"><i class="fa fa-google"></i><span class="mini-p">Sign In with Google</span></button>
+          </div>
+          <div class="sign-up-1__content--terms">
+            <input type="checkbox" name="terms" value="">
+            <p>By checking this box I agree to the Terms of Sevice (required).</p>
+          </div>
+          <button type="button" onclick= "window.location.href='sign-up-2.html'" class="button__pill--quaternary--disabled button__pill--medium-small">Become a Member</button>
+        </form>
+      </div>
     </div>
-  </div>
-</div>
+
+    <!-- build:include footer.html --><!-- /build -->
+
+  </main>
+  <!-- /End of Content -->
+
+  <!-- Footer -->
+  <footer>
+  </footer>
+  <!-- /End of Footer -->
+
+  <!-- Javascript files -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script>
+  window.jQuery || document.write('<script src="./js/vendor/jquery.min.js"><\/script>');
+  </script>
+  <script src="./js/modules.js"></script>
+</body>
+
+</html>

@@ -34,12 +34,12 @@
   width: 100%;
   ul{
     text-align: center;
-    width: toem(420px);
+    width: toem(380px);
     margin: auto;
-    margin-left: toem(-50px);
+    margin-left: toem(-45px);
 
     @include respond-to('ismobile') {
-      width: toem(400px);
+      width: toem(370px);
       margin-left: toem(-45px);
     }
   }

@@ -14,7 +14,7 @@
     height: torem(45px);
 
     @include respond-to('ipad') {
-      justify-content: center;
+      display: none;
     }
 
     @include respond-to('ismobile') {

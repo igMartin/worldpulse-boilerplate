@@ -68,35 +68,8 @@ $('#goToMembers').on('click', function(){
   $('.stories').hide();
 });
 
-// Sign Up
 
-$('#goTo-sign-up-2').on('click', function() {
-  $('#sign-up-1').hide();
-  $('#sign-up-2').show();
-});
-
-$('#goTo-sign-up-3').on('click', function() {
-  $('#sign-up-2').hide();
-  $('#sign-up-3').show();
-});
-
-$('#goTo-sign-up-4').on('click', function() {
-  $('#sign-up-3').hide();
-  $('#sign-up-4').show();
-});
-
-$('#goTo-sign-up-5').on('click', function() {
-  $('#sign-up-4').hide();
-  $('#sign-up-5').show();
-});
-
-$('#goTo-sign-up-6').on('click', function() {
-  $('#sign-up-5').hide();
-  $('#sign-up-6').show();
-});
-
-
-// Sign-up disclaimer text
+// Sign-up-2 disclaimer text
 
 $('#sign-up-email').focus(function() {
   $('#disclaimer-email').show();
