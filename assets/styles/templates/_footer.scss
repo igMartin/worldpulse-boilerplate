@@ -48,11 +48,7 @@
       }
     }
 
-    @include respond-to('ismobile') {
-      display: none;
-    }
-
-    @include respond-to('ipad') {
+    @include respond-to('notdesktop') {
       display: none;
     }
   }
@@ -60,22 +56,14 @@
   &__email {
     flex: 4;
 
-    p {
-      margin-bottom: toem(10px);
-
-      @include respond-to('ismobile') {
-        margin-top: toem(15px);
-      }
-
-      @include respond-to('ipad') {
-        margin-top: toem(15px);
-      }
+    @include respond-to('notdesktop') {
+      margin-top: toem(15px);
     }
-
+  
     &--wrapper {
       display: flex;
       flex-wrap: wrap;
-
+      margin-top: toem(10px);
       input {
         margin-bottom: toem(8px);
         color: $color-black;
@@ -84,11 +72,7 @@
         &[type="text"] {
           flex: 1;
 
-          @include respond-to('ismobile') {
-            width: 49%;
-          }
-
-          @include respond-to('ipad') {
+          @include respond-to('notdesktop') {
             width: 49%;
           }
 
@@ -119,12 +103,7 @@
     flex: 2;
     padding-left: 3%;
 
-    @include respond-to('ismobile') {
-      padding-left: 0;
-      padding-bottom: toem(20px);
-    }
-
-    @include respond-to('ipad') {
+    @include respond-to('notdesktop') {
       padding-left: 0;
       padding-bottom: toem(20px);
     }
@@ -135,14 +114,7 @@
       flex-flow: row wrap;
       margin: 0;
 
-      @include respond-to('ismobile') {
-        justify-content: center;
-        flex-wrap: nowrap;
-        width: 100%;
-        margin-top: toem(25px);
-      }
-
-      @include respond-to('ipad') {
+      @include respond-to('notdesktop') {
         justify-content: center;
         flex-wrap: nowrap;
         width: 100%;
@@ -153,22 +125,14 @@
         flex-basis: 33%;
         font-size: 35px;
 
-        @include respond-to('ismobile') {
-          text-align: center;
-        }
-
-        @include respond-to('ipad') {
+        @include respond-to('notdesktop') {
           text-align: center;
         }
 
         &:nth-child(-n+3) {
           margin-bottom: toem(8px);
 
-          @include respond-to('ismobile') {
-            margin-bottom: 0;
-          }
-
-          @include respond-to('ipad') {
+          @include respond-to('notdesktop') {
             margin-bottom: 0;
           }
         }
