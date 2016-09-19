@@ -140,5 +140,6 @@ $modal-transition-delay:       $msuif-transition-duration !default;
 $msuif-breakpoints: (
   'desktop': (min-width: 1026px),
   'ipad': (min-width: 501px, max-width: 1025px),
-  'ismobile': (max-width: 500px)
+  'ismobile': (max-width: 500px),
+  'notdesktop': (max-width: 1026px)
 );
