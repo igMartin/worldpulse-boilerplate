@@ -1,0 +1,52 @@
+// Sign Up 4
+
+
+.sign-up-4 {
+  background-color: $color-lightgray;
+
+  h3 {
+    text-align: center;
+    padding-top: toem(60px);
+
+    @include respond-to('ismobile') {
+      padding: 60px 20px 0 20px;
+    }
+  }
+
+  &__content {
+    padding: 40px 0 120px;
+    max-width: toem(320px);
+    margin: auto;
+
+    &--form {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: toem(10px);
+
+      select {
+        width: 100%;
+      }
+
+      h4 {
+        margin-top: toem(30px);
+        margin-bottom: toem(10px);
+      }
+
+      .small-p {
+        margin-bottom: toem(10px);
+      }
+    }
+
+    &--button-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: toem(40px);
+
+      button {
+        min-width: toem(120px);
+        margin-bottom: toem(20px);
+      }
+    }
+  }
+}
