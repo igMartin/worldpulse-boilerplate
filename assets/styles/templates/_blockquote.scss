@@ -74,10 +74,11 @@
       justify-content: space-around;
       @include respond-to('ismobile') {
         margin-top: -23px;
-        margin-left: -258px;/*custom by selection*/
+        margin-left: -279px;/*custom by selection*/
       }
       .ms-icon{
         font-size: toem(45px);
+        opacity: 0.5;
         @include respond-to('ismobile') {
           margin: 0 20%;
           font-size: toem(35px);

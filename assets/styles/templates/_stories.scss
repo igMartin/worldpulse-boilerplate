@@ -115,6 +115,7 @@
           h5 {
             padding-top: toem(3px);
             font-style: italic;
+            font-family: $msuif-font-family-tertiary;
           }
 
           &--flag {
@@ -148,6 +149,7 @@
       .small-p {
         padding-left: 0;
         font-size: $msuif-font-size;
+        margin-top: 10px;
       }
 
       .green {

@@ -34,9 +34,14 @@
   width: 100%;
   ul{
     text-align: center;
-    width: toem(400px);
+    width: toem(420px);
     margin: auto;
-    margin-left: toem(-15px);
+    margin-left: toem(-50px);
+
+    @include respond-to('ismobile') {
+      width: toem(400px);
+      margin-left: toem(-45px);
+    }
   }
 }
 

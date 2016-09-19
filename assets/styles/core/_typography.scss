@@ -29,11 +29,18 @@ $msuif-headers-h5-font-size-mobile: torem(20px);
 $msuif-headers-h6-font-size: torem(18px);
 $msuif-headers-h6-font-size-mobile: torem(16px);
 ///
-$msuif-headers-p-font-size: torem(18px);
-$msuif-headers-p-font-size-mobile: torem(16px);
+$msuif-headers-p-font-size: torem(16px);
+$msuif-headers-p-font-size-mobile: torem(14px);
 ///
-$msuif-headers-small-p-font-size: torem(14px);
+$msuif-headers-small-p-font-size: torem(13px);
 $msuif-headers-small-p-font-size-mobile: torem(12px);
+///
+$msuif-headers-mini-p-font-size: torem(10px);
+$msuif-headers-mini-p-font-size-mobile: torem(10px);
+
+body {
+  font-family: $msuif-font-family-default;
+}
 
 h1 {
   font-size: $msuif-headers-h1-font-size;
@@ -92,7 +99,6 @@ h6 {
   font-size: $msuif-headers-h6-font-size;
   font-weight: $msuif-font-weight-semibold;
   font-family: $msuif-font-family-primary;
-  color: $color-red;
 
   @include respond-to('ismobile') {
     font-size: $msuif-headers-h6-font-size-mobile;
@@ -100,8 +106,8 @@ h6 {
 }
 
 p {
-  font-size: $msuif-headers-p-font-size;
   font-family: $msuif-font-family-secondary;
+  font-size: $msuif-headers-p-font-size;
   text-align: left;
 
   @include respond-to('ismobile') {
@@ -111,11 +117,19 @@ p {
 
 .small-p {
   font-size: $msuif-headers-small-p-font-size;
-  font-family: $msuif-font-family-secondary;
   text-align: left;
 
   @include respond-to('ismobile') {
     font-size: $msuif-headers-small-p-font-size-mobile;
+  }
+}
+
+.mini-p {
+  font-size: $msuif-headers-mini-p-font-size;
+  text-align: left;
+
+  @include respond-to('ismobile') {
+    font-size: $msuif-headers-mini-p-font-size-mobile;
   }
 }
 

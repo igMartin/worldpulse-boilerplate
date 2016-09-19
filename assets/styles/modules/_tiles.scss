@@ -21,8 +21,11 @@
 
       &__naming {
 
-        h5:first-child {
-          margin-top: toem(10px);
+        h5 {
+          font-family: $msuif-font-family-tertiary;
+          &:first-child {
+            margin-top: toem(10px);
+          }
         }
 
         img {
@@ -75,8 +78,11 @@
 
         &__naming {
 
-          h5:first-child {
-            margin-top: toem(10px);
+          h5 {
+            font-family: $msuif-font-family-tertiary;
+            &:first-child {
+              margin-top: toem(10px);
+            }
           }
 
           img {

@@ -94,3 +94,24 @@ $('#goTo-sign-up-6').on('click', function() {
   $('#sign-up-5').hide();
   $('#sign-up-6').show();
 });
+
+
+// Sign-up disclaimer text
+
+$('#sign-up-email').focus(function() {
+  $('#disclaimer-email').show();
+}).blur(function() {
+  $('#disclaimer-email').fadeOut('medium');
+});
+
+$('#sign-up-name').focus(function() {
+  $('#disclaimer-name').show();
+}).blur(function() {
+  $('#disclaimer-name').fadeOut('medium');
+});
+
+$('#sign-up-password').focus(function() {
+  $('#disclaimer-password').show();
+}).blur(function() {
+  $('#disclaimer-password').fadeOut('medium');
+});
