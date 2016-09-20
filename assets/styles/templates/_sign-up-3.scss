@@ -19,7 +19,7 @@
     margin: auto;
 
     @include respond-to('ismobile') {
-      padding: 30px 0 120px;
+      padding: 40px 15px 120px;
     }
 
     &--photo-wrapper {
@@ -33,6 +33,11 @@
         border: toem(2px) solid $color-blue;
         border-radius: 50%;
         background-color: $color-white;
+
+        @include respond-to('ismobile') {
+          height: toem(290px);
+          width: toem(290px);
+        }
       }
     }
 
@@ -47,7 +52,7 @@
         padding-right: toem(10px);
 
         @include respond-to('ismobile') {
-          min-width: toem(145px);
+          min-width: toem(135px);
         }
       }
     }

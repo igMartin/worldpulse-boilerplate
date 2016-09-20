@@ -1,0 +1,41 @@
+// Sign Up 6
+
+
+.sign-up-6 {
+  background-color: $color-lightgray;
+
+  h3 {
+    text-align: center;
+    padding-top: toem(60px);
+    padding-bottom: toem(10px);
+
+
+    @include respond-to('ismobile') {
+      padding: 60px 25px 30px 25px;
+    }
+  }
+
+  &__text {
+    max-width: toem(320px);
+    margin: auto;
+
+    @include respond-to('ismobile') {
+      max-width: toem(290px);
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 0 150px 0;
+
+    @include respond-to('ismobile') {
+      padding: 40px 0 100px 0;
+    }
+
+    button {
+      min-width: toem(180px);
+    }
+  }
+}

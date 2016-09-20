@@ -39,8 +39,8 @@
     margin-left: toem(-45px);
 
     @include respond-to('ismobile') {
-      width: toem(370px);
-      margin-left: toem(-45px);
+      width: toem(340px);
+      margin-left: toem(-40px);
     }
   }
 }

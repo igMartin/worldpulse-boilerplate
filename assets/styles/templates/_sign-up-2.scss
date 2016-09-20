@@ -18,6 +18,10 @@
     max-width: toem(320px);
     margin: auto;
 
+    @include respond-to('ismobile') {
+      padding: 40px 15px 120px;
+    }
+
     &--form {
       display: flex;
       flex-wrap: wrap;

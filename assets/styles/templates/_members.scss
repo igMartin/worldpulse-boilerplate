@@ -84,6 +84,7 @@
 
       @include respond-to('ismobile') {
         width: 50%;
+        margin-bottom: toem(40px);
       }
 
       @include respond-to('ipad') {

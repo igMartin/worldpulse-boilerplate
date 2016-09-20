@@ -15,7 +15,7 @@
   &--small {
     padding: 5px 15px;
     font-size: $msuif-font-size;
-    min-width: toem(165px);
+    min-width: toem(145px);
     max-height: toem(35px);
 
     @include respond-to('ismobile') {

@@ -47,7 +47,6 @@
     display: none;
     font-size: $msuif-font-size-jumbo;
     align-items: center;
-    margin-bottom: toem(20px);
 
     &--arrow {
       font-size: $msuif-font-size-super;
@@ -62,7 +61,7 @@
       &__individual {
         @include individual;
         width: 100%;
-        min-height: toem(200px);
+        min-height: toem(180px);
         padding: 0;
 
         &__photo {
@@ -71,8 +70,8 @@
 
           &--unit {
             @include photo-circle();
-            height: 150px;
-            width: 150px;
+            height: 130px;
+            width: 130px;
           }
         }
 
