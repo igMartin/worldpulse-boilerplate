@@ -1,7 +1,7 @@
-// Sign Up 1
+// Sign In
 
 
-.sign-up-1 {
+.sign-in {
   background-color: $color-lightgray;
 
   h3 {
@@ -27,28 +27,10 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: toem(50px);
 
       input {
         width: 100%;
         margin-bottom: torem(20px);
-      }
-
-      #disclaimer-email, #disclaimer-name, #disclaimer-password {
-        display: none;
-        margin-bottom: toem(20px);
-
-        ul {
-          list-style: disc;
-          text-align: left;
-          margin-left: toem(20px);
-          font-family: $msuif-font-family-secondary;
-          font-size: $msuif-headers-p-font-size;
-
-          @include respond-to('ismobile') {
-            font-size: $msuif-headers-p-font-size-mobile;
-          }
-        }
       }
     }
 
@@ -94,16 +76,19 @@
       }
     }
 
-    &--terms {
+    &--button-wrapper {
       display: flex;
-      margin-bottom: toem(30px);
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: toem(40px);
 
-      input {
-        flex: 1;
+      button {
+        min-width: toem(110px);
+        margin-bottom: toem(15px);
       }
 
-      p {
-        flex: 8;
+      a {
+        margin-bottom: toem(10px);
       }
     }
   }

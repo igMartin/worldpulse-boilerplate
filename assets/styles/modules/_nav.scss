@@ -7,14 +7,14 @@
   background-color: $color-white;
   color: $color-red;
   padding: 15px 0;
-  border-bottom: toem(4px) solid $msuif-font-color-tertiary;
+  border-bottom: toem(4px) solid $color-gray-2;
 
   @include respond-to('ismobile') {
-    border-bottom: toem(1px) solid $msuif-font-color-tertiary;
+    border-bottom: toem(1px) solid $color-gray-2;
   }
 
   @include respond-to('ipad') {
-    border-bottom: toem(1px) solid $msuif-font-color-tertiary;
+    border-bottom: toem(1px) solid $color-gray-2;
   }
 
   &__logo {
