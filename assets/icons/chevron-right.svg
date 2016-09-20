@@ -1,12 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="41px" height="41px" viewBox="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-    <title>Chevron Right_11x19</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="A" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Chevron-Right_11x19" fill="#000000">
-            <polyline id="Fill-6-Copy" transform="translate(20.500000, 20.500000) rotate(-180.000000) translate(-20.500000, -20.500000) " points="15 20.5005588 24.6953204 30 26 28.7225294 17.6088033 20.5005588 26 12.2785882 24.6953204 11 15 20.5005588"></polyline>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="400px" height="400px" viewBox="-179.5 -179.5 400 400" enable-background="new -179.5 -179.5 400 400"
+	 xml:space="preserve">
+<polyline id="Fill-6-Copy" points="136.289,20.489 -67.822,-179.5 -95.289,-152.608 81.355,20.489 -95.289,193.588 -67.822,220.5 
+	136.289,20.489 "/>
 </svg>

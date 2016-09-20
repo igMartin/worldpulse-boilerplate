@@ -118,7 +118,10 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: toem(8px);
-
+      .ms-icon {
+        font-size: 26px;
+        margin-top: -10px;
+      }
       i {
         font-size: toem(60px);
         color: $color-peach;
