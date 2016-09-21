@@ -148,8 +148,9 @@ $modal-transition-delay:       $msuif-transition-duration !default;
 /// Breakpoints ///
 ///
 $msuif-breakpoints: (
+  'notdesktop': (max-width: 1026px),
   'desktop': (min-width: 1026px),
   'ipad': (min-width: 501px, max-width: 1025px),
   'ismobile': (max-width: 500px),
-  'notdesktop': (max-width: 1026px)
+  'iphone5': (max-width: 320px)
 );
