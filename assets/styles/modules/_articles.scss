@@ -1,0 +1,143 @@
+// Article
+
+  .article {
+    margin-bottom: torem(60px);
+
+    &--header {
+
+      &__profile {
+        display: flex;
+        margin-bottom: toem(10px);
+
+        &__photo {
+          @include photo-circle(medium);
+          margin-right: toem(10px);
+        }
+
+        &__wrapper {
+          flex: 8;
+
+          h5 {
+            padding-top: toem(3px);
+            font-style: italic;
+            font-family: $msuif-font-family-tertiary;
+          }
+
+          &--flag {
+            @include flag-image();
+          }
+        }
+      }
+    }
+
+    &--text {
+      margin-bottom: toem(20px);
+
+      h4 {
+        margin-bottom: toem(10px);
+      }
+    }
+
+    &--actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      &__elem, &__elem--welcome {
+        display: flex;
+        align-items: center;
+        margin-top: toem(10px);
+      }
+
+      &__elem--welcome {
+        span {
+          color: $color-green !important;
+        }
+      }
+
+      .small-p {
+        padding-left: toem(5px);
+        padding-right: 0;
+        color: $color-orange;
+        font-size: $msuif-font-size;
+        margin-right: toem(10px);
+
+        @include respond-to('ismobile') {
+          font-size: $msuif-font-size-small;
+        }
+
+        &:first-child{
+          margin-right: toem(5px);
+        }
+      }
+
+      .green {
+        @include respond-to('ismobile') {
+          margin-top: toem(5px);
+        }
+      }
+
+      .ms-icon {
+        font-size: $msuif-font-size-jumbo-plus;
+        color: $color-orange;
+        width: toem(20px);
+
+        @include respond-to('ismobile') {
+          font-size: toem(22px);
+        }
+
+        @mixin icon-value-position{
+          position: relative;
+          font-size: toem(6px);
+          text-align: center;
+          font-family: $msuif-font-family-secondary;
+
+          @include respond-to('ismobile') {
+            font-size: toem(8px);
+          }
+        }
+
+        .icon-speach__value {
+          @include icon-value-position;
+          top: -12px;
+          left: -29px;
+
+          @include respond-to('ismobile') {
+            top: -7px;
+            left: -19px;
+          }
+        }
+        .icon-heart__value{
+          @include icon-value-position;
+          top: -10px;
+          left: -27px;
+
+          @include respond-to('ismobile') {
+            top: -6px;
+            left: -18px;
+          }
+        }
+      }
+
+      .icon-over_heart,
+      .icon-over_speach {
+
+        .icon-heart__value {
+          color: $color-white;
+          left: -27px;
+
+          @include respond-to('ismobile') {
+            left: -18px;
+          }
+        }
+        .icon-speach__value {
+          color: $color-white;
+          left: -29px;
+
+          @include respond-to('ismobile') {
+            left: -19px;
+          }
+        }
+      }
+    }
+  }
