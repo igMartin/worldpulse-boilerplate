@@ -37,6 +37,7 @@
 
     input {
       flex: 5;
+      border-width: 1px 0 1px 1px;
     }
 
     button {
@@ -83,6 +84,7 @@
 
       @include respond-to('ismobile') {
         width: 50%;
+        margin-bottom: toem(40px);
       }
 
       @include respond-to('ipad') {

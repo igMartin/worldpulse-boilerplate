@@ -51,38 +51,39 @@
 
     <!-- build:include header.html --><!-- /build -->
 
-    <div class="sign-up-2">
-      <h3>Step 2: Tell Us About Yourself</h3>
-      <div class="sign-up-2__content">
+    <div class="sign-up-3">
+      <h3>Step 3: Add a Profile Picture</h3>
+      <div class="sign-up-3__content">
         <div class="progress-indicator-container">
           <ul>
             <li class="progress-indicator-item"><a href="sign-up-1.html"></a></li>
-            <li class="progress-indicator-item--selected"><a href="sign-up-2.html"></a></li>
             <li class="progress-indicator-item"><a href="sign-up-3.html"></a></li>
+            <li class="progress-indicator-item--selected"><a href="sign-up-3.html"></a></li>
             <li class="progress-indicator-item"><a href="sign-up-4.html"></a></li>
             <li class="progress-indicator-item"><a href="sign-up-5.html"></a></li>
           </ul>
         </div>
-        <form action="index.html" method="post">
-          <div class="sign-up-2__content--form">
-            <h4>Thanks for becoming a member!</h4>
-            <p>We want to personalize your experience, and invite you to tell us a little bit about yourself.</p>
-            <h4>Where do you live?</h4>
-            <p class="small-p">We won't share this information with anyone without your consent</p>
-            <select class="dropdown__square--primary" name="country-live">
-              <option>australia</option>
-            </select>
-            <h4>What country do you identify with?</h4>
-            <p class="small-p">This country's flag will be assigned to your World Pulse profile</p>
-            <select class="dropdown__square--primary" name="country-identify">
-              <option>country</option>
-            </select>
+        <div class="sign-up-3__content--photo-wrapper">
+          <div class="sign-up-3__content--photo-wrapper__photo">
+
           </div>
-          <div class="sign-up-2__content--button-wrapper">
-            <button type="button" onclick="window.location.href='sign-up-3.html'" class="button__pill--quaternary button__pill--medium-small">Next</button>
-            <a href="sign-up-3.html" class="skip">Skip</a>
-          </div>
-        </form>
+        </div>
+        <div class="sign-up-3__content--photo-buttons">
+          <button type="button" name="button" class="button__pill--quinary button__pill--medium-small">Choose File</button>
+          <button type="button" name="button" class="button__pill--senary button__pill--medium-small">Upload</button>
+        </div>
+        <div class="sign-up-3__content--info">
+          <p>The picture you upload will be assigned to your World Pulse profile. If you skip this step, an ilustration known as an avatar will be shown.</p>
+          <ul>
+            <li>Files must be less than 2MB.</li>
+            <li>Allowed file types: png, gif, jpg, jpeg.</li>
+            <li>Images must be between 200x200 and 1800x1800 pixels.</li>
+          </ul>
+        </div>
+        <div class="sign-up-3__content--button-wrapper">
+          <button type="button" onclick="window.location.href='sign-up-4.html'" class="button__pill--quaternary button__pill--medium-small">Next</button>
+          <a href="sign-up-4.html" class="skip">Skip</a>
+        </div>
       </div>
     </div>
 

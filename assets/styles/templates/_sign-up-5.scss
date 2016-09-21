@@ -1,0 +1,78 @@
+// Sign Up 5
+
+
+.sign-up-5 {
+  background-color: $color-lightgray;
+
+  h3 {
+    text-align: center;
+    padding-top: toem(60px);
+
+    @include respond-to('ismobile') {
+      padding: 60px 25px 0 25px;
+    }
+  }
+
+  &__progress-indicator {
+    padding: 40px 0;
+    max-width: toem(320px);
+    margin: auto;
+
+    @include respond-to('ismobile') {
+      max-width: toem(290px);
+    }
+  }
+
+  &__text {
+    max-width: toem(320px);
+    margin: auto;
+
+    @include respond-to('ismobile') {
+      max-width: toem(290px);
+    }
+
+    h6 {
+      margin: 10px 0 30px;
+    }
+  }
+
+  &__tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: toem(490px);
+    margin: auto;
+
+    @include respond-to('ismobile') {
+      padding: 0 15px;
+    }
+
+    section {
+      background-color: $color-white;
+      padding: toem(15px);
+      border-radius: toem(10px);
+      min-height: 0;
+      margin-bottom: toem(40px);
+
+      @include respond-to('ismobile') {
+        min-height: 0;
+        max-width: 48%;
+        padding-left: toem(5px);
+        padding-right: toem(5px);
+        margin-bottom: toem(15px);
+      }
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 0 120px 0;
+
+    button {
+      min-width: toem(120px);
+      margin-bottom: toem(20px);
+    }
+  }
+}

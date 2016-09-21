@@ -4,6 +4,14 @@ $('.hello-bar__close').click(function(){
   $('.hello-bar').hide();
 });
 
+// take border bottom of nav in home
+
+var url = window.location.href;
+var page = url.split('/').pop();
+
+if(page === 'index.html') {
+  $('.nav').css('border-bottom', 'none');
+}
 
 // tabs
 
@@ -58,4 +66,25 @@ $('#goToStories').on('click', function(){
 $('#goToMembers').on('click', function(){
   $('.members').show();
   $('.stories').hide();
+});
+
+
+// Sign-up-2 disclaimer text
+
+$('#sign-up-email').focus(function() {
+  $('#disclaimer-email').show();
+}).blur(function() {
+  $('#disclaimer-email').fadeOut('medium');
+});
+
+$('#sign-up-name').focus(function() {
+  $('#disclaimer-name').show();
+}).blur(function() {
+  $('#disclaimer-name').fadeOut('medium');
+});
+
+$('#sign-up-password').focus(function() {
+  $('#disclaimer-password').show();
+}).blur(function() {
+  $('#disclaimer-password').fadeOut('medium');
 });

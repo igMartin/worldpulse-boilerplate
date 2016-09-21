@@ -15,12 +15,30 @@
   &--small {
     padding: 5px 15px;
     font-size: $msuif-font-size;
-    min-width: toem(165px);
+    min-width: toem(145px);
     max-height: toem(35px);
 
     @include respond-to('ismobile') {
       padding: 5px 5px;
       font-size: $msuif-font-size-small;
+    }
+  }
+
+  &--medium-small {
+    padding: 15px 10px;
+    min-width: toem(220px);
+    font-size: $msuif-font-size-big;
+
+    @include respond-to('ipad') {
+      min-width: toem(220px);
+      padding: 15px 20px;
+      font-size: $msuif-font-size-big;
+    }
+
+    @include respond-to('ismobile') {
+      min-width: toem(220px);
+      padding: 15px 20px;
+      font-size: $msuif-font-size;
     }
   }
 
@@ -80,6 +98,21 @@
 
     &--quaternary {
       @include button($color-white, $color-red, $color-red, 2px);
+      border-radius: torem(50px);
+
+      &--disabled {
+        @include button($color-white, $color-red-disabled, $color-red-disabled, 2px);
+        border-radius: torem(50px);
+      }
+    }
+
+    &--quinary {
+      @include button($color-blue, transparent, $color-blue, 2px);
+      border-radius: torem(50px);
+    }
+
+    &--senary {
+      @include button($color-green, transparent, $color-green, 2px);
       border-radius: torem(50px);
     }
   }
@@ -141,18 +174,11 @@
     @include button_size;
 
     &--primary {
-      @include button($color-white, $color-black, $color-black, 1px);
+      @include button($color-white, $color-facebook, $color-facebook, 1px);
     }
 
     &--secondary {
-      @include button($color-black, $color-white, $color-black, 1px);
-    }
-
-    &--tertiary {
-      @include button($color-white, transparent, $color-white, 1px);
-      padding: 5px 8px 5px 8px;
-      font-weight: normal;
-      font-size: $msuif-font-size-small;
+      @include button($color-white, $color-google, $color-google, 1px);
     }
   }
 

@@ -25,6 +25,7 @@
       @include individual;
       background-color: $color-ivory;
       width: 31.5%;
+      padding-top: toem(30px);
 
       &__photo {
         display: flex;

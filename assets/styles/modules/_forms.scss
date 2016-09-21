@@ -23,9 +23,8 @@
 
     &--primary {
       @include input($color-gray, 1px);
-      font-style: italic;
-      font-weight: $msuif-font-weight-regular;
-      border-width: 1px 0 1px 1px;
+      font-weight: $msuif-font-weight-bold;
+      font-size: $msuif-font-size-small;
     }
 
     &--secondary {
@@ -67,16 +66,9 @@
   border: torem(1px) solid $border-color;
   border-radius: torem($border-radius);
   font-weight: $msuif-font-weight-bold;
-  color: $color-gray;
   padding: torem(8px);
   outline: none;
   background-color: $color-white;
-  min-width: 50%;
-
-  &:hover {
-    background-color: $border-color;
-    color: $color-white;
-  }
 }
 
 .dropdown {
@@ -89,6 +81,7 @@
 
     &--blue {
       @include dropdown($color-blue, 50px);
+      width: 50%;
     }
 
     &--green {
@@ -97,12 +90,11 @@
   }
 
   &__square {
+
+    &--primary {
       @include dropdown($color-gray, 0px);
       text-transform: uppercase;
-
-    &:hover {
-      background-color: $color-green;
-      border-color: $color-green;
+      color: $msuif-font-color-tertiary;
     }
   }
 }
