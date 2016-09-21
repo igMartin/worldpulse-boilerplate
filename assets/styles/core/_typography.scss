@@ -115,6 +115,16 @@ p {
   }
 }
 
+.p {
+  font-family: $msuif-font-family-secondary;
+  font-size: $msuif-headers-p-font-size;
+  text-align: left;
+
+  @include respond-to('ismobile') {
+    font-size: $msuif-headers-p-font-size-mobile;
+  }
+}
+
 .small-p {
   font-size: $msuif-headers-small-p-font-size;
   text-align: left;
