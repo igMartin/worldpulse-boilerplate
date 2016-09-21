@@ -1,0 +1,100 @@
+// Tiles element
+
+
+.tiles {
+
+  &__profile {
+    @include profile;
+
+    &--individual {
+
+      @include individual;
+
+      &__photo {
+        display: flex;
+        justify-content: center;
+
+        &--unit {
+          @include photo-circle;
+        }
+      }
+
+      &__naming {
+
+        h5 {
+          font-family: $msuif-font-family-tertiary;
+          &:first-child {
+            margin-top: toem(10px);
+          }
+        }
+
+        img {
+          @include flag-image();
+        }
+      }
+
+      button {
+        margin-top: toem(20px);
+      }
+
+      @include respond-to('ismobile') {
+        display: none;
+      }
+    }
+  }
+
+  &__mobile {
+    display: none;
+    font-size: $msuif-font-size-jumbo;
+    align-items: center;
+
+    &--arrow {
+      font-size: $msuif-font-size-super;
+      color: $color-orange;
+      padding: 0 5px;
+    }
+
+    &--profile {
+      @include profile;
+      margin-bottom: 0;
+
+      &__individual {
+        @include individual;
+        width: 100%;
+        min-height: toem(180px);
+        padding: 0;
+
+        &__photo {
+          display: flex;
+          justify-content: center;
+
+          &--unit {
+            @include photo-circle();
+            height: 130px;
+            width: 130px;
+          }
+        }
+
+        &__naming {
+
+          h5 {
+            font-family: $msuif-font-family-tertiary;
+            &:first-child {
+              margin-top: toem(10px);
+            }
+          }
+
+          img {
+            height: auto;
+            width: toem(25px);
+            border-radius: 0px;
+          }
+        }
+      }
+    }
+
+    @include respond-to('ismobile'){
+      display: flex;
+    }
+  }
+}

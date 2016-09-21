@@ -4,13 +4,17 @@
   background-color: $color-white;
   color: $msuif-font-color-tertiary;
 
+  .small-p {
+    font-family: $msuif-font-family-default;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: flex-end;
     height: torem(45px);
 
     @include respond-to('ipad') {
-      justify-content: center;
+      display: none;
     }
 
     @include respond-to('ismobile') {
@@ -48,6 +52,7 @@
         li>a>p {
           margin-top: 0;
           margin-bottom: 0;
+          color: $msuif-font-color-tertiary;
         }
 
         >li:not(:last-child) {

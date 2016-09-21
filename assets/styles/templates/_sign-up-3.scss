@@ -1,0 +1,87 @@
+// Sign Up 3
+
+
+.sign-up-3 {
+  background-color: $color-lightgray;
+
+  h3 {
+    text-align: center;
+    padding-top: toem(60px);
+
+    @include respond-to('ismobile') {
+      padding: 60px 20px 0 20px;
+    }
+  }
+
+  &__content {
+    padding: 40px 0 120px;
+    max-width: toem(320px);
+    margin: auto;
+
+    @include respond-to('ismobile') {
+      padding: 40px 15px 120px;
+    }
+
+    &--photo-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 50px 0 20px 0;
+
+      &__photo {
+        height: toem(320px);
+        width: toem(320px);
+        border: toem(2px) solid $color-blue;
+        border-radius: 50%;
+        background-color: $color-white;
+
+        @include respond-to('ismobile') {
+          height: toem(290px);
+          width: toem(290px);
+        }
+      }
+    }
+
+    &--photo-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: toem(25px);
+
+      button {
+        min-width: toem(120px);
+        padding-left: toem(10px);
+        padding-right: toem(10px);
+
+        @include respond-to('ismobile') {
+          min-width: toem(135px);
+        }
+      }
+    }
+
+    &--info {
+
+      ul {
+        list-style: disc;
+        text-align: left;
+        margin-left: toem(20px);
+        font-family: $msuif-font-family-secondary;
+        font-size: $msuif-headers-p-font-size;
+
+        @include respond-to('ismobile') {
+          font-size: $msuif-headers-p-font-size-mobile;
+        }
+      }
+    }
+
+    &--button-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: toem(40px);
+
+      button {
+        min-width: toem(120px);
+        margin-bottom: toem(20px);
+      }
+    }
+  }
+}

@@ -141,3 +141,45 @@
 .col-wrapper {
   padding: 0 40px 0 40px;
 }
+
+// Colors
+
+.red {
+  color: $color-red !important;
+}
+
+.blue {
+  color: $color-blue !important;
+}
+
+.green {
+  color: $color-green !important;
+}
+
+
+// Links
+
+.active {
+  color: $color-orange;
+  font-weight: bold;
+  border-bottom: toem(3px) solid $color-orange;
+}
+
+// Skip anchor
+
+.skip {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: $msuif-font-size;
+  font-family: $msuif-font-family-tertiary;
+  color: $color-orange;
+}
+
+// Enhaced titles
+
+.enhaced-title {
+  color: $color-red;
+  border-bottom: toem(2px) solid $color-red;
+  padding-bottom: 5px;
+}

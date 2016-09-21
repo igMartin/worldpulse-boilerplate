@@ -1,0 +1,210 @@
+// Stories
+
+.stories {
+  @include myPulse;
+  position: relative;
+  display: inline-block;
+
+  &__tell-button {
+    margin-bottom: toem(30px);
+
+    >button {
+      min-width: toem(200px);
+    }
+
+    @include respond-to('desktop') {
+      display: none;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__nav {
+    color: $color-gray;
+    font-size: $msuif-font-size-big;
+    margin-top: toem(40px);
+    margin-bottom: toem(40px);
+
+    ul{
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      li:not(:first-child) {
+        padding-bottom: toem(12px);
+        padding-left: toem(20px);
+      }
+    }
+
+    &--dropdown {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      top: toem(200px);
+      right: toem(110px);
+      text-align: left;
+      padding: 1.5%;
+      border: toem(2px) solid $color-orange;
+      background-color: inherit;
+      color: $color-gray;
+      font-size: $msuif-font-size-big;
+
+      ul {
+        margin: 0;
+
+        li {
+          margin-bottom: torem(5px);
+        }
+      }
+
+      @include respond-to('ismobile') {
+        top: toem(250px);
+        right: 0;
+        font-size: $msuif-font-size;
+      }
+
+      @include respond-to('ipad') {
+        top: toem(250px);
+        right: toem(80px);
+        font-size: $msuif-font-size;
+      }
+    }
+
+    @include respond-to('ismobile') {
+      font-size: $msuif-font-size;
+      margin-bottom: toem(20px);
+
+      ul:last-child {
+        li:nth-child(n+3):not(:last-child){
+          display: none;
+        }
+      }
+    }
+
+    @include respond-to('ipad') {
+      font-size: $msuif-font-size;
+      margin-bottom: toem(20px);
+    }
+  }
+
+  &__articles {
+    text-align: left;
+
+    article {
+      margin-bottom: torem(60px);
+    }
+
+    &--header {
+
+      &__profile {
+        display: flex;
+        margin-bottom: toem(10px);
+
+        &__photo {
+          @include photo-circle(medium);
+          margin-right: toem(10px);
+        }
+
+        &__wrapper {
+          flex: 8;
+
+          h5 {
+            padding-top: toem(3px);
+            font-style: italic;
+            font-family: $msuif-font-family-tertiary;
+          }
+
+          &--flag {
+            @include flag-image();
+          }
+        }
+      }
+    }
+
+    &--text {
+      margin-bottom: toem(20px);
+
+      h4 {
+        margin-bottom: toem(10px);
+      }
+    }
+
+    &--actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      >span {
+        color: $color-green !important;
+
+        @include respond-to('ismobile') {
+          margin-top: toem(5px);
+        }
+      }
+
+      .small-p {
+        padding-left: 0;
+        font-size: $msuif-font-size;
+        margin-top: 10px;
+      }
+
+      .green {
+        @include respond-to('ismobile') {
+          margin-top: toem(5px);
+        }
+      }
+
+      .ms-icon {
+        font-size: $msuif-font-size-jumbo-plus;
+        color: $color-orange;
+        width: toem(20px);
+
+
+        @mixin icon-value-position{
+          position: relative;
+          font-size: toem(6px);
+          text-align: center;
+          font-family: $msuif-font-family-secondary;
+        }
+
+        .icon-speach__value {
+          @include icon-value-position;
+          top: -12px;
+          left: -26px;
+        }
+        .icon-heart__value{
+          @include icon-value-position;
+          top: -11px;
+          left: -26px;
+        }
+      }
+
+      .icon-over_heart,
+      .icon-over_speach {
+
+       .icon-heart__value {
+         color: $color-white;
+         left: -26px;
+       }
+       .icon-speach__value {
+         color: $color-white;
+         left: -29px;
+       }
+     }
+
+      p {
+        padding-right: toem(20px);
+        padding-left: toem(5px);
+        color: $color-orange;
+      }
+    }
+  }
+
+  >button {
+    min-width: toem(200px);
+  }
+}

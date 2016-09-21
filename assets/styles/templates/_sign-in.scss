@@ -1,0 +1,95 @@
+// Sign In
+
+
+.sign-in {
+  background-color: $color-lightgray;
+
+  h3 {
+    text-align: center;
+    padding-top: toem(60px);
+
+    @include respond-to('ismobile') {
+      padding-top: toem(30px);
+    }
+  }
+
+  &__content {
+    padding: 40px 0 120px;
+    max-width: toem(320px);
+    margin: auto;
+    text-align: center;
+
+    @include respond-to('ismobile') {
+      padding: 40px 15px 120px;
+    }
+
+    &--form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      input {
+        width: 100%;
+        margin-bottom: torem(20px);
+      }
+    }
+
+    &--separator {
+      margin-bottom: toem(45px);
+      margin-top: toem(30px);
+
+      p {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        border-bottom: 1px solid $msuif-font-color;
+        line-height: 0.1em;
+        font-weight: bold;
+
+        span {
+          background-color: $color-lightgray;
+          padding: 0 10px;
+        }
+      }
+    }
+
+    &--social {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: toem(30px);
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 0;
+        padding: 8px;
+
+        @include respond-to('ismobile') {
+          padding: 8px 2px;
+        }
+
+        i {
+          margin-right: toem(2px);
+          font-size: $msuif-font-size-jumbo;
+        }
+      }
+    }
+
+    &--button-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: toem(40px);
+
+      button {
+        min-width: toem(110px);
+        margin-bottom: toem(15px);
+      }
+
+      a {
+        margin-bottom: toem(10px);
+      }
+    }
+  }
+}

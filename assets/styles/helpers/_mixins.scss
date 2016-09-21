@@ -87,12 +87,15 @@
 	background-color: $background-color;
   text-align: center;
   padding: 5% $lateral-padding;
+
 	@include respond-to('ismobile'){
 		padding: 5% 0;
 	};
+
 	h1 {
     color: $color-orange;
     margin-bottom: torem(30px);
+
 		@include respond-to('ismobile') {
       padding: 0 40px;
     }
@@ -115,10 +118,10 @@
     height: 180px;
     width: 180px;
 
-  }@else if $size == small {
-
+  }@else if $size == medium {
     height: torem(85px);
     width: torem(85px);
+
     @include respond-to('ismobile') {
       height: toem(60px);
       width: toem(60px);
@@ -128,13 +131,53 @@
       height: toem(60px);
       width: toem(60px);
     }
-
-  }
+  }@else if $size == small {
+		height: toem(30px);
+		width: toem(30px);
+	}
 }
+
 
 //global flags images
 @mixin flag-image {
 	border-radius: 0px;
 	height: auto;
 	width: toem(30px);
+}
+
+
+// tiles
+
+@mixin profile {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 95%;
+  margin: auto;
+}
+
+@mixin individual {
+  border-radius: torem(15px);
+  min-height: toem(420px);
+	text-align: center;
+}
+
+
+// MY Pulse
+
+@mixin myPulse {
+	@include main-wrapper;
+	width: 75%;
+	background-color: $color-white;
+	padding: 60px 45px;
+
+	@include respond-to('ismobile') {
+		width: 100%;
+		padding: 30px 20px;
+	}
+
+	@include respond-to('ipad') {
+		width: 100%;
+		padding: 30px 20px;
+	}
 }

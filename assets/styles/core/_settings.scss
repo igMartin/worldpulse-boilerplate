@@ -7,6 +7,18 @@
 @import 'https://fonts.googleapis.com/css?family=Noto+Serif';
 
 @font-face {
+  font-family: 'Campton-Book';
+  src: url('../fonts/Campton-Book.eot');
+  src: url('../fonts/Campton-Book.woff2') format('woff2'),
+       url('../fonts/Campton-Book.woff') format('woff'),
+       url('../fonts/Campton-Book.ttf') format('truetype'),
+       url('../fonts/Campton-Book.svg#Campton-Bold') format('svg'),
+       url('../fonts/Campton-Book.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Campton-Bold';
   src: url('../fonts/Campton-Bold.eot');
   src: url('../fonts/Campton-Bold.woff2') format('woff2'),
@@ -57,6 +69,8 @@ $msuif-font-weight-semibold: 600;
 $msuif-font-weight-bold: 700;
 ///
 ///Family
+$msuif-font-family-default: "Campton-Book", "Helvetica Neue", Helvetica, sans-serif;
+///
 $msuif-font-family-primary: "Campton-SemiBold", "Campton-Bold", "Helvetica Neue", Helvetica, sans-serif;
 ///
 $msuif-font-family-secondary: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
@@ -78,17 +92,25 @@ $msuif-transition-timing: ease;
 ///
 $color-red: #961E23;
 ///
+$color-red-disabled: #D6A5A7;
+///
 $color-blue: #4AA8B7;
 ///
-$color-orange: #F58255;
+$color-orange: #f48155;
+///
+$color-peach: #facdbb;
 ///
 $color-yellow: #E6C81E;
 ///
 $color-green: #69BEA5;
 ///
-$color-gray: #AAAFA1;
+$color-gray: #414141;
 ///
-$color-lightgray: #F6F6F6;
+$color-gray-2: #aaaf9f;
+///
+$color-midgray: #dbdbdb;
+///
+$color-lightgray: #F6F6F5;
 ///
 $color-pink: #F4E8E8;
 ///
@@ -104,13 +126,17 @@ $color-white: #FFFFFF;
 ///
 $color-ivory: #FCFCFC;
 ///
+$color-facebook: #6987c2;
+///
+$color-google: #dd4b39;
+///
 $msuif-background: $color-red;
 ///
 $msuif-font-color: tint($color-black,35%);
 ///
 $msuif-font-color-secondary: tint($color-black,30%);
 ///
-$msuif-font-color-tertiary: tint($color-black,45%);
+$msuif-font-color-tertiary: #606060;
 ///
 $modal-backdrop-background:    rgba(0, 0, 0, 0.5);
 ///
@@ -124,5 +150,6 @@ $modal-transition-delay:       $msuif-transition-duration !default;
 $msuif-breakpoints: (
   'desktop': (min-width: 1026px),
   'ipad': (min-width: 501px, max-width: 1025px),
-  'ismobile': (max-width: 500px)
+  'ismobile': (max-width: 500px),
+  'notdesktop': (max-width: 1026px)
 );
