@@ -132,7 +132,9 @@ module.exports = function (grunt) {
       options: {
         map: true,
         processors: [
-          require('autoprefixer')({browsers: ['last 2 versions']}),
+          require('autoprefixer')({
+            browsers: ['last 2 versions','Safari 8']
+          }),
           require('cssnano')({zindex: false}) // minify the result
         ]
       },

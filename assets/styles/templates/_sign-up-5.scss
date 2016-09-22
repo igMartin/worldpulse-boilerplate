@@ -51,7 +51,6 @@
       background-color: $color-white;
       padding: toem(15px);
       border-radius: toem(10px);
-      min-height: 0;
       margin-bottom: toem(40px);
 
       @include respond-to('ismobile') {
@@ -60,6 +59,14 @@
         padding-left: toem(5px);
         padding-right: toem(5px);
         margin-bottom: toem(15px);
+      }
+
+      >div {
+        min-height: toem(350px);
+
+        @include respond-to('ismobile') {
+          min-height: 0;
+        }
       }
     }
   }

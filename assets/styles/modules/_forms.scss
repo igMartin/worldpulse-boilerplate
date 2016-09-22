@@ -4,7 +4,7 @@
 /// @group Forms
 ////
 
-@import "forms/radio-checkbox";
+@import "forms/radio-checkbox";  
 
 
 /// Inputs
@@ -22,9 +22,10 @@
   &__classic {
 
     &--primary {
-      @include input($color-gray, 1px);
-      font-weight: $msuif-font-weight-bold;
-      font-size: $msuif-font-size-small;
+      @include input($color-gray-2, 1px);
+      font-weight: normal;
+      font-size: $msuif-font-size;
+      font-style: italic;
     }
 
     &--secondary {
