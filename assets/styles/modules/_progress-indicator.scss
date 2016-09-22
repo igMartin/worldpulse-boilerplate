@@ -1,60 +1,52 @@
 // Progress indicator
-@mixin progress-indicator($color){
-  position: relative;
-  display: inline-block;
-  width: 18%;
-  //Lines
-  &:after {
-    position: absolute;
-    display: block;
-    left: 80%;
-    height: 1px;
-    width: 80%;
-    content: "";
-    background-color: $color-peach;
-  }
-  // Bullets/Balls
-  &:before {
-    position: absolute;
-    z-index: 2;
-    top: -15px;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    content: " ";
-    background-color: $color;
-  }
-  &:last-child{
-    &:after{
-      display:none;
-    }
-  }
-}
-.progress-indicator-container {
+
+.progress-indicator {
   width: 100%;
 
-  ul{
-    text-align: center;
-    width: toem(380px);
-    margin: auto;
-    margin-left: toem(-45px);
-
-    @include respond-to('ismobile') {
-      width: toem(340px);
-      margin-left: toem(-40px);
-    }
+  @include respond-to('ismobile') {
+    max-width: 300px;
   }
-}
 
-.progress-indicator-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.progress-indicator-item {
-  @include progress-indicator($color-peach);
-  &--selected{
-    @include progress-indicator($color-orange);
+    &--item, &--item--selected {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: $color-peach;
+      z-index: 1;
+
+      &::before {
+        display: block;
+        content: "";
+        height: 1px;
+        width: 145%;
+        margin: 14px 30px;
+        background-color: $color-peach;
+        z-index: 0;
+      }
+
+      &:last-child {
+        &::before {
+          display: none;
+        }
+      }
+
+      >a {
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 10%;
+        top: 0;
+      }
+    }
+
+    &--item--selected {
+      background-color: $color-orange;
+    }
   }
 }
