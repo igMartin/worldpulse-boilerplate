@@ -165,15 +165,16 @@
   border-bottom: toem(3px) solid $color-orange;
 }
 
-// Skip anchor
+// Links styling
 
-.skip {
+.link {
   width: 100%;
   text-align: center;
   font-weight: bold;
   font-size: $msuif-font-size;
   font-family: $msuif-font-family-tertiary;
   color: $color-orange;
+
 }
 
 // Enhaced titles
