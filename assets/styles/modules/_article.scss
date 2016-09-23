@@ -81,6 +81,8 @@
         font-size: $msuif-font-size-jumbo-plus;
         color: $color-orange;
         width: toem(20px);
+        display: flex;
+        align-items: baseline;
 
         @include respond-to('ismobile') {
           font-size: toem(22px);

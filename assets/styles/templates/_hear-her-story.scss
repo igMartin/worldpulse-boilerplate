@@ -135,6 +135,8 @@
         font-size: $msuif-font-size-jumbo-plus;
         color: $color-orange;
         width: toem(20px);
+        display: flex;
+        align-items: baseline;
 
 
         @mixin icon-value-position{
